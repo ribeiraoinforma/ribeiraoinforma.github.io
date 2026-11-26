@@ -161,7 +161,7 @@ function montarTopo(ativa) {
       <img class="selo" src="${SELO}" alt="" onerror="this.remove()">
       <div class="nome">RIBEIRÃO <span>INFORMA</span><small>NOTÍCIAS DE RIBEIRÃO PRETO</small></div>
     </a>
-    <nav class="redes" aria-label="Redes sociais">${redesHTML()}</nav>
+    <div class="topo-dir"><button class="btn-instalar" type="button" hidden>📲 Instalar o app</button><nav class="redes" aria-label="Redes sociais">${redesHTML()}</nav></div>
   </div></header>
   <nav class="secoes" aria-label="Seções"><div class="wrap">
     ${link("./", "Início", "inicio")}
@@ -369,6 +369,7 @@ async function capa() {
     ${sigaHTML()}
     ${blocos}`;
   carregarTempo();
+  mostrarInstalar();
 }
 
 function paginaSecao(lista, s) {
@@ -467,19 +468,29 @@ else if (pagina === "agenda") agenda();
 else montarTopo("");
 
 // ---------- app instalável (PWA) ----------
+// Android/Chrome: um toque instala (beforeinstallprompt).
+// iPhone: a Apple não deixa instalar com um toque, então abrimos um passo a passo com desenhos.
+// Navegador de dentro do Instagram/Facebook etc.: pedimos para abrir no Safari/Chrome.
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () =>
     navigator.serviceWorker.register("sw.js").catch(() => {}),
   );
 }
+const UA = navigator.userAgent;
 const ehApp = () =>
   matchMedia("(display-mode: standalone)").matches ||
   navigator.standalone === true;
 const ehIOS = () =>
-  /iphone|ipad|ipod/i.test(navigator.userAgent) ||
+  /iphone|ipad|ipod/i.test(UA) ||
   (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
-const ehCelular = () =>
-  /android|iphone|ipad|ipod|mobile/i.test(navigator.userAgent) || ehIOS();
+const ehAndroid = () => /android/i.test(UA);
+const ehCelular = () => ehIOS() || ehAndroid() || /mobile/i.test(UA);
+const ehInterno = () =>
+  /Instagram|FBAN|FBAV|FB_IAB|Line\/|Twitter|TikTok|musical_ly|Snapchat|; wv\)/i.test(
+    UA,
+  );
+const ehSafari = () =>
+  ehIOS() && !/CriOS|FxiOS|EdgiOS|OPiOS|GSA\//i.test(UA) && !ehInterno();
 let pedidoInstalar = null;
 const guardado = (k, v) => {
   try {
@@ -490,62 +501,168 @@ const guardado = (k, v) => {
   }
 };
 
-function avisoInstalar(forcar) {
-  if (ehApp() || document.getElementById("instalar")) return;
-  const fechado = +guardado("ri-instalar-fechado") || 0;
-  if (!forcar && Date.now() - fechado < 14 * 864e5) return;
-  let corpo;
-  if (pedidoInstalar) {
-    corpo = `<p><b>Tenha o Ribeirão Informa no celular.</b> Abre rápido, direto da tela inicial.</p>
-      <button class="btn" id="instalar-ok">Instalar o app</button>`;
-  } else if (ehIOS()) {
-    corpo = `<p><b>Instale o app no iPhone:</b> toque em <b>Compartilhar</b> <span class="ic-share" aria-hidden="true">⬆︎</span> na barra do Safari e depois em <b>Adicionar à Tela de Início</b>.</p>`;
-  } else if (ehCelular()) {
-    corpo = `<p><b>Instale o app no Android:</b> toque no menu <b>⋮</b> do navegador e depois em <b>Instalar app</b> ou <b>Adicionar à tela inicial</b>.</p>`;
-  } else if (forcar) {
-    corpo = `<p><b>Abra este site no celular</b> (ribeiraoinforma.github.io) para instalar o app. No computador, use o ícone de instalar na barra de endereço do Chrome.</p>`;
-  } else return;
+// desenhos simples (SVG) dos botões do celular
+const IC_COMPARTILHAR = `<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7.5 7.5 12 3l4.5 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 10H6a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1h-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`;
+const IC_MAIS = `<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 8v8M8 12h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`;
+const IC_TRES = `<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="2" fill="currentColor"/><circle cx="12" cy="12" r="2" fill="currentColor"/><circle cx="19" cy="12" r="2" fill="currentColor"/></svg>`;
+const IC_TRES_V = `<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2" fill="currentColor"/><circle cx="12" cy="12" r="2" fill="currentColor"/><circle cx="12" cy="19" r="2" fill="currentColor"/></svg>`;
+
+function passo(n, html) {
+  return `<li><span class="num">${n}</span><div>${html}</div></li>`;
+}
+
+function guiaHTML() {
+  const linkSite = location.origin + location.pathname.replace(/[^/]*$/, "");
+  if (ehInterno()) {
+    const ios = ehIOS();
+    return `<h2>Abra no ${ios ? "Safari" : "Chrome"} para instalar</h2>
+      <p class="sub">Você está no navegador de dentro de outro app (Instagram, Facebook...). Ele não deixa instalar.</p>
+      <ol class="passos">
+        ${passo(1, `Toque nos ${IC_TRES} ou ${IC_TRES_V} no <b>canto de cima</b> da tela.`)}
+        ${passo(2, `Escolha <b>${ios ? "Abrir no navegador externo" : "Abrir no Chrome"}</b>${ios ? " (ou <b>Abrir no Safari</b>)" : ""}.`)}
+        ${passo(3, `Lá, toque de novo em <b>📲 Instalar o app</b>.`)}
+      </ol>
+      <p class="sub">Não achou? Copie o link e cole no ${ios ? "Safari" : "Chrome"}:</p>
+      <button class="btn" id="copiar-site" data-link="${esc(linkSite)}">Copiar o link do site</button>`;
+  }
+  if (ehIOS() && !ehSafari()) {
+    return `<h2>Abra no Safari para instalar</h2>
+      <p class="sub">No iPhone, o app se instala pelo <b>Safari</b> (a bússola azul).</p>
+      <button class="btn" id="copiar-site" data-link="${esc(linkSite)}">Copiar o link do site</button>
+      <ol class="passos">
+        ${passo(1, `Toque no botão acima para copiar o link.`)}
+        ${passo(2, `Abra o <b>Safari</b>, toque na barra de endereço e cole.`)}
+        ${passo(3, `Toque em <b>📲 Instalar o app</b> e siga os passos.`)}
+      </ol>`;
+  }
+  if (ehIOS()) {
+    return `<h2>Instale em 3 toques</h2>
+      <ol class="passos">
+        ${passo(1, `Toque no botão <b>Compartilhar</b> ${IC_COMPARTILHAR}<br><small>Fica na barra <b>de baixo</b> do Safari, no meio. Não aparece? Toque nos ${IC_TRES} no canto de baixo e depois em <b>Compartilhar</b> ${IC_COMPARTILHAR}.</small>`)}
+        ${passo(2, `Role a lista para baixo e toque em <b>Adicionar à Tela de Início</b> ${IC_MAIS}`)}
+        ${passo(3, `Toque em <b>Adicionar</b>, no canto de cima. Pronto: o ícone aparece na sua tela.`)}
+      </ol>
+      <div class="seta-baixo" aria-hidden="true"><span>Compartilhar fica aqui embaixo</span>⬇︎</div>`;
+  }
+  if (ehAndroid()) {
+    return `<h2>Instale em 2 toques</h2>
+      <ol class="passos">
+        ${passo(1, `Toque nos ${IC_TRES_V} no <b>canto de cima, à direita</b> do Chrome.`)}
+        ${passo(2, `Toque em <b>Instalar app</b> ou <b>Adicionar à tela inicial</b> e confirme.`)}
+      </ol>
+      <div class="seta-cima" aria-hidden="true">⬆︎<span>o menu fica aqui em cima</span></div>`;
+  }
+  return `<h2>Instale no celular</h2>
+    <p class="sub">Abra <b>${esc(location.host)}</b> no celular e toque em <b>📲 Instalar o app</b>.
+    No computador, use o ícone de instalar na barra de endereço do Chrome.</p>`;
+}
+
+function abrirGuia() {
+  document.getElementById("guia")?.remove();
   const el = document.createElement("div");
-  el.id = "instalar";
+  el.id = "guia";
   el.setAttribute("role", "dialog");
-  el.innerHTML = `<img src="icones/icone-192.png" alt="" width="48" height="48"><div class="txt">${corpo}</div><button class="fechar" aria-label="Fechar">×</button>`;
+  el.setAttribute("aria-modal", "true");
+  el.innerHTML = `<div class="guia-caixa"><button class="fechar" aria-label="Fechar">×</button>
+    <img src="icones/icone-192.png" alt="" width="64" height="64" class="guia-icone">
+    ${guiaHTML()}
+    <button class="btn claro" id="guia-ok">Entendi</button></div>`;
   document.body.appendChild(el);
-  el.querySelector(".fechar").onclick = () => {
-    guardado("ri-instalar-fechado", Date.now());
-    el.remove();
-  };
-  const ok = el.querySelector("#instalar-ok");
-  if (ok)
-    ok.onclick = async () => {
-      pedidoInstalar.prompt();
-      await pedidoInstalar.userChoice.catch(() => {});
-      pedidoInstalar = null;
-      el.remove();
+  const fechar = () => el.remove();
+  el.querySelector(".fechar").onclick = fechar;
+  el.querySelector("#guia-ok").onclick = fechar;
+  el.addEventListener("click", (e) => {
+    if (e.target === el) fechar();
+  });
+  const cp = el.querySelector("#copiar-site");
+  if (cp)
+    cp.onclick = async () => {
+      try {
+        await navigator.clipboard.writeText(cp.dataset.link);
+        cp.textContent = "Link copiado! Agora cole no navegador";
+      } catch {
+        prompt("Copie o link:", cp.dataset.link);
+      }
     };
 }
+
+async function instalar() {
+  if (pedidoInstalar) {
+    pedidoInstalar.prompt();
+    const r = await pedidoInstalar.userChoice.catch(() => null);
+    pedidoInstalar = null;
+    if (r && r.outcome === "accepted") {
+      esconderInstalar();
+      return;
+    }
+  } else abrirGuia();
+}
+
+function esconderInstalar() {
+  document
+    .querySelectorAll(".btn-instalar,#instalar,.instalar-faixa")
+    .forEach((e) => e.remove());
+}
+
+function mostrarInstalar() {
+  if (ehApp()) return esconderInstalar();
+  document.querySelectorAll(".btn-instalar").forEach((b) => {
+    b.hidden = false;
+    b.onclick = instalar;
+  });
+  // faixa na capa, logo abaixo da faixa do WhatsApp (só no celular)
+  const zap = document.querySelector(".capa .zap-faixa");
+  if (ehCelular() && zap && !document.querySelector(".instalar-faixa")) {
+    const f = document.createElement("button");
+    f.type = "button";
+    f.className = "instalar-faixa";
+    f.innerHTML = `<img src="icones/icone-192.png" alt="" width="40" height="40"><span><b>Tenha o Ribeirão Informa no celular</b><small>Instale o app grátis. Abre direto da sua tela.</small></span><em>Instalar</em>`;
+    f.onclick = instalar;
+    zap.after(f);
+  }
+  // aviso pequeno no rodapé da tela (uma vez a cada 14 dias)
+  const fechado = +guardado("ri-instalar-fechado") || 0;
+  if (
+    ehCelular() &&
+    !document.getElementById("instalar") &&
+    Date.now() - fechado > 14 * 864e5
+  ) {
+    setTimeout(() => {
+      if (ehApp() || document.getElementById("instalar")) return;
+      const el = document.createElement("div");
+      el.id = "instalar";
+      el.innerHTML = `<img src="icones/icone-192.png" alt="" width="44" height="44"><div class="txt"><p><b>Instale o app do Ribeirão Informa</b></p>
+        <button class="btn" type="button">📲 Instalar o app</button></div><button class="fechar" aria-label="Fechar">×</button>`;
+      document.body.appendChild(el);
+      el.querySelector(".btn").onclick = () => {
+        el.remove();
+        instalar();
+      };
+      el.querySelector(".fechar").onclick = () => {
+        guardado("ri-instalar-fechado", Date.now());
+        el.remove();
+      };
+    }, 4000);
+  }
+}
+
 window.addEventListener("beforeinstallprompt", (e) => {
   e.preventDefault();
   pedidoInstalar = e;
-  setTimeout(() => avisoInstalar(), 3000);
 });
-window.addEventListener("appinstalled", () =>
-  document.getElementById("instalar")?.remove(),
-);
-setTimeout(() => {
-  if (!pedidoInstalar && ehCelular()) avisoInstalar();
-}, 5000);
-// link "Baixe o app" no rodapé abre as instruções a qualquer hora
+window.addEventListener("appinstalled", esconderInstalar);
+setTimeout(mostrarInstalar, 600);
+// link no rodapé abre o passo a passo a qualquer hora
 setTimeout(() => {
   const mapa = document.querySelector(".rodape .mapa");
   if (mapa && !ehApp()) {
     const a = document.createElement("a");
     a.href = "#";
-    a.textContent = "📲 Baixe o app";
+    a.textContent = "📲 Instalar o app";
     a.onclick = (ev) => {
       ev.preventDefault();
-      document.getElementById("instalar")?.remove();
-      avisoInstalar(true);
+      instalar();
     };
     mapa.appendChild(a);
   }
-}, 500);
+}, 700);
