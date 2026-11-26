@@ -8,7 +8,7 @@ const REDES = {
   kwai: "",
 };
 const SELO =
-  "https://cdn.creativeclaw.co/u/c6e73e30/images/428bec61-c6b0-4db6-aea5-ef5ef96f2395.png";
+  "icones/selo-96.png";
 
 // Seções do site, com a mesma cor das artes das redes.
 // Cada notícia cai na seção que lista a editoria dela; editoria desconhecida cai em "Cidade".
