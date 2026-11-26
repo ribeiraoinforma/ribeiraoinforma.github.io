@@ -706,3 +706,7 @@ h2.secao::before {
 .btn-grande{display:block;width:100%;font-size:20px !important;padding:16px !important;margin:12px 0 4px}
 .btn-avisos{border:0;cursor:pointer;background:#fff;color:var(--azul);font:800 14px Inter,sans-serif;padding:9px 14px;border-radius:999px;white-space:nowrap;margin-right:6px;box-shadow:0 0 0 2px var(--ouro)}
 @media (max-width:640px){.btn-avisos{padding:8px 10px;font-size:13px}.btn-avisos span{display:none}.btn-avisos{font-size:18px}}
+#avisos-resultado{position:fixed;inset:0;z-index:110;background:rgba(7,26,58,.78);display:flex;align-items:center;justify-content:center;padding:16px}
+#avisos-resultado .guia-caixa{text-align:center}
+#avisos-resultado .diag{font-size:12px;color:#777;margin:10px 0}
+.versao{font-size:11px;opacity:.5;margin:10px 0 0;text-align:center}

@@ -733,9 +733,17 @@ const temPush = () =>
   "serviceWorker" in navigator &&
   "PushManager" in window;
 let osPronto = null;
+let osErro = "";
 function carregarOneSignal() {
   if (osPronto) return osPronto;
-  osPronto = new Promise((ok) => {
+  osPronto = new Promise((ok0) => {
+    let feito = false;
+    const ok = (v) => {
+      if (!feito) {
+        feito = true;
+        ok0(v);
+      }
+    };
     window.OneSignalDeferred = window.OneSignalDeferred || [];
     OneSignalDeferred.push(async (OS) => {
       try {
@@ -748,14 +756,23 @@ function carregarOneSignal() {
         });
         OS.Notifications.addEventListener("permissionChange", atualizarAvisos);
         ok(OS);
-      } catch {
+      } catch (e) {
+        osErro = "OneSignal: " + ((e && e.message) || e);
         ok(null);
       }
     });
     const s = document.createElement("script");
     s.src = "https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js";
     s.defer = true;
-    s.onerror = () => ok(null);
+    s.onerror = () => {
+      osErro = "não carregou o serviço de avisos (internet?)";
+      ok(null);
+    };
+    setTimeout(() => {
+      if (feito) return;
+      osErro = osErro || "o serviço de avisos demorou demais para responder";
+      ok(null);
+    }, 15000);
     document.head.appendChild(s);
   });
   return osPronto;
@@ -792,38 +809,88 @@ function explicarIphone() {
   });
 }
 
+// resultado da ativação, com o motivo quando falha (para o leitor conseguir contar o que apareceu)
+function resultadoAvisos(ok, titulo, motivo) {
+  document.getElementById("avisos-resultado")?.remove();
+  const el = document.createElement("div");
+  el.id = "avisos-resultado";
+  el.setAttribute("role", "dialog");
+  el.setAttribute("aria-modal", "true");
+  const iosV = (UA.match(/OS (\d+)_(\d+)/) || []).slice(1).join(".");
+  const diag = [
+    iosV ? "iOS " + iosV : "",
+    ehApp() ? "app instalado" : "navegador",
+    "Notification" in window ? "permissão: " + Notification.permission : "sem suporte a avisos",
+    "PushManager" in window ? "push ok" : "sem push",
+  ].filter(Boolean).join(" · ");
+  el.innerHTML = `<div class="guia-caixa"><div class="sino-grande" aria-hidden="true">${ok ? "✅" : "⚠️"}</div>
+    <h2>${esc(titulo)}</h2>${motivo ? `<p class="sub">${esc(motivo)}</p>` : ""}
+    <p class="diag">${esc(diag)}</p>
+    <button class="btn" type="button">${ok ? "Ótimo!" : "Fechar"}</button></div>`;
+  document.body.appendChild(el);
+  el.querySelector(".btn").onclick = () => el.remove();
+}
+
 async function ativarAvisos() {
   if (ehIOS() && !ehApp()) return explicarIphone();
   if (!temPush()) {
-    alertaCurto(
-      "Este navegador não recebe avisos. Use o Chrome ou instale o app.",
+    const iosV = +((UA.match(/OS (\d+)_(\d+)/) || [])[1] || 0);
+    return resultadoAvisos(
+      false,
+      "Não deu certo: este aparelho não aceita avisos",
+      ehIOS() && iosV && iosV < 17
+        ? "O iPhone precisa estar no iOS 16.4 ou mais novo. Atualize em Ajustes > Geral > Atualização de Software."
+        : "Use o Chrome (Android) ou o app instalado (iPhone).",
     );
-    return;
   }
   if (Notification.permission === "denied") {
-    alertaCurto(
-      "Os avisos estão bloqueados. Libere nas configurações do navegador, em Notificações.",
+    return resultadoAvisos(
+      false,
+      "Não deu certo: os avisos estão bloqueados",
+      ehIOS()
+        ? "Abra Ajustes > Notificações > Ribeirão Informa e ligue Permitir Notificações."
+        : "Libere em Configurações do navegador > Notificações.",
     );
-    return;
   }
   // o pedido do celular tem que sair NA HORA do toque (o iPhone ignora se demorar),
   // então pedimos a permissão primeiro e só depois ligamos o OneSignal
   let perm = Notification.permission;
+  let erroPerm = "";
   try {
     if (perm !== "granted") perm = await Notification.requestPermission();
-  } catch {}
+  } catch (e) {
+    erroPerm = (e && e.message) || String(e);
+  }
   if (perm !== "granted") {
-    alertaCurto("Sem permissão, não dá para avisar. Toque de novo em 🔔 e escolha Permitir.");
-    return;
+    return resultadoAvisos(
+      false,
+      "Não deu certo: a permissão não foi dada",
+      erroPerm
+        ? "O celular respondeu: " + erroPerm
+        : "Toque de novo no 🔔 e, na mensagem do celular, escolha Permitir.",
+    );
   }
   const OS = await carregarOneSignal();
+  let inscrito = false;
   try {
-    if (OS?.User?.PushSubscription && !OS.User.PushSubscription.optedIn)
-      await OS.User.PushSubscription.optIn();
-  } catch {}
+    if (OS?.User?.PushSubscription) {
+      if (!OS.User.PushSubscription.optedIn) await OS.User.PushSubscription.optIn();
+      for (let i = 0; i < 20 && !OS.User.PushSubscription.id; i++)
+        await new Promise((r) => setTimeout(r, 500));
+      inscrito = !!OS.User.PushSubscription.id;
+    }
+  } catch (e) {
+    osErro = osErro || "inscrição: " + ((e && e.message) || e);
+  }
+  if (!inscrito) {
+    return resultadoAvisos(
+      false,
+      "Não deu certo: a permissão foi dada, mas a inscrição não concluiu",
+      (osErro || "sem resposta do serviço de avisos") + ". Feche o app, abra de novo e toque no 🔔.",
+    );
+  }
   atualizarAvisos();
-  if (avisosLigados())
-    alertaCurto("Pronto! Você vai receber as notícias importantes. 🔔");
+  resultadoAvisos(true, "Pronto! Avisos ligados", "Quando sair notícia importante, ela aparece na sua tela.");
 }
 
 function alertaCurto(txt) {
@@ -909,3 +976,15 @@ setTimeout(() => {
     mapa.appendChild(a);
   }
 }, 750);
+
+// número da versão no rodapé (para saber se o celular está com a versão nova)
+const VERSAO_SITE = "7";
+setTimeout(() => {
+  const r = document.querySelector(".rodape .wrap");
+  if (r && !document.querySelector(".versao")) {
+    const v = document.createElement("p");
+    v.className = "versao";
+    v.textContent = "versão " + VERSAO_SITE + (ehApp() ? " · app" : "");
+    r.appendChild(v);
+  }
+}, 800);
