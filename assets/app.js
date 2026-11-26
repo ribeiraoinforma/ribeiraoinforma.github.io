@@ -539,8 +539,16 @@ function guiaHTML() {
     return `<h2>Instale em 3 toques</h2>
       <ol class="passos">
         ${passo(1, `Toque no botão <b>Compartilhar</b> ${IC_COMPARTILHAR}<br><small>Fica na barra <b>de baixo</b> do Safari, no meio. Não aparece? Toque nos ${IC_TRES} no canto de baixo e depois em <b>Compartilhar</b> ${IC_COMPARTILHAR}.</small>`)}
-        ${passo(2, `Role a lista para baixo e toque em <b>Adicionar à Tela de Início</b> ${IC_MAIS}`)}
-        ${passo(3, `Toque em <b>Adicionar</b>, no canto de cima. Pronto: o ícone aparece na sua tela.`)}
+        ${passo(
+          2,
+          `Abre uma lista. Toque na linha <b>Adicionar à Tela de Início</b>, a que tem o quadradinho com ${IC_MAIS}
+          <div class="menu-ios" aria-hidden="true">
+            <div class="mi-redondos"><span>Copiar</span><span>Adicionar a Preferidos</span><span>Lista de Leitura</span><span>Adicionar Favorito</span></div>
+            <div class="mi-bloco"><div>☆ Preferidos</div><div>Adicionar à Nota Rápida</div><div>Buscar na Página</div><div class="mi-certo">${IC_MAIS} Adicionar à Tela de Início <b>← ESTA</b></div></div>
+          </div>
+          <small>⚠️ <b>Não é</b> "Favoritos" nem "Preferidos". É a linha com o <b>quadradinho e o +</b>, no bloco cinza do meio. Não achou? Role a lista para baixo. Se ainda não aparecer, toque em <b>Editar Ações</b> (no fim da lista) e ligue <b>Adicionar à Tela de Início</b>.</small>`,
+        )}
+        ${passo(3, `Toque em <b>Adicionar</b>, no <b>canto de cima, à direita</b>. Pronto: o ícone do Ribeirão Informa aparece na sua tela, junto com os outros apps.`)}
       </ol>
       <div class="seta-baixo" aria-hidden="true"><span>Compartilhar fica aqui embaixo</span>⬇︎</div>`;
   }

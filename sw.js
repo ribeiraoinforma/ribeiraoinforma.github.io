@@ -1,7 +1,7 @@
 // Service worker do app Ribeirão Informa.
 // Notícias (data/noticias.json) e páginas: sempre tenta a rede primeiro (nunca prende versão velha);
 // sem sinal, usa a última cópia salva. Imagens e arquivos fixos: cópia salva primeiro, para abrir rápido.
-const VERSAO = "ri-v2";
+const VERSAO = "ri-v3";
 const BASICOS = [
   "./",
   "index.html",

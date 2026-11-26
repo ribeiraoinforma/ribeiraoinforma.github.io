@@ -676,3 +676,13 @@ h2.secao::before {
   .btn-instalar{padding:8px 12px;font-size:13px}
   .topo .wrap{flex-wrap:wrap}
 }
+/* desenho do menu Compartilhar do iPhone no passo a passo */
+.menu-ios{margin:10px 0 8px;background:#1c1c1e;border-radius:14px;padding:10px;color:#fff;font:500 13px -apple-system,system-ui,sans-serif}
+.mi-redondos{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;text-align:center;font-size:10px;color:#ccc;margin-bottom:8px}
+.mi-redondos span::before{content:"";display:block;width:30px;height:30px;margin:0 auto 3px;border-radius:50%;background:#3a3a3c}
+.mi-bloco{background:#3a3a3c;border-radius:10px;overflow:hidden}
+.mi-bloco div{padding:8px 10px;border-top:1px solid #4a4a4c;opacity:.6}
+.mi-bloco div:first-child{border-top:0}
+.mi-bloco .mi-certo{opacity:1;background:#F5B700;color:#0B2A5B;font-weight:800;display:flex;align-items:center;gap:6px}
+.mi-certo .ic{width:20px;height:20px}
+.mi-certo b{margin-left:auto;font-size:12px}
