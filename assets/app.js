@@ -231,8 +231,8 @@ function itemHTML(n) {
 function destaqueHTML(n) {
   const fd = fotoSrc(n.foto || (FOTO_PADRAO[secaoDe(n).slug] || {}).url || "");
   if (fd) {
-    return `<a class="destaque foto" href="${linkMateria(n)}">
-      <img src="${fd}" alt="" fetchpriority="high" ${reserva(n)} width="1200" height="675">
+    return `<a class="destaque foto" href="${linkMateria(n)}" style="--cor:${corDe(n)}">
+      <img src="${fd}" alt="" fetchpriority="high" onerror="this.onerror=null;this.parentNode.classList.add('falhou');this.remove()" width="1200" height="675">
       <div class="sobre">${tagHTML(n)}<h1>${esc(n.titulo)}</h1><p>${esc(n.resumo)}</p>${metaHTML(n)}</div></a>`;
   }
   const arte = n.imagem

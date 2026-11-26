@@ -616,3 +616,5 @@ h2.secao::before {
 .thumb.de-card img{object-position:center 42%}
 .thumb{background:var(--cor,#dfe5ee)}
 .destaque.foto{min-height:200px}
+.destaque.foto.falhou{min-height:0;background:linear-gradient(160deg,var(--cor,#0b2a5b),#071a3a)}
+.destaque.foto.falhou .sobre{position:static;background:none;padding:28px}
