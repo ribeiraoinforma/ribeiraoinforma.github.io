@@ -1,0 +1,10 @@
+<!doctype html><html lang="pt-br"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Story Ribeirão Informa</title>
+<style>body{margin:0;background:#0B2A5B;color:#fff;font-family:sans-serif;text-align:center}img{max-width:100%;height:auto;display:block;margin:0 auto}p{padding:12px}</style></head><body>
+<p>Segure o dedo na imagem e toque em "Salvar imagem". Depois poste nos Stories.</p>
+<img id="out" alt="Story Ribeirão Informa">
+<script>
+(async()=>{const L=await createImageBitmap(await (await fetch('https://cdn.creativeclaw.co/u/c6e73e30/images/428bec61-c6b0-4db6-aea5-ef5ef96f2395.png')).blob());
+const B=await createImageBitmap(await (await fetch('s1.jpg')).blob());
+const c=document.createElement('canvas');c.width=1080;c.height=1920;const g=c.getContext('2d');g.drawImage(B,0,0);const s=540,p=22;g.drawImage(L,270+p,330+p,s-2*p,s-2*p);
+document.getElementById('out').src=c.toDataURL('image/jpeg',0.92);})();
+</script></body></html>
