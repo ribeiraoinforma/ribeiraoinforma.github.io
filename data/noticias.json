@@ -27,7 +27,13 @@
       ],
       "fonte": "ACidade ON",
       "link": "",
-      "imagem": "midia/2026-11-26/feira-de-natal-da-ceagesp-tera-chegada-do-papai-noel.jpg"
+      "imagem": "midia/2026-11-26/feira-de-natal-da-ceagesp-tera-chegada-do-papai-noel.jpg",
+      "evento": {
+        "data": "2026-12-04",
+        "fim": "2026-12-05",
+        "hora": "sex 6h às 16h, sáb 8h às 15h",
+        "local": "Polo Ribeirão Preto da Ceagesp (Rod. Anhanguera, km 322)"
+      }
     },
     {
       "id": "2026-11-26-concerto-gratuito-no-theatro-pedro-ii-nesta-terca-1o",
@@ -41,7 +47,12 @@
       ],
       "fonte": "ACidade ON",
       "link": "",
-      "imagem": "midia/2026-11-26/concerto-gratuito-no-theatro-pedro-ii-nesta-terca-1o.jpg"
+      "imagem": "midia/2026-11-26/concerto-gratuito-no-theatro-pedro-ii-nesta-terca-1o.jpg",
+      "evento": {
+        "data": "2026-12-01",
+        "hora": "20h",
+        "local": "Theatro Pedro II"
+      }
     }
   ]
 }

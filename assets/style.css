@@ -463,3 +463,73 @@ h2.secao::before {
     height: 34px;
   }
 }
+
+/* ===== v2: seções, capa com lateral, agenda ===== */
+.secoes{background:#fff;border-bottom:1px solid var(--linha);position:sticky;top:0;z-index:5}
+.secoes .wrap{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.secoes .wrap::-webkit-scrollbar{display:none}
+.secoes a{flex:none;padding:13px 12px;font:800 14px Archivo,sans-serif;letter-spacing:.3px;text-transform:uppercase;text-decoration:none;color:var(--tinta);border-bottom:3px solid transparent}
+.secoes a:hover{color:var(--azul-claro)}
+.secoes a[aria-current=page]{border-bottom-color:var(--ouro);color:var(--azul)}
+.hoje a{color:#fff}
+
+.capa{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:28px;margin:24px 0 32px;align-items:start}
+.capa .destaque{margin:0 0 28px}
+.lateral{display:flex;flex-direction:column;gap:18px;position:sticky;top:64px}
+.box{background:#fff;border:1px solid var(--linha);padding:18px}
+.box-t{font:900 15px Archivo,sans-serif;text-transform:uppercase;letter-spacing:.5px;margin-bottom:12px;padding-bottom:10px;border-bottom:3px solid var(--ouro)}
+.mini{font-size:14px;color:var(--cinza)}
+.credito{font-size:11px;color:#98a1b3;margin-top:6px}
+.mais{display:inline-block;margin-top:10px;font-weight:800;font-size:14px;color:var(--azul);text-decoration:none}
+.agora{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.agora .ic{font-size:34px}
+.agora b{font:900 40px Archivo,sans-serif;color:var(--azul)}
+.agora span:last-child{font-weight:600;color:#3a4660}
+.fones{list-style:none;display:grid;gap:6px}
+.fones a{display:flex;gap:10px;align-items:center;text-decoration:none;font-size:15px}
+.fones b{display:inline-block;min-width:46px;text-align:center;background:var(--azul);color:#fff;font:900 15px Archivo,sans-serif;padding:3px 0;border-radius:4px}
+
+.evento{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--linha);text-decoration:none}
+.evento:last-of-type{border-bottom:0}
+.evento .dia{flex:none;align-self:flex-start;width:52px;text-align:center;background:var(--azul);color:#fff;padding:6px 0;border-radius:6px;line-height:1.1}
+.evento .dia b{display:block;font:900 22px Archivo,sans-serif}
+.evento .dia span{font-size:12px;font-weight:700;text-transform:uppercase;color:var(--ouro)}
+.evento h4{font:800 15px Archivo,sans-serif;line-height:1.25}
+.evento p{font-size:13px;color:var(--cinza);margin-top:3px}
+.evento:hover h4{color:var(--azul-claro)}
+.agenda-full{margin:0 0 32px}
+.agenda-full .evento .dia{width:64px}
+.agenda-full .evento h4{font-size:18px}
+
+.lista{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-bottom:8px}
+.item{background:#fff;border:1px solid var(--linha);padding:16px;text-decoration:none;display:flex;flex-direction:column;gap:8px}
+.item h3{font:800 18px/1.25 Archivo,sans-serif}
+.item:hover h3{color:var(--azul-claro)}
+.item .tag{align-self:flex-start}
+
+.bloco{margin-bottom:12px}
+.bloco-t{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.bloco-t .mais{margin:0 0 16px}
+.grade{grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+
+.cab-secao{margin:26px 0 20px;padding:24px;background:var(--azul);color:#fff;border-bottom:5px solid var(--ouro)}
+.cab-secao h1{font:900 clamp(28px,5vw,40px) Archivo,sans-serif;line-height:1.1}
+.cab-secao p{color:#c9d6ea;margin-top:6px}
+
+.sem-img{aspect-ratio:4/5;background:linear-gradient(160deg,var(--azul),var(--azul-escuro));color:#fff;padding:22px;display:flex;flex-direction:column;justify-content:center;gap:12px}
+.sem-img .tag{align-self:flex-start}
+.sem-img b{font:900 24px/1.12 Archivo,sans-serif}
+.destaque .sem-img b{font-size:32px}
+.caixa-evento{border-left:5px solid var(--azul);background:#eef2f8;padding:14px 18px;margin:22px 0 0;font-size:16px;line-height:1.7}
+
+.rodape .mapa{display:flex;flex-wrap:wrap;gap:6px 16px}
+.rodape .mapa a{color:#c9d6ea;text-decoration:none;font-weight:600}
+
+@media (max-width:900px){
+  .capa{grid-template-columns:1fr}
+  .lateral{position:static}
+}
+@media (max-width:560px){
+  .lista{grid-template-columns:1fr}
+  .secoes a{padding:12px 9px;font-size:13px}
+}

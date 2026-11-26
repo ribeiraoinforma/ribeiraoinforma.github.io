@@ -1,23 +1,42 @@
 #!/usr/bin/env python3
 """Adiciona uma notícia do radar ao site do Ribeirão Informa.
 
-Uso:
-  python3 scripts/adicionar_noticia.py <legenda.txt> <card.png> --editoria CULTURA [--data 2026-11-26] [--link URL_DA_MATERIA]
+Uso (rodar da raiz do site):
+  python3 scripts/adicionar_noticia.py <legenda.txt> [card.png] --editoria ESPORTE
+      [--data 2026-11-26] [--link URL_DA_MATERIA] [--destaque]
+      [--evento-data 2026-12-04 [--evento-fim 2026-12-05] [--evento-hora "20h"] [--evento-local "Theatro Pedro II"]]
+
+Editorias e a seção do site onde cada uma aparece:
+  Cidade ....... CIDADE, TRÂNSITO, TEMPO, SEGURANÇA, POLÍTICA, EDUCAÇÃO
+  Serviço ...... SERVIÇO, CONCURSOS, EMPREGO, UTILIDADE
+  Esporte ...... ESPORTE, FUTEBOL
+  Lazer ........ LAZER, GASTRONOMIA, PASSEIO, EVENTO
+  Cultura ...... CULTURA, SHOW, TEATRO, MÚSICA, CINEMA
+  Bem-estar .... BEM-ESTAR, SAÚDE, VIDA
+  Economia ..... ECONOMIA, NEGÓCIOS
+  (qualquer outra editoria cai em Cidade)
 
 Lê a legenda no formato do manual de redação (1ª linha = manchete,
-parágrafos, "📰 Fonte: <veículo>"), converte o card para JPG leve em
-midia/<data>/ e grava a notícia no topo de data/noticias.json.
-Rodar da raiz do site. Se a notícia (mesmo id) já existir, ela é atualizada.
+parágrafos, "📰 Fonte: <veículo>"). Se houver card, converte para JPG leve em
+midia/<data>/. Grava a notícia em data/noticias.json (mais nova primeiro).
+Com --evento-data a notícia entra também na Agenda até a data do evento passar.
+Se a notícia (mesmo id) já existir, ela é atualizada.
 """
 
 import argparse, json, re, sys, unicodedata
-from datetime import date
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 from PIL import Image
 
 RAIZ = Path(__file__).resolve().parent.parent
-EMOJI = re.compile(r"[\U0001F000-\U0001FAFF☀-➿️‍]+")
+EMOJI = re.compile("[\U0001f000-\U0001faff☀-➿️‍]+")
+LIMITE = 500  # notícias guardadas no site (as mais antigas saem)
+
+
+def hoje_sp():
+    return datetime.now(ZoneInfo("America/Sao_Paulo")).date().isoformat()
 
 
 def slug(txt):
@@ -42,10 +61,17 @@ def ler_legenda(caminho):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("legenda")
-    ap.add_argument("card")
+    ap.add_argument("card", nargs="?", help="PNG/JPG do card (opcional)")
     ap.add_argument("--editoria", required=True)
-    ap.add_argument("--data", default=date.today().isoformat())
+    ap.add_argument("--data", default=hoje_sp())
     ap.add_argument("--link", default="", help="URL da matéria original (opcional)")
+    ap.add_argument(
+        "--destaque", action="store_true", help="manchete principal da capa no dia"
+    )
+    ap.add_argument("--evento-data", help="AAAA-MM-DD: entra na Agenda")
+    ap.add_argument("--evento-fim", help="AAAA-MM-DD, se durar mais de um dia")
+    ap.add_argument("--evento-hora", default="")
+    ap.add_argument("--evento-local", default="")
     a = ap.parse_args()
 
     titulo, paragrafos, fonte = ler_legenda(a.legenda)
@@ -53,12 +79,35 @@ def main():
         sys.exit("Legenda sem 'Fonte:'. Regra do jornal: não publica sem fonte.")
 
     nid = f"{a.data}-{slug(titulo)}"
-    pasta = RAIZ / "midia" / a.data
-    pasta.mkdir(parents=True, exist_ok=True)
-    img_rel = f"midia/{a.data}/{slug(titulo)}.jpg"
-    im = Image.open(a.card).convert("RGB")
-    im.thumbnail((1080, 1350))
-    im.save(RAIZ / img_rel, "JPEG", quality=82, optimize=True, progressive=True)
+    noticia = {
+        "id": nid,
+        "data": a.data,
+        "editoria": a.editoria.strip().upper(),
+        "titulo": titulo,
+        "resumo": paragrafos[0] if paragrafos else "",
+        "texto": paragrafos,
+        "fonte": fonte,
+        "link": a.link,
+        "imagem": "",
+    }
+    if a.card:
+        (RAIZ / "midia" / a.data).mkdir(parents=True, exist_ok=True)
+        img_rel = f"midia/{a.data}/{slug(titulo)}.jpg"
+        im = Image.open(a.card).convert("RGB")
+        im.thumbnail((1080, 1350))
+        im.save(RAIZ / img_rel, "JPEG", quality=82, optimize=True, progressive=True)
+        noticia["imagem"] = img_rel
+    if a.destaque:
+        noticia["destaque"] = True
+    if a.evento_data:
+        ev = {"data": a.evento_data}
+        if a.evento_fim:
+            ev["fim"] = a.evento_fim
+        if a.evento_hora:
+            ev["hora"] = a.evento_hora
+        if a.evento_local:
+            ev["local"] = a.evento_local
+        noticia["evento"] = ev
 
     arq = RAIZ / "data" / "noticias.json"
     base = (
@@ -67,21 +116,9 @@ def main():
         else {"noticias": []}
     )
     base["noticias"] = [n for n in base["noticias"] if n["id"] != nid]
-    base["noticias"].insert(
-        0,
-        {
-            "id": nid,
-            "data": a.data,
-            "editoria": a.editoria.upper(),
-            "titulo": titulo,
-            "resumo": paragrafos[0] if paragrafos else "",
-            "texto": paragrafos,
-            "fonte": fonte,
-            "link": a.link,
-            "imagem": img_rel,
-        },
-    )
+    base["noticias"].insert(0, noticia)
     base["noticias"].sort(key=lambda n: n["data"], reverse=True)
+    base["noticias"] = base["noticias"][:LIMITE]
     arq.write_text(
         json.dumps(base, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
