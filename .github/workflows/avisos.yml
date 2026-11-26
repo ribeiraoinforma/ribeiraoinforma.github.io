@@ -3,6 +3,17 @@ on:
   push:
     branches: [main]
     paths: [data/noticias.json]
+  # aviso avulso, pela aba Actions > Avisos no celular > Run workflow
+  workflow_dispatch:
+    inputs:
+      titulo:
+        description: "Título do aviso"
+        required: true
+        default: "Ribeirão Informa: avisos ligados! 🔔"
+      texto:
+        description: "Texto"
+        required: false
+        default: "Agora você recebe as notícias importantes de Ribeirão na hora."
 permissions:
   contents: read
 concurrency:
@@ -16,8 +27,17 @@ jobs:
         with:
           fetch-depth: 2
       # espera o GitHub Pages publicar a notícia antes de avisar (o link precisa abrir)
-      - run: sleep 90
-      - run: python3 scripts/avisar_novas.py
+      - if: github.event_name == 'push'
+        run: sleep 90
+      - if: github.event_name == 'push'
+        run: python3 scripts/avisar_novas.py
         env:
+          ONESIGNAL_APP_ID: 7140f1ac-f0cf-4cee-a53d-76f94e300c79
+          ONESIGNAL_API_KEY: ${{ secrets.ONESIGNAL_API_KEY }}
+      - if: github.event_name == 'workflow_dispatch'
+        run: python3 scripts/notificar.py --titulo "$TITULO" --texto "$TEXTO"
+        env:
+          TITULO: ${{ inputs.titulo }}
+          TEXTO: ${{ inputs.texto }}
           ONESIGNAL_APP_ID: 7140f1ac-f0cf-4cee-a53d-76f94e300c79
           ONESIGNAL_API_KEY: ${{ secrets.ONESIGNAL_API_KEY }}
