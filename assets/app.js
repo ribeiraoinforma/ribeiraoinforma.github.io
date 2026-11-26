@@ -787,13 +787,10 @@ function explicarIphone() {
   el.setAttribute("aria-modal", "true");
   el.innerHTML = `<div class="guia-caixa"><button class="fechar" aria-label="Fechar">×</button>
     <img src="icones/icone-192.png" alt="" width="64" height="64" class="guia-icone">
-    <h2>🔔 Avisos no iPhone</h2>
-    <p class="sub">No iPhone, os avisos só funcionam <b>com o app instalado</b>. É rápido:</p>
-    <ol class="passos">
-      ${passo(1, `Instale o app (toque no botão abaixo e siga os 3 toques).`)}
-      ${passo(2, `Abra o <b>Ribeirão Informa</b> pelo ícone na sua tela.`)}
-      ${passo(3, `Toque em <b>🔔 Ativar avisos</b> e depois em <b>Permitir</b>.`)}
-    </ol>
+    <h2>Você está no Safari</h2>
+    <p class="sub">No iPhone, os avisos <b>só ligam dentro do app</b>, não aqui no navegador.</p>
+    <div class="ja-instalou"><b>Já instalou o app?</b><br>Saia do Safari e toque no ícone <img src="icones/icone-192.png" alt="" width="28" height="28"> <b>Ribeirão Informa</b> na tela do celular. Lá dentro aparece sozinha a pergunta <b>"Quer receber as notícias?"</b>: toque em <b>Sim</b> e depois em <b>Permitir</b>.</div>
+    <p class="sub"><b>Ainda não instalou?</b> Toque no botão abaixo.</p>
     <button class="btn" id="ir-instalar">📲 Instalar o app</button>
     <button class="btn claro" id="guia-ok">Entendi</button></div>`;
   document.body.appendChild(el);
@@ -978,7 +975,7 @@ setTimeout(() => {
 }, 750);
 
 // número da versão no rodapé (para saber se o celular está com a versão nova)
-const VERSAO_SITE = "7";
+const VERSAO_SITE = "8";
 setTimeout(() => {
   const r = document.querySelector(".rodape .wrap");
   if (r && !document.querySelector(".versao")) {
