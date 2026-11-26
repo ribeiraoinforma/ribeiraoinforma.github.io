@@ -10,12 +10,13 @@ const REDES = {
 const SELO =
   "https://cdn.creativeclaw.co/u/c6e73e30/images/428bec61-c6b0-4db6-aea5-ef5ef96f2395.png";
 
-// Seções do site. Cada notícia cai na seção que lista a editoria dela.
-// Editoria desconhecida cai em "Cidade".
+// Seções do site, com a mesma cor das artes das redes.
+// Cada notícia cai na seção que lista a editoria dela; editoria desconhecida cai em "Cidade".
 const SECOES = [
   {
     slug: "cidade",
     nome: "Cidade",
+    cor: "#0b2a5b",
     desc: "O dia a dia de Ribeirão: bairros, prefeitura, trânsito, tempo e segurança.",
     editorias: [
       "CIDADE",
@@ -24,48 +25,58 @@ const SECOES = [
       "SEGURANÇA",
       "POLÍTICA",
       "EDUCAÇÃO",
+      "URGENTE",
     ],
   },
   {
     slug: "servico",
     nome: "Serviço",
+    cor: "#0f5e57",
     desc: "Prazos, vacinação, concursos, vagas e tudo o que é útil saber.",
     editorias: ["SERVIÇO", "CONCURSOS", "EMPREGO", "UTILIDADE"],
   },
   {
     slug: "esporte",
     nome: "Esporte",
+    cor: "#14703a",
     desc: "Botafogo-SP, Comercial, corridas e o esporte da cidade.",
     editorias: ["ESPORTE", "FUTEBOL"],
   },
   {
     slug: "lazer",
     nome: "Lazer",
+    cor: "#d9480f",
     desc: "Passeios, feiras, parques, gastronomia e o que fazer no fim de semana.",
     editorias: ["LAZER", "GASTRONOMIA", "PASSEIO", "EVENTO", "EVENTOS"],
   },
   {
     slug: "cultura",
     nome: "Cultura",
+    cor: "#5f2b8f",
     desc: "Shows, teatro, cinema, exposições e a agenda cultural.",
     editorias: ["CULTURA", "SHOW", "TEATRO", "MÚSICA", "CINEMA"],
   },
   {
     slug: "bem-estar",
     nome: "Bem-estar",
+    cor: "#0b7285",
     desc: "Saúde, qualidade de vida e cuidados para o dia a dia.",
     editorias: ["BEM-ESTAR", "SAÚDE", "VIDA"],
   },
   {
     slug: "economia",
     nome: "Economia",
+    cor: "#212529",
     desc: "Empregos, empresas, preços e o bolso de quem vive em Ribeirão.",
     editorias: ["ECONOMIA", "NEGÓCIOS"],
   },
 ];
+const URGENTE = "#b3122e";
 const secaoDe = (n) =>
   SECOES.find((s) => s.editorias.includes((n.editoria || "").toUpperCase())) ||
   SECOES[0];
+const corDe = (n) =>
+  (n.editoria || "").toUpperCase() === "URGENTE" ? URGENTE : secaoDe(n).cor;
 
 const TELEFONES = [
   ["190", "Polícia Militar"],
@@ -136,8 +147,8 @@ function montarTopo(ativa) {
     year: "numeric",
     timeZone: "America/Sao_Paulo",
   });
-  const link = (href, nome, slug) =>
-    `<a href="${href}"${slug === ativa ? ' aria-current="page"' : ""}>${nome}</a>`;
+  const link = (href, nome, slug, cor) =>
+    `<a href="${href}" style="--cor:${cor || "#0b2a5b"}"${slug === ativa ? ' aria-current="page"' : ""}>${nome}</a>`;
   $("#topo").innerHTML = `
   <header class="topo"><div class="wrap">
     <a class="marca" href="./">
@@ -148,8 +159,8 @@ function montarTopo(ativa) {
   </div></header>
   <nav class="secoes" aria-label="Seções"><div class="wrap">
     ${link("./", "Início", "inicio")}
-    ${SECOES.map((s) => link(`./?secao=${s.slug}`, s.nome, s.slug)).join("")}
-    ${link("agenda.html", "Agenda", "agenda")}
+    ${SECOES.map((s) => link(`./?secao=${s.slug}`, s.nome, s.slug, s.cor)).join("")}
+    ${link("agenda.html", "Agenda", "agenda", "#d9480f")}
   </div></nav>
   <div class="hoje"><div class="wrap"><span>${hoje}</span><span><b>Notícia confirmada</b>, sempre com a fonte · <a href="sobre.html">Quem somos</a></span></div></div>`;
   $("#rodape").innerHTML = `
@@ -168,23 +179,42 @@ async function carregar() {
   return (await r.json()).noticias || [];
 }
 
+// ---------- peças ----------
 const linkMateria = (n) => `noticia.html?id=${encodeURIComponent(n.id)}`;
-const capaHTML = (n, lazy = true) =>
-  n.imagem
-    ? `<img src="${esc(n.imagem)}" alt="" ${lazy ? 'loading="lazy"' : ""} width="1080" height="1350">`
-    : `<div class="sem-img"><span class="tag">${esc(n.editoria)}</span><b>${esc(n.titulo)}</b></div>`;
-const metaHTML = (n) =>
-  `<div class="meta">${dataBR(n.data)} · Fonte: <span class="fonte">${esc(n.fonte)}</span></div>`;
+const tagHTML = (n) =>
+  `<span class="tag" style="--cor:${corDe(n)}">${esc(n.editoria)}</span>`;
+const metaHTML = (n, fonte) =>
+  `<div class="meta">${dataBR(n.data)} · Fonte: <span class="fonte">${fonte || esc(n.fonte)}</span></div>`;
+
+// Miniatura horizontal: foto se houver; senão um quadro na cor da seção.
+function thumbHTML(n, lazy = true) {
+  if (n.foto)
+    return `<div class="thumb"><img src="${esc(n.foto)}" alt="" ${lazy ? 'loading="lazy"' : ""} width="1200" height="675"></div>`;
+  const s = secaoDe(n);
+  return `<div class="thumb bloco-cor" style="--cor:${corDe(n)}"><span>${(n.editoria || "").toUpperCase() === "URGENTE" ? "Urgente" : esc(s.nome)}</span></div>`;
+}
 
 function cardHTML(n) {
-  return `<a class="card" href="${linkMateria(n)}">${capaHTML(n)}
-    <div class="corpo"><span><span class="tag">${esc(n.editoria)}</span></span>
-    <h3>${esc(n.titulo)}</h3>${metaHTML(n)}</div></a>`;
+  return `<a class="card" href="${linkMateria(n)}">${thumbHTML(n)}
+    <div class="corpo">${tagHTML(n)}<h3>${esc(n.titulo)}</h3>${metaHTML(n)}</div></a>`;
 }
 
 function itemHTML(n) {
-  return `<a class="item" href="${linkMateria(n)}"><span class="tag">${esc(n.editoria)}</span>
-    <h3>${esc(n.titulo)}</h3>${metaHTML(n)}</a>`;
+  return `<a class="item" href="${linkMateria(n)}" style="--cor:${corDe(n)}">${thumbHTML(n)}
+    <div>${tagHTML(n)}<h3>${esc(n.titulo)}</h3>${metaHTML(n)}</div></a>`;
+}
+
+function destaqueHTML(n) {
+  if (n.foto) {
+    return `<a class="destaque foto" href="${linkMateria(n)}">
+      <img src="${esc(n.foto)}" alt="" width="1200" height="675">
+      <div class="sobre">${tagHTML(n)}<h1>${esc(n.titulo)}</h1><p>${esc(n.resumo)}</p>${metaHTML(n)}</div></a>`;
+  }
+  const arte = n.imagem
+    ? `<img src="${esc(n.imagem)}" alt="" width="1080" height="1350">`
+    : `<div class="sem-img" style="--cor:${corDe(n)}">${tagHTML(n)}<b>${esc(n.titulo)}</b></div>`;
+  return `<a class="destaque" href="${linkMateria(n)}" style="--cor:${corDe(n)}">${arte}
+    <div>${tagHTML(n)}<h1>${esc(n.titulo)}</h1><p>${esc(n.resumo)}</p>${metaHTML(n)}</div></a>`;
 }
 
 function sigaHTML() {
@@ -205,7 +235,7 @@ function eventoHTML(n) {
   const e = n.evento,
     [, m, d] = e.data.split("-");
   const fim = e.fim && e.fim !== e.data ? ` a ${dataBR(e.fim)}` : "";
-  return `<a class="evento" href="${linkMateria(n)}">
+  return `<a class="evento" href="${linkMateria(n)}" style="--cor:${corDe(n)}">
     <div class="dia"><b>${+d}</b><span>${MESES[+m - 1]}</span></div>
     <div><h4>${esc(n.titulo)}</h4><p>${dataBR(e.data)}${fim}${e.hora ? " · " + esc(e.hora) : ""}${e.local ? " · " + esc(e.local) : ""}</p></div></a>`;
 }
@@ -237,9 +267,8 @@ const CLIMA = {
   96: ["⛈️", "Tempestade"],
   99: ["⛈️", "Tempestade"],
 };
-function tempoBox() {
-  return `<section class="box tempo" id="tempo"><h2 class="box-t">Tempo agora em Ribeirão</h2><p class="mini">Carregando…</p></section>`;
-}
+const tempoBox = () =>
+  `<section class="box tempo" id="tempo"><h2 class="box-t">Tempo agora em Ribeirão</h2><p class="mini">Carregando…</p></section>`;
 async function carregarTempo() {
   const el = $("#tempo");
   if (!el) return;
@@ -257,16 +286,14 @@ async function carregarTempo() {
   }
 }
 
-function telefonesBox() {
-  return `<section class="box"><h2 class="box-t">Telefones úteis</h2><ul class="fones">
+const telefonesBox =
+  () => `<section class="box"><h2 class="box-t">Telefones úteis</h2><ul class="fones">
     ${TELEFONES.map(([n, s]) => `<li><a href="tel:${n}"><b>${n}</b> ${s}</a></li>`).join("")}</ul></section>`;
-}
 
 // ---------- páginas ----------
 async function capa() {
   const lista = await carregar();
-  const slug = params.get("secao");
-  const secao = SECOES.find((s) => s.slug === slug);
+  const secao = SECOES.find((s) => s.slug === params.get("secao"));
   montarTopo(secao ? secao.slug : "inicio");
   if (secao) return paginaSecao(lista, secao);
 
@@ -278,22 +305,26 @@ async function capa() {
   const d =
     lista.find((n) => n.destaque && n.data === lista[0].data) || lista[0];
   const resto = lista.filter((n) => n !== d);
+  const dupla = resto.slice(0, 2),
+    ultimas = resto.slice(2, 8),
+    depois = resto.slice(8);
+
+  // blocos por seção: 1 grande + até 3 em lista, cada um na cor da seção
   const blocos = SECOES.map((s) => {
-    // não repete o que já está em "Últimas notícias"
-    const ns = resto
-      .slice(6)
-      .filter((n) => secaoDe(n) === s)
-      .slice(0, 4);
+    const ns = depois.filter((n) => secaoDe(n) === s).slice(0, 4);
     if (!ns.length) return "";
-    return `<section class="bloco"><div class="bloco-t"><h2 class="secao">${s.nome}</h2><a class="mais" href="./?secao=${s.slug}">Ver tudo →</a></div>
-      <div class="grade">${ns.map(cardHTML).join("")}</div></section>`;
+    const [p, ...r] = ns;
+    return `<section class="bloco" style="--cor:${s.cor}">
+      <div class="bloco-t"><h2>${s.nome}</h2><a href="./?secao=${s.slug}">Ver tudo →</a></div>
+      <div class="bloco-c">${cardHTML(p)}<div class="lista-v">${r.map(itemHTML).join("")}</div></div></section>`;
   }).join("");
+
   $("#conteudo").innerHTML = `
     <div class="capa">
       <div>
-        <a class="destaque" href="${linkMateria(d)}">${capaHTML(d, false)}
-          <div><span class="tag">${esc(d.editoria)}</span><h1>${esc(d.titulo)}</h1><p>${esc(d.resumo)}</p>${metaHTML(d)}</div></a>
-        ${resto.length ? `<h2 class="secao">Últimas notícias</h2><div class="lista">${resto.slice(0, 6).map(itemHTML).join("")}</div>` : ""}
+        ${destaqueHTML(d)}
+        ${dupla.length ? `<div class="dupla">${dupla.map(cardHTML).join("")}</div>` : ""}
+        ${ultimas.length ? `<h2 class="secao">Últimas notícias</h2><div class="lista-v">${ultimas.map(itemHTML).join("")}</div>` : ""}
       </div>
       <aside class="lateral">${tempoBox()}${agendaBox(lista)}${telefonesBox()}</aside>
     </div>
@@ -306,7 +337,7 @@ function paginaSecao(lista, s) {
   document.title = `${s.nome} | Ribeirão Informa`;
   const ns = lista.filter((n) => secaoDe(n) === s);
   $("#conteudo").innerHTML = `
-    <header class="cab-secao"><h1>${s.nome}</h1><p>${s.desc}</p></header>
+    <header class="cab-secao" style="--cor:${s.cor}"><h1>${s.nome}</h1><p>${s.desc}</p></header>
     ${
       ns.length
         ? `<div class="grade">${ns.slice(0, 60).map(cardHTML).join("")}</div>`
@@ -320,7 +351,7 @@ async function agenda() {
   const lista = await carregar();
   const ev = eventos(lista);
   $("#conteudo").innerHTML = `
-    <header class="cab-secao"><h1>Agenda</h1><p>Shows, feiras, eventos e programação gratuita em Ribeirão Preto, sempre com a fonte.</p></header>
+    <header class="cab-secao" style="--cor:#d9480f"><h1>Agenda</h1><p>Shows, feiras, eventos e programação gratuita em Ribeirão Preto, sempre com a fonte.</p></header>
     <section class="box agenda-full">${ev.length ? ev.map(eventoHTML).join("") : `<p class="vazio">Nenhum evento marcado no momento.</p>`}</section>
     ${sigaHTML()}`;
 }
@@ -350,13 +381,18 @@ async function materia() {
     .filter((x) => x.id !== n.id && secaoDe(x) === s)
     .slice(0, 3);
   const e = n.evento;
+  const midia = n.foto
+    ? `<figure class="foto-mat"><img src="${esc(n.foto)}" alt="" width="1200" height="675">${n.credito_foto ? `<figcaption>Foto: ${esc(n.credito_foto)}</figcaption>` : ""}</figure>`
+    : n.imagem
+      ? `<img class="card-mat" src="${esc(n.imagem)}" alt="Card da notícia: ${esc(n.titulo)}" width="1080" height="1350">`
+      : "";
   $("#conteudo").innerHTML = `
     <a class="voltar" href="./?secao=${s.slug}">← ${s.nome}</a>
-    <article class="materia">
-      <span class="tag">${esc(n.editoria)}</span>
+    <article class="materia" style="--cor:${corDe(n)}">
+      ${tagHTML(n)}
       <h1>${esc(n.titulo)}</h1>
-      ${metaHTML(n).replace(esc(n.fonte) + "</span>", fonte + "</span>")}
-      ${n.imagem ? `<img src="${esc(n.imagem)}" alt="Card da notícia: ${esc(n.titulo)}" width="1080" height="1350">` : ""}
+      ${metaHTML(n, fonte)}
+      ${midia}
       <p class="linha-fina">${esc(primeiro)}</p>
       <div class="texto">${demais.map((p) => `<p>${esc(p)}</p>`).join("")}</div>
       ${e ? `<div class="caixa-evento"><b>📅 Anote:</b> ${dataBR(e.data)}${e.fim && e.fim !== e.data ? " a " + dataBR(e.fim) : ""}${e.hora ? " · " + esc(e.hora) : ""}${e.local ? "<br>📍 " + esc(e.local) : ""}</div>` : ""}

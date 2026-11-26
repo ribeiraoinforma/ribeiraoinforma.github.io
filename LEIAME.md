@@ -24,7 +24,12 @@ Opções:
 - `--destaque` vira a manchete da capa no dia.
 - `--link URL` link da matéria original.
 - `--evento-data AAAA-MM-DD` (+ `--evento-fim`, `--evento-hora "20h"`, `--evento-local "Theatro Pedro II"`): entra na Agenda até a data passar. Usar só com data, hora e local confirmados na fonte.
-- O card é opcional: sem card a notícia aparece com um quadro azul com o título.
+- `--foto foto.jpg --credito-foto "Unsplash/Fulano"`: foto horizontal para a capa, as listas e o topo da matéria. Só foto de uso livre ou enviada pela rotina, nunca copiada de jornal. Sem foto, a notícia aparece com um quadro na cor da seção.
+- O card é opcional (aparece na manchete e na matéria quando não há foto).
+- Editoria URGENTE aparece em vermelho (dentro de Cidade).
+
+Cores das seções (iguais às das redes): Cidade #0b2a5b, Serviço #0f5e57, Esporte #14703a,
+Lazer #d9480f, Cultura #5f2b8f, Bem-estar #0b7285, Economia #212529, Urgente #b3122e.
 
 Depois, commit com autor anônimo e push:
 

@@ -5,6 +5,7 @@ Uso (rodar da raiz do site):
   python3 scripts/adicionar_noticia.py <legenda.txt> [card.png] --editoria ESPORTE
       [--data 2026-11-26] [--link URL_DA_MATERIA] [--destaque]
       [--evento-data 2026-12-04 [--evento-fim 2026-12-05] [--evento-hora "20h"] [--evento-local "Theatro Pedro II"]]
+      [--foto foto.jpg --credito-foto "Unsplash/Fulano"]
 
 Editorias e a seção do site onde cada uma aparece:
   Cidade ....... CIDADE, TRÂNSITO, TEMPO, SEGURANÇA, POLÍTICA, EDUCAÇÃO
@@ -72,6 +73,14 @@ def main():
     ap.add_argument("--evento-fim", help="AAAA-MM-DD, se durar mais de um dia")
     ap.add_argument("--evento-hora", default="")
     ap.add_argument("--evento-local", default="")
+    ap.add_argument(
+        "--foto", help="foto de uso livre (horizontal) para capa e lista do site"
+    )
+    ap.add_argument(
+        "--credito-foto",
+        default="",
+        help='ex.: "Unsplash/Fulano" ou "Prefeitura de RP (divulgação)"',
+    )
     a = ap.parse_args()
 
     titulo, paragrafos, fonte = ler_legenda(a.legenda)
@@ -97,6 +106,18 @@ def main():
         im.thumbnail((1080, 1350))
         im.save(RAIZ / img_rel, "JPEG", quality=82, optimize=True, progressive=True)
         noticia["imagem"] = img_rel
+    if a.foto:
+        if not a.credito_foto:
+            sys.exit(
+                "Foto sem crédito. Use --credito-foto (só fotos de uso livre ou enviadas pela rotina)."
+            )
+        (RAIZ / "midia" / a.data).mkdir(parents=True, exist_ok=True)
+        foto_rel = f"midia/{a.data}/{slug(titulo)}-foto.jpg"
+        im = Image.open(a.foto).convert("RGB")
+        im.thumbnail((1200, 1200))
+        im.save(RAIZ / foto_rel, "JPEG", quality=78, optimize=True, progressive=True)
+        noticia["foto"] = foto_rel
+        noticia["credito_foto"] = a.credito_foto
     if a.destaque:
         noticia["destaque"] = True
     if a.evento_data:
