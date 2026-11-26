@@ -628,3 +628,20 @@ h2.secao::before {
 #instalar .ic-share{display:inline-block;border:1.5px solid currentColor;border-radius:4px;padding:0 4px;font-size:12px}
 @keyframes sobe{from{transform:translateY(20px);opacity:0}to{transform:none;opacity:1}}
 @media (display-mode: standalone){ .topo{padding-top:env(safe-area-inset-top)} }
+
+/* ===== canal do WhatsApp ===== */
+.zap-faixa{display:flex;align-items:center;gap:14px;background:#e7f8ee;border:1px solid #bfe8cf;border-left:5px solid #25D366;padding:14px 16px;margin:0 0 26px;text-decoration:none;color:#0b3b22;border-radius:6px}
+.zap-faixa svg{width:34px;height:34px;flex:none;fill:#25D366}
+.zap-faixa span{display:flex;flex-direction:column;gap:2px;flex:1;min-width:0}
+.zap-faixa b{font:800 17px/1.25 Archivo,sans-serif}
+.zap-faixa small{font-size:14px;color:#2d5a41}
+.zap-faixa em{font-style:normal;background:#25D366;color:#063b1d;font-weight:800;padding:9px 16px;border-radius:999px;flex:none}
+.zap-faixa:hover{background:#dbf4e5}
+.materia .zap-faixa{margin:22px 0 0}
+.btn.zap svg{width:18px;height:18px;fill:currentColor}
+.siga-btns{display:flex;gap:10px;flex-wrap:wrap}
+.redes a[aria-label=whatsapp]{background:#25D366;color:#fff}
+@media (max-width:560px){
+  .zap-faixa{flex-wrap:wrap}
+  .zap-faixa em{width:100%;text-align:center}
+}

@@ -1,14 +1,14 @@
 // Ribeirão Informa: monta topo, capa, seções, agenda e matéria a partir de data/noticias.json
 // Para ligar uma rede nova, basta preencher o link dela aqui (vazio = escondida).
 const REDES = {
+  whatsapp: "https://whatsapp.com/channel/0029VbE9Ox5KwqSR7FtcE341",
   instagram: "https://www.instagram.com/ribeiraoinforma/",
   facebook: "",
   tiktok: "",
   threads: "",
   kwai: "",
 };
-const SELO =
-  "icones/selo-96.png";
+const SELO = "icones/selo-96.png";
 
 // Seções do site, com a mesma cor das artes das redes.
 // Cada notícia cai na seção que lista a editoria dela; editoria desconhecida cai em "Cidade".
@@ -86,7 +86,10 @@ const TELEFONES = [
   ["181", "Disque Denúncia (SP)"],
 ];
 
+const ZAP_ICONE =
+  '<path d="M12 .5A11.4 11.4 0 002.2 17.7L.6 23.5l6-1.6A11.4 11.4 0 1012 .5zm0 20.8a9.4 9.4 0 01-4.8-1.3l-.3-.2-3.6.9 1-3.5-.2-.4A9.4 9.4 0 1112 21.3zm5.2-7c-.3-.1-1.7-.8-2-.9s-.5-.1-.7.1-.8.9-.9 1.1-.3.2-.6.1a7.7 7.7 0 01-3.8-3.3c-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 00-.8.4 3.4 3.4 0 00-1 2.5 5.9 5.9 0 001.2 3.1 13.4 13.4 0 005.2 4.6c1.9.8 2.7.9 3.6.7a3.1 3.1 0 002-1.4 2.5 2.5 0 00.2-1.4c-.1-.1-.3-.2-.6-.3z"/>';
 const ICONES = {
+  whatsapp: ZAP_ICONE,
   instagram:
     '<path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7C8.3 24 8.7 24 12 24s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 100 12.4 6.2 6.2 0 000-12.4zM12 16a4 4 0 110-8 4 4 0 010 8zm6.4-11.8a1.4 1.4 0 100 2.9 1.4 1.4 0 000-2.9z"/>',
   facebook:
@@ -170,7 +173,7 @@ function montarTopo(ativa) {
   <footer class="rodape"><div class="wrap">
     <div><b style="color:#fff">Ribeirão Informa</b> · Tudo o que acontece em Ribeirão Preto/SP<br>
     Cada notícia cita o veículo que publicou primeiro. Viu um erro? Fale com a gente no Instagram.</div>
-    <nav class="mapa">${SECOES.map((s) => `<a href="./?secao=${s.slug}">${s.nome}</a>`).join("")}<a href="agenda.html">Agenda</a><a href="sobre.html">Quem somos</a></nav>
+    <nav class="mapa">${SECOES.map((s) => `<a href="./?secao=${s.slug}">${s.nome}</a>`).join("")}<a href="agenda.html">Agenda</a><a href="sobre.html">Quem somos</a>${REDES.whatsapp ? `<a href="${REDES.whatsapp}" target="_blank" rel="noopener">💬 Avisos no WhatsApp</a>` : ""}</nav>
     <nav class="redes">${redesHTML()}</nav>
   </div></footer>`;
 }
@@ -241,7 +244,20 @@ function destaqueHTML(n) {
 function sigaHTML() {
   return `<section class="siga"><div><h2>Siga o <span>Ribeirão Informa</span></h2>
     <p>As notícias da cidade chegam primeiro nas redes, o dia todo.</p></div>
-    <a class="btn" href="${REDES.instagram}" target="_blank" rel="noopener">Seguir no Instagram</a></section>`;
+    <div class="siga-btns">${zapBotao()}<a class="btn" href="${REDES.instagram}" target="_blank" rel="noopener">Seguir no Instagram</a></div></section>`;
+}
+
+// Botão do canal do WhatsApp (avisos de notícia urgente)
+const zapBotao = (txt = "Receber avisos no WhatsApp") =>
+  REDES.whatsapp
+    ? `<a class="btn whats zap" href="${REDES.whatsapp}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true">${ZAP_ICONE}</svg>${txt}</a>`
+    : "";
+function zapFaixa() {
+  if (!REDES.whatsapp) return "";
+  return `<a class="zap-faixa" href="${REDES.whatsapp}" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" aria-hidden="true">${ZAP_ICONE}</svg>
+    <span><b>Receba as notícias urgentes no WhatsApp</b><small>Entre no canal do Ribeirão Informa. É grátis e ninguém vê seu número.</small></span>
+    <em>Entrar</em></a>`;
 }
 
 // ---------- agenda ----------
@@ -344,6 +360,7 @@ async function capa() {
     <div class="capa">
       <div>
         ${destaqueHTML(d)}
+        ${zapFaixa()}
         ${dupla.length ? `<div class="dupla">${dupla.map(cardHTML).join("")}</div>` : ""}
         ${ultimas.length ? `<h2 class="secao">Últimas notícias</h2><div class="lista-v">${ultimas.map(itemHTML).join("")}</div>` : ""}
       </div>
@@ -429,6 +446,7 @@ async function materia() {
         <a class="btn whats" href="${zap}" target="_blank" rel="noopener">Mandar no WhatsApp</a>
         <button class="btn claro" id="copiar">Copiar link</button>
       </div>
+      ${zapFaixa()}
     </article>
     ${outras.length ? `<h2 class="secao">Mais de ${s.nome}</h2><div class="grade">${outras.map(cardHTML).join("")}</div>` : ""}
     ${sigaHTML()}`;
@@ -450,13 +468,27 @@ else montarTopo("");
 
 // ---------- app instalável (PWA) ----------
 if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
+  window.addEventListener("load", () =>
+    navigator.serviceWorker.register("sw.js").catch(() => {}),
+  );
 }
-const ehApp = () => matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
-const ehIOS = () => /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
-const ehCelular = () => /android|iphone|ipad|ipod|mobile/i.test(navigator.userAgent) || ehIOS();
+const ehApp = () =>
+  matchMedia("(display-mode: standalone)").matches ||
+  navigator.standalone === true;
+const ehIOS = () =>
+  /iphone|ipad|ipod/i.test(navigator.userAgent) ||
+  (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+const ehCelular = () =>
+  /android|iphone|ipad|ipod|mobile/i.test(navigator.userAgent) || ehIOS();
 let pedidoInstalar = null;
-const guardado = (k, v) => { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch { return null; } };
+const guardado = (k, v) => {
+  try {
+    if (v === undefined) return localStorage.getItem(k);
+    localStorage.setItem(k, v);
+  } catch {
+    return null;
+  }
+};
 
 function avisoInstalar(forcar) {
   if (ehApp() || document.getElementById("instalar")) return;
@@ -478,20 +510,42 @@ function avisoInstalar(forcar) {
   el.setAttribute("role", "dialog");
   el.innerHTML = `<img src="icones/icone-192.png" alt="" width="48" height="48"><div class="txt">${corpo}</div><button class="fechar" aria-label="Fechar">×</button>`;
   document.body.appendChild(el);
-  el.querySelector(".fechar").onclick = () => { guardado("ri-instalar-fechado", Date.now()); el.remove(); };
+  el.querySelector(".fechar").onclick = () => {
+    guardado("ri-instalar-fechado", Date.now());
+    el.remove();
+  };
   const ok = el.querySelector("#instalar-ok");
-  if (ok) ok.onclick = async () => { pedidoInstalar.prompt(); await pedidoInstalar.userChoice.catch(() => {}); pedidoInstalar = null; el.remove(); };
+  if (ok)
+    ok.onclick = async () => {
+      pedidoInstalar.prompt();
+      await pedidoInstalar.userChoice.catch(() => {});
+      pedidoInstalar = null;
+      el.remove();
+    };
 }
-window.addEventListener("beforeinstallprompt", (e) => { e.preventDefault(); pedidoInstalar = e; setTimeout(() => avisoInstalar(), 3000); });
-window.addEventListener("appinstalled", () => document.getElementById("instalar")?.remove());
-setTimeout(() => { if (!pedidoInstalar && ehCelular()) avisoInstalar(); }, 5000);
+window.addEventListener("beforeinstallprompt", (e) => {
+  e.preventDefault();
+  pedidoInstalar = e;
+  setTimeout(() => avisoInstalar(), 3000);
+});
+window.addEventListener("appinstalled", () =>
+  document.getElementById("instalar")?.remove(),
+);
+setTimeout(() => {
+  if (!pedidoInstalar && ehCelular()) avisoInstalar();
+}, 5000);
 // link "Baixe o app" no rodapé abre as instruções a qualquer hora
 setTimeout(() => {
   const mapa = document.querySelector(".rodape .mapa");
   if (mapa && !ehApp()) {
     const a = document.createElement("a");
-    a.href = "#"; a.textContent = "📲 Baixe o app";
-    a.onclick = (ev) => { ev.preventDefault(); document.getElementById("instalar")?.remove(); avisoInstalar(true); };
+    a.href = "#";
+    a.textContent = "📲 Baixe o app";
+    a.onclick = (ev) => {
+      ev.preventDefault();
+      document.getElementById("instalar")?.remove();
+      avisoInstalar(true);
+    };
     mapa.appendChild(a);
   }
 }, 500);
