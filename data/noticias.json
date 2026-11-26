@@ -1,0 +1,47 @@
+{
+  "noticias": [
+    {
+      "id": "2026-11-26-16-8-mil-empresas-de-ribeirao-preto-estao-na-divida-ativa-da",
+      "data": "2026-11-26",
+      "editoria": "ECONOMIA",
+      "titulo": "16,8 mil empresas de Ribeirão Preto estão na Dívida Ativa da União",
+      "resumo": "Levantamento da consultoria Administrador de Dívidas, com dados da PGFN do 2º trimestre de 2026, aponta 16.796 empresas da cidade com débitos federais, que somam R$ 8,56 bilhões. São 10,88% das empresas ativas, acima da média paulista (9,8%).",
+      "texto": [
+        "Levantamento da consultoria Administrador de Dívidas, com dados da PGFN do 2º trimestre de 2026, aponta 16.796 empresas da cidade com débitos federais, que somam R$ 8,56 bilhões. São 10,88% das empresas ativas, acima da média paulista (9,8%).",
+        "Quem deve pode negociar pela internet, no sistema da PGFN: desconto de até 65% em multas e juros (70% para micro e pequenas empresas) e parcelamento em até 120 meses (145 para ME e EPP)."
+      ],
+      "fonte": "Tribuna Ribeirão",
+      "link": "",
+      "imagem": "midia/2026-11-26/16-8-mil-empresas-de-ribeirao-preto-estao-na-divida-ativa-da.jpg"
+    },
+    {
+      "id": "2026-11-26-feira-de-natal-da-ceagesp-tera-chegada-do-papai-noel",
+      "data": "2026-11-26",
+      "editoria": "SERVIÇO",
+      "titulo": "Feira de Natal da Ceagesp terá chegada do Papai Noel",
+      "resumo": "A feira acontece nos dias 4 e 5 de dezembro, no Polo Ribeirão Preto da Ceagesp (Rodovia Anhanguera, km 322, Distrito Industrial).",
+      "texto": [
+        "A feira acontece nos dias 4 e 5 de dezembro, no Polo Ribeirão Preto da Ceagesp (Rodovia Anhanguera, km 322, Distrito Industrial).",
+        "🕕 Sexta (4): das 6h às 16h\n🕗 Sábado (5): das 8h às 15h. O Papai Noel chega a partir das 10h.",
+        "Entrada e estacionamento gratuitos. Tem presentes, flores, plantas e produtos para as festas."
+      ],
+      "fonte": "ACidade ON",
+      "link": "",
+      "imagem": "midia/2026-11-26/feira-de-natal-da-ceagesp-tera-chegada-do-papai-noel.jpg"
+    },
+    {
+      "id": "2026-11-26-concerto-gratuito-no-theatro-pedro-ii-nesta-terca-1o",
+      "data": "2026-11-26",
+      "editoria": "CULTURA",
+      "titulo": "Concerto gratuito no Theatro Pedro II nesta terça (1º)",
+      "resumo": "Os Concertos EPTV 2026 trazem o músico chinês Pang Wai Lun, ao lado de Pablo de León, Horácio Schaefer e Roberto Ring, com obras tradicionais chinesas e o Octeto de Schubert.",
+      "texto": [
+        "Os Concertos EPTV 2026 trazem o músico chinês Pang Wai Lun, ao lado de Pablo de León, Horácio Schaefer e Roberto Ring, com obras tradicionais chinesas e o Octeto de Schubert.",
+        "📍 Theatro Pedro II, terça (1º/12), às 20h\n🎟️ Ingressos grátis na bilheteria do teatro no próprio dia, a partir das 14h."
+      ],
+      "fonte": "ACidade ON",
+      "link": "",
+      "imagem": "midia/2026-11-26/concerto-gratuito-no-theatro-pedro-ii-nesta-terca-1o.jpg"
+    }
+  ]
+}
