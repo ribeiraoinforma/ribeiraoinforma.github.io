@@ -502,8 +502,13 @@ else montarTopo("");
 // iPhone: a Apple não deixa instalar com um toque, então abrimos um passo a passo com desenhos.
 // Navegador de dentro do Instagram/Facebook etc.: pedimos para abrir no Safari/Chrome.
 if ("serviceWorker" in navigator) {
+  // o OneSignal registra o MESMO sw.js (com ?appId=...). Se já existe um registro,
+  // não registramos de novo, senão um atropela o outro e a inscrição de avisos falha.
   window.addEventListener("load", () =>
-    navigator.serviceWorker.register("sw.js").catch(() => {}),
+    navigator.serviceWorker
+      .getRegistration("/")
+      .then((r) => r || navigator.serviceWorker.register("sw.js"))
+      .catch(() => {}),
   );
 }
 const UA = navigator.userAgent;
@@ -734,6 +739,10 @@ const temPush = () =>
   "PushManager" in window;
 let osPronto = null;
 let osErro = "";
+window.addEventListener("unhandledrejection", (e) => {
+  const m = String((e.reason && (e.reason.message || e.reason)) || "");
+  if (/onesignal|push|subscri|service ?worker/i.test(m)) osErro = m.slice(0, 160);
+});
 function carregarOneSignal() {
   if (osPronto) return osPronto;
   osPronto = new Promise((ok0) => {
@@ -777,7 +786,9 @@ function carregarOneSignal() {
   });
   return osPronto;
 }
-const avisosLigados = () => temPush() && Notification.permission === "granted";
+// ligado = permissão dada E inscrição confirmada no OneSignal
+const avisosLigados = () =>
+  temPush() && Notification.permission === "granted" && guardado("ri-avisos-ok") === "1";
 
 function explicarIphone() {
   document.getElementById("guia")?.remove();
@@ -872,7 +883,7 @@ async function ativarAvisos() {
   try {
     if (OS?.User?.PushSubscription) {
       if (!OS.User.PushSubscription.optedIn) await OS.User.PushSubscription.optIn();
-      for (let i = 0; i < 20 && !OS.User.PushSubscription.id; i++)
+      for (let i = 0; i < 60 && !OS.User.PushSubscription.id; i++)
         await new Promise((r) => setTimeout(r, 500));
       inscrito = !!OS.User.PushSubscription.id;
     }
@@ -886,6 +897,7 @@ async function ativarAvisos() {
       (osErro || "sem resposta do serviço de avisos") + ". Feche o app, abra de novo e toque no 🔔.",
     );
   }
+  guardado("ri-avisos-ok", "1");
   atualizarAvisos();
   resultadoAvisos(true, "Pronto! Avisos ligados", "Quando sair notícia importante, ela aparece na sua tela.");
 }
@@ -911,6 +923,22 @@ function mostrarAvisos() {
   if (avisosLigados()) {
     carregarOneSignal(); // mantém a inscrição em dia
     return;
+  }
+  // permissão já dada mas inscrição não confirmada: tenta sozinho, sem o leitor tocar em nada
+  if (temPush() && Notification.permission === "granted") {
+    carregarOneSignal().then(async (OS) => {
+      try {
+        const ps = OS?.User?.PushSubscription;
+        if (ps && !ps.optedIn) await ps.optIn();
+        for (let i = 0; i < 60 && ps && !ps.id; i++)
+          await new Promise((r) => setTimeout(r, 500));
+        if (ps?.id) {
+          guardado("ri-avisos-ok", "1");
+          atualizarAvisos();
+          alertaCurto("Avisos ligados! 🔔");
+        }
+      } catch {}
+    });
   }
   if (!ehIOS() && !temPush()) return;
   // faixa na capa, logo abaixo da faixa de instalar / do WhatsApp
@@ -975,7 +1003,7 @@ setTimeout(() => {
 }, 750);
 
 // número da versão no rodapé (para saber se o celular está com a versão nova)
-const VERSAO_SITE = "8";
+const VERSAO_SITE = "9";
 setTimeout(() => {
   const r = document.querySelector(".rodape .wrap");
   if (r && !document.querySelector(".versao")) {
