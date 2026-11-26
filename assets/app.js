@@ -774,7 +774,7 @@ function carregarOneSignal() {
     s.src = "https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js";
     s.defer = true;
     s.onerror = () => {
-      osErro = "não carregou o serviço de avisos (internet?)";
+      osErro = "não carregou o serviço de avisos (cdn.onesignal.com)";
       ok(null);
     };
     setTimeout(() => {
@@ -837,6 +837,27 @@ function resultadoAvisos(ok, titulo, motivo) {
     <button class="btn" type="button">${ok ? "Ótimo!" : "Fechar"}</button></div>`;
   document.body.appendChild(el);
   el.querySelector(".btn").onclick = () => el.remove();
+  if (!ok) testarConexao(el.querySelector(".diag"));
+}
+
+// testa se o celular alcança os endereços do serviço de avisos (bloqueador, VPN, DNS...)
+async function testarConexao(linha) {
+  const alvo = async (u) => {
+    try {
+      await Promise.race([
+        fetch(u, { mode: "no-cors", cache: "no-store" }),
+        new Promise((_, n) => setTimeout(() => n(new Error("tempo")), 8000)),
+      ]);
+      return "ok";
+    } catch {
+      return "BLOQUEADO";
+    }
+  };
+  const [cdn, api] = await Promise.all([
+    alvo("https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js"),
+    alvo("https://api.onesignal.com/"),
+  ]);
+  if (linha) linha.textContent += ` · cdn: ${cdn} · api: ${api} · v${VERSAO_SITE}`;
 }
 
 async function ativarAvisos() {
@@ -1003,7 +1024,7 @@ setTimeout(() => {
 }, 750);
 
 // número da versão no rodapé (para saber se o celular está com a versão nova)
-const VERSAO_SITE = "9";
+const VERSAO_SITE = "10";
 setTimeout(() => {
   const r = document.querySelector(".rodape .wrap");
   if (r && !document.querySelector(".versao")) {
