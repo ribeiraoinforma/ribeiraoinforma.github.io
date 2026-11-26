@@ -1,6 +1,191 @@
 {
   "noticias": [
     {
+      "id": "2026-11-26-show-gratuito-de-pai-pra-filho-reune-familia-de-musicos-no-s",
+      "data": "2026-11-26",
+      "editoria": "SHOW",
+      "titulo": "Show gratuito \"De Pai pra Filho\" reúne família de músicos no Sesi",
+      "resumo": "O espetáculo \"De Pai pra Filho\" é nesta quinta-feira (26), às 20h, no Teatro do Sesi (Rua João Ignacchitti, s/n, Jardim Castelo Branco). A entrada é gratuita, com reserva pela plataforma Meu Sesi.",
+      "texto": [
+        "O espetáculo \"De Pai pra Filho\" é nesta quinta-feira (26), às 20h, no Teatro do Sesi (Rua João Ignacchitti, s/n, Jardim Castelo Branco). A entrada é gratuita, com reserva pela plataforma Meu Sesi.",
+        "No palco, o cantor e violonista Alessandro Machado, o pai Gera Machado e o tio Carlinhos Machado tocam músicas próprias e releituras de Djavan, Milton Nascimento e Lupicínio Rodrigues."
+      ],
+      "fonte": "Revide",
+      "link": "https://www.revide.com.br/noticias/cultura/show-gratuito-reune-tres-musicos-da-mesma-familia-em-ribeirao-preto-nesta-quinta-feira-26/",
+      "imagem": "",
+      "evento": {
+        "data": "2026-11-26",
+        "hora": "20h",
+        "local": "Teatro do Sesi"
+      }
+    },
+    {
+      "id": "2026-11-26-orquestra-de-viola-caipira-e-gabriel-sater-fazem-show-gratis",
+      "data": "2026-11-26",
+      "editoria": "MÚSICA",
+      "titulo": "Orquestra de viola caipira e Gabriel Sater fazem show grátis no Curupira",
+      "resumo": "A Orquestra Paulistana de Viola Caipira, com 30 músicos e regência de Rui Torneze, se apresenta com Gabriel Sater no sábado, 28 de novembro, a partir das 18h, no Parque Curupira.",
+      "texto": [
+        "A Orquestra Paulistana de Viola Caipira, com 30 músicos e regência de Rui Torneze, se apresenta com Gabriel Sater no sábado, 28 de novembro, a partir das 18h, no Parque Curupira.",
+        "O show é gratuito e não precisa retirar ingresso. Haverá cerca de 500 cadeiras, intérprete de Libras e estrutura de acessibilidade."
+      ],
+      "fonte": "Tribuna Ribeirão",
+      "link": "https://www.tribunaribeirao.com.br/curupira-recebe-show-de-violeiros-2/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Lago_do_Parque_Curupira_-_Ribeir%C3%A3o_Preto_-_panoramio.jpg/1280px-Lago_do_Parque_Curupira_-_Ribeir%C3%A3o_Preto_-_panoramio.jpg",
+      "credito_foto": "Parque Curupira: Marco Aurélio Esparza / Wikimedia Commons, CC BY-SA 3.0",
+      "evento": {
+        "data": "2026-11-28",
+        "hora": "18h",
+        "local": "Parque Curupira"
+      }
+    },
+    {
+      "id": "2026-11-26-lagum-traz-nova-turne-a-ribeirao-preto-em-5-de-dezembro",
+      "data": "2026-11-26",
+      "editoria": "SHOW",
+      "titulo": "Lagum traz nova turnê a Ribeirão Preto em 5 de dezembro",
+      "resumo": "A banda Lagum apresenta a turnê \"Lagum em Todo Lugar\" no sábado, 5 de dezembro, às 21h, no Multiplan Hall do RibeirãoShopping. Os portões abrem às 19h.",
+      "texto": [
+        "A banda Lagum apresenta a turnê \"Lagum em Todo Lugar\" no sábado, 5 de dezembro, às 21h, no Multiplan Hall do RibeirãoShopping. Os portões abrem às 19h.",
+        "Ingressos a partir de R$ 45 (meia), pela Ticketmaster e na bilheteria oficial, em até 3 vezes sem juros. Classificação 16 anos; de 5 a 15 anos só com pais ou responsáveis."
+      ],
+      "fonte": "Revide",
+      "link": "https://www.revide.com.br/noticias/cultura/lagum-apresenta-nova-turne-em-ribeirao-preto-em-dezembro/",
+      "imagem": "",
+      "evento": {
+        "data": "2026-12-05",
+        "hora": "21h",
+        "local": "Multiplan Hall, RibeirãoShopping"
+      }
+    },
+    {
+      "id": "2026-11-26-unimed-abre-pronto-atendimento-adulto-24h-na-avenida-indepen",
+      "data": "2026-11-26",
+      "editoria": "SAÚDE",
+      "titulo": "Unimed abre pronto atendimento adulto 24h na Avenida Independência",
+      "resumo": "A Unimed Ribeirão Preto começa a atender em 14 de dezembro no novo Pronto Atendimento Adulto 24h, na Avenida Independência, 4.000, para pacientes a partir de 16 anos, todos os dias.",
+      "texto": [
+        "A Unimed Ribeirão Preto começa a atender em 14 de dezembro no novo Pronto Atendimento Adulto 24h, na Avenida Independência, 4.000, para pacientes a partir de 16 anos, todos os dias.",
+        "São mais de 1.800 m², com clínica médica, ortopedia, raio X, tomografia e exames laboratoriais. O pronto atendimento infantil continua na Rua Visconde de Inhaúma, 1.600."
+      ],
+      "fonte": "Revide",
+      "link": "https://www.revide.com.br/noticias/saude/unimed-ribeirao-preto-amplia-sua-rede-propria-com-novo-pronto-atendimento-adulto-24h/",
+      "imagem": ""
+    },
+    {
+      "id": "2026-11-26-agenda-ribeirao-lota-teatro-do-sesi-para-falar-de-empreended",
+      "data": "2026-11-26",
+      "editoria": "NEGÓCIOS",
+      "titulo": "Agenda Ribeirão lota Teatro do Sesi para falar de empreendedorismo",
+      "resumo": "O Agenda Ribeirão reuniu público com ingressos esgotados no Teatro do Sesi para discutir empreendedorismo e empregabilidade.",
+      "texto": [
+        "O Agenda Ribeirão reuniu público com ingressos esgotados no Teatro do Sesi para discutir empreendedorismo e empregabilidade.",
+        "Participaram representantes do Sebrae, do Senai e do Sesi, e a ilustradora ribeirão-pretana Rafaela Tuma fez palestra."
+      ],
+      "fonte": "CBN Ribeirão",
+      "link": "https://cbnribeirao.com.br/agenda-ribeirao-reune-publico-para-discutir-empreendedorismo-e-empregabilidade/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Vista_do_Centro_Expandido_de_Ribeir%C3%A3o_Preto_em_2026.jpg/1280px-Vista_do_Centro_Expandido_de_Ribeir%C3%A3o_Preto_em_2026.jpg",
+      "credito_foto": "Centro de Ribeirão (ilustrativa): And Ribeirão 1980 / Wikimedia Commons, CC0"
+    },
+    {
+      "id": "2026-11-26-usinas-do-futuro-reune-setor-de-bioenergia-em-ribeirao",
+      "data": "2026-11-26",
+      "editoria": "ECONOMIA",
+      "titulo": "Usinas do Futuro reúne setor de bioenergia em Ribeirão",
+      "resumo": "A 4ª edição do Usinas do Futuro acontece nesta quinta-feira (26) na sede da Federação da Agricultura e Pecuária do Estado de São Paulo (FAESP), com empresas, especialistas e lideranças do setor sucroenergético.",
+      "texto": [
+        "A 4ª edição do Usinas do Futuro acontece nesta quinta-feira (26) na sede da Federação da Agricultura e Pecuária do Estado de São Paulo (FAESP), com empresas, especialistas e lideranças do setor sucroenergético.",
+        "Os temas incluem biogás, bioinsumos, drones, internet das coisas, logística, combustível sustentável de aviação e inteligência artificial, além de tecnologias para etanol de milho e de cana."
+      ],
+      "fonte": "CBN Ribeirão",
+      "link": "https://cbnribeirao.com.br/ribeirao-preto-recebe-evento-sobre-inovacao-e-o-futuro-das-usinas-de-bioenergia/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Vista_A%C3%A9rea_da_Rodovia_Anhanguera_SP-330_em_Ribeir%C3%A3o_Preto_-_panoramio.jpg/1280px-Vista_A%C3%A9rea_da_Rodovia_Anhanguera_SP-330_em_Ribeir%C3%A3o_Preto_-_panoramio.jpg",
+      "credito_foto": "Anhanguera em Ribeirão (ilustrativa): Marco Aurélio Esparza / Wikimedia Commons, CC BY-SA 3.0"
+    },
+    {
+      "id": "2026-11-26-camara-mantem-dois-vetos-da-prefeitura-e-derruba-um",
+      "data": "2026-11-26",
+      "editoria": "POLÍTICA",
+      "titulo": "Câmara mantém dois vetos da Prefeitura e derruba um",
+      "resumo": "Em sessão desta semana, a Câmara de Ribeirão Preto acolheu dois vetos do Executivo e derrubou um terceiro.",
+      "texto": [
+        "Em sessão desta semana, a Câmara de Ribeirão Preto acolheu dois vetos do Executivo e derrubou um terceiro.",
+        "Os projetos analisados tratavam da política municipal de fortalecimento da atenção primária à saúde, da inclusão do Desafio 24 Horas pelas Crianças no calendário oficial e da criação do Banco Municipal de Serviço de Atendimento à Mulher em situação de violência."
+      ],
+      "fonte": "CBN Ribeirão",
+      "link": "https://cbnribeirao.com.br/camara-de-ribeirao-preto-acolhe-dois-vetos-do-executivo-e-derruba-outro-em-sessao/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Sp-ribeirao-pca-xv.jpg/1280px-Sp-ribeirao-pca-xv.jpg",
+      "credito_foto": "Praça XV (ilustrativa): Eduardo Verderame / Wikimedia Commons, CC BY-SA 4.0"
+    },
+    {
+      "id": "2026-11-26-aposentados-ficam-sem-cesta-de-natal-e-sindicato-critica",
+      "data": "2026-11-26",
+      "editoria": "CIDADE",
+      "titulo": "Aposentados ficam sem cesta de Natal e sindicato critica",
+      "resumo": "O sindicato dos servidores municipais criticou a exclusão de aposentados e pensionistas da cesta natalina. Ficam de fora 6.620 beneficiários do IPM: 5.140 aposentados e 1.480 pensionistas.",
+      "texto": [
+        "O sindicato dos servidores municipais criticou a exclusão de aposentados e pensionistas da cesta natalina. Ficam de fora 6.620 beneficiários do IPM: 5.140 aposentados e 1.480 pensionistas.",
+        "A Prefeitura vai entregar cestas a 9.601 servidores da ativa e kits a 46.903 alunos da rede municipal, e diz que segue entendimento do STF. O sindicato defende o pagamento em dinheiro para todos."
+      ],
+      "fonte": "Tribuna Ribeirão",
+      "link": "https://www.tribunaribeirao.com.br/sindicato-critica-restricao-de-cestas-a-aposentados/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Catedral_Metropolitana_de_S%C3%A3o_Sebasti%C3%A3o.jpg/1280px-Catedral_Metropolitana_de_S%C3%A3o_Sebasti%C3%A3o.jpg",
+      "credito_foto": "Catedral Metropolitana (ilustrativa): Daniel Guedes F. Dionizio / Wikimedia Commons, CC BY-SA 4.0"
+    },
+    {
+      "id": "2026-11-26-copinha-2027-comercial-joga-em-casa-e-botafogo-sp-em-cravinh",
+      "data": "2026-11-26",
+      "editoria": "FUTEBOL",
+      "titulo": "Copinha 2027: Comercial joga em casa e Botafogo-SP em Cravinhos",
+      "resumo": "A Copa São Paulo de Futebol Júnior vai de 2 a 25 de janeiro. O Comercial está no Grupo 13, com jogos no Palma Travassos, contra Botafogo-RJ, Capivariano e QFC-RN.",
+      "texto": [
+        "A Copa São Paulo de Futebol Júnior vai de 2 a 25 de janeiro. O Comercial está no Grupo 13, com jogos no Palma Travassos, contra Botafogo-RJ, Capivariano e QFC-RN.",
+        "O Botafogo-SP está no Grupo 14, com sede em Cravinhos, contra I9, Coritiba e União ABC-MS. Os dois melhores de cada grupo avançam. A tabela com dias e horários ainda não saiu."
+      ],
+      "fonte": "Tribuna Ribeirão e CBN Ribeirão",
+      "link": "https://www.tribunaribeirao.com.br/comercial-e-botafogo-conhecem-adversarios-da-copa-sp/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Palma_Travassos.jpg/1280px-Palma_Travassos.jpg",
+      "credito_foto": "Estádio Palma Travassos: Anderson Bueno Pereira / Wikimedia Commons, domínio público"
+    },
+    {
+      "id": "2026-11-26-paulistao-2027-botafogo-sp-estreia-fora-e-fecha-a-1a-fase-co",
+      "data": "2026-11-26",
+      "editoria": "FUTEBOL",
+      "titulo": "Paulistão 2027: Botafogo-SP estreia fora e fecha a 1ª fase contra o Corinthians",
+      "resumo": "A Federação Paulista divulgou a tabela do Paulistão 2027. O Botafogo-SP estreia em 10 de janeiro contra o Primavera, fora de casa, e encerra a primeira fase contra o Corinthians, no Estádio Santa Cruz, em 14 de fevereiro.",
+      "texto": [
+        "A Federação Paulista divulgou a tabela do Paulistão 2027. O Botafogo-SP estreia em 10 de janeiro contra o Primavera, fora de casa, e encerra a primeira fase contra o Corinthians, no Estádio Santa Cruz, em 14 de fevereiro.",
+        "Em casa, o time ainda recebe Juventus (13/1), Guarani (17/1) e Novorizontino (24/1). Fora, enfrenta Mirassol (20/1), São Paulo (31/1) e São Bernardo (6/2). Os horários ainda não foram definidos."
+      ],
+      "fonte": "Tribuna Ribeirão, CBN Ribeirão e ACidade ON",
+      "link": "https://www.tribunaribeirao.com.br/botafogo-pega-sao-paulo-fora-e-corinthians-em-casa-no-paulistao/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Est%C3%A1dio_Santa_Cruz_BFC.JPG/1280px-Est%C3%A1dio_Santa_Cruz_BFC.JPG",
+      "credito_foto": "Estádio Santa Cruz: Anderson Bueno Pereira / Wikimedia Commons, domínio público"
+    },
+    {
+      "id": "2026-11-26-botafogo-sp-compra-ze-hugo-e-renova-ate-2028",
+      "data": "2026-11-26",
+      "editoria": "FUTEBOL",
+      "titulo": "Botafogo-SP compra Zé Hugo e renova até 2028",
+      "resumo": "O Botafogo-SP exerceu a opção de compra e ficou em definitivo com o atacante Zé Hugo, de 27 anos. O novo contrato vai até dezembro de 2028.",
+      "texto": [
+        "O Botafogo-SP exerceu a opção de compra e ficou em definitivo com o atacante Zé Hugo, de 27 anos. O novo contrato vai até dezembro de 2028.",
+        "Ele chegou em março, vindo do Azuriz, e na Série B jogou 37 das 38 partidas, com 2 gols e 3 assistências."
+      ],
+      "fonte": "Tribuna Ribeirão",
+      "link": "https://www.tribunaribeirao.com.br/fim-do-impasse-botafogo-compra-atacante-ze-hugo/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Estadio_santacruz.JPG/1280px-Estadio_santacruz.JPG",
+      "credito_foto": "Estádio Santa Cruz: Duskien / Wikimedia Commons, CC BY-SA 3.0"
+    },
+    {
       "id": "2026-11-26-16-8-mil-empresas-de-ribeirao-preto-estao-na-divida-ativa-da",
       "data": "2026-11-26",
       "editoria": "ECONOMIA",
@@ -59,6 +244,358 @@
       },
       "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Vista_do_Theatro_Pedro_II_em_2022.jpg/1280px-Vista_do_Theatro_Pedro_II_em_2022.jpg",
       "credito_foto": "Mtvdanilo / Wikimedia Commons, CC BY-SA 4.0"
+    },
+    {
+      "id": "2026-11-25-musical-de-natal-com-mais-de-20-atores-no-theatro-pedro-ii",
+      "data": "2026-11-25",
+      "editoria": "TEATRO",
+      "titulo": "Musical de Natal com mais de 20 atores no Theatro Pedro II",
+      "resumo": "\"Sonhos de Natal – O Musical\" será apresentado no domingo, 6 de dezembro, às 16h, no Theatro Pedro II. O espetáculo para toda a família tem mais de 20 atores, músicas ao vivo e mais de 80 figurinos.",
+      "texto": [
+        "\"Sonhos de Natal – O Musical\" será apresentado no domingo, 6 de dezembro, às 16h, no Theatro Pedro II. O espetáculo para toda a família tem mais de 20 atores, músicas ao vivo e mais de 80 figurinos.",
+        "Os ingressos são vendidos pela plataforma Ingresso Digital."
+      ],
+      "fonte": "Revide",
+      "link": "https://www.revide.com.br/noticias/cultura/musical-de-natal-reune-mais-de-20-atores-no-theatro-pedro-ii-em-ribeirao-preto/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Vista_do_Theatro_Pedro_II_em_2022.jpg/1280px-Vista_do_Theatro_Pedro_II_em_2022.jpg",
+      "credito_foto": "Theatro Pedro II: Mtvdanilo / Wikimedia Commons, CC BY-SA 4.0",
+      "evento": {
+        "data": "2026-12-06",
+        "hora": "16h",
+        "local": "Theatro Pedro II"
+      }
+    },
+    {
+      "id": "2026-11-25-festival-de-cultura-afro-brasileira-tem-seis-horas-de-progra",
+      "data": "2026-11-25",
+      "editoria": "CULTURA",
+      "titulo": "Festival de cultura afro-brasileira tem seis horas de programação grátis no sábado",
+      "resumo": "O 4º Festival Panela Preta acontece no sábado, 28 de novembro, das 16h às 22h, na Aldeia Caboclo Pena Vermelha (Rua Espírito Santo, 2016, Ipiranga). A entrada é gratuita.",
+      "texto": [
+        "O 4º Festival Panela Preta acontece no sábado, 28 de novembro, das 16h às 22h, na Aldeia Caboclo Pena Vermelha (Rua Espírito Santo, 2016, Ipiranga). A entrada é gratuita.",
+        "Tem shows, roda de capoeira, oficinas de samba e estamparia, exposição, feira de artesanato e, às 18h, a roda de conversa \"Kilombo de Ideias\". O prato da edição é cuscuz nordestino, com porções limitadas e reserva antecipada."
+      ],
+      "fonte": "Revide",
+      "link": "https://www.revide.com.br/noticias/cultura/festival-gratuito-de-cultura-afro-brasileira-tera-seis-horas-de-programacao-em-ribeirao-preto/",
+      "imagem": "",
+      "evento": {
+        "data": "2026-11-28",
+        "hora": "16h às 22h",
+        "local": "Aldeia Caboclo Pena Vermelha, Ipiranga"
+      }
+    },
+    {
+      "id": "2026-11-25-chocolate-premiado-no-mundo-abre-loja-no-iguatemi-na-segunda",
+      "data": "2026-11-25",
+      "editoria": "GASTRONOMIA",
+      "titulo": "Chocolate premiado no mundo abre loja no Iguatemi na segunda (30)",
+      "resumo": "A Cacau do Céu, medalha de prata no International Chocolate Awards 2026, inaugura loja no Shopping Iguatemi Ribeirão Preto na segunda-feira, 30 de novembro, das 18h às 22h.",
+      "texto": [
+        "A Cacau do Céu, medalha de prata no International Chocolate Awards 2026, inaugura loja no Shopping Iguatemi Ribeirão Preto na segunda-feira, 30 de novembro, das 18h às 22h.",
+        "A loja terá chocolates da marca, cafeteria e produtos de outros fabricantes, com degustação para os clientes."
+      ],
+      "fonte": "ACidade ON",
+      "link": "https://www.acidadeon.com/ribeiraopreto/lazer-e-cultura/giro-lazer-e-cultura/eleito-um-dos-melhores-do-mundo-marca-de-chocolates-inaugura-loja-em-ribeirao-preto/",
+      "imagem": "",
+      "evento": {
+        "data": "2026-11-30",
+        "hora": "18h às 22h",
+        "local": "Shopping Iguatemi Ribeirão Preto"
+      }
+    },
+    {
+      "id": "2026-11-25-caminhada-gratuita-mostra-o-patrimonio-italiano-do-centro-ne",
+      "data": "2026-11-25",
+      "editoria": "PASSEIO",
+      "titulo": "Caminhada gratuita mostra o patrimônio italiano do Centro neste sábado",
+      "resumo": "O Museu Casa da Memória Italiana promove no sábado, 28 de novembro, às 9h, uma caminhada pelo Centro Histórico. O roteiro sai da Esplanada do Theatro Pedro II, passa pela Sociedade Dante Alighieri e pela Associação Socorros Mútuos e termina no museu.",
+      "texto": [
+        "O Museu Casa da Memória Italiana promove no sábado, 28 de novembro, às 9h, uma caminhada pelo Centro Histórico. O roteiro sai da Esplanada do Theatro Pedro II, passa pela Sociedade Dante Alighieri e pela Associação Socorros Mútuos e termina no museu.",
+        "É gratuita, com vagas limitadas e inscrição antecipada pelo Sympla. Terá intérprete de Libras. Leve água, protetor solar e use calçado confortável."
+      ],
+      "fonte": "Revide",
+      "link": "https://www.revide.com.br/noticias/cidades/caminhada-percorre-patrimonio-italiano-do-centro-historico-de-ribeirao-preto-neste-sabado/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Vista_do_Theatro_Pedro_II_em_2022.jpg/1280px-Vista_do_Theatro_Pedro_II_em_2022.jpg",
+      "credito_foto": "Theatro Pedro II: Mtvdanilo / Wikimedia Commons, CC BY-SA 4.0",
+      "evento": {
+        "data": "2026-11-28",
+        "hora": "9h",
+        "local": "Saída na Esplanada do Theatro Pedro II"
+      }
+    },
+    {
+      "id": "2026-11-25-bosque-faz-programacao-gratuita-pelo-dia-da-onca-pintada-nes",
+      "data": "2026-11-25",
+      "editoria": "LAZER",
+      "titulo": "Bosque faz programação gratuita pelo Dia da Onça-Pintada nesta sexta (27)",
+      "resumo": "O Bosque e Zoológico Fábio Barreto comemora o Dia Nacional da Onça-Pintada na sexta-feira, 27 de novembro, com uma tenda educativa durante o dia, em frente ao Centro de Apoio à Educação Ambiental.",
+      "texto": [
+        "O Bosque e Zoológico Fábio Barreto comemora o Dia Nacional da Onça-Pintada na sexta-feira, 27 de novembro, com uma tenda educativa durante o dia, em frente ao Centro de Apoio à Educação Ambiental.",
+        "Às 9h30 tem enriquecimento ambiental com a onça Juma e, às 15h30, com o Peter. Tudo é gratuito. O Bosque abre de quarta a domingo, das 9h às 16h30."
+      ],
+      "fonte": "Revide e Tribuna Ribeirão",
+      "link": "https://www.revide.com.br/noticias/cidades/bosque-de-ribeirao-preto-tera-programacao-gratuita-em-comemoracao-ao-dia-nacional-da-onca-pintada/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Bosque_F%C3%A1bio_Barreto_em_Ribeir%C3%A3o_Preto._On%C3%A7a_Pintada_%28Panthera_onca%29_-_panoramio.jpg/1280px-Bosque_F%C3%A1bio_Barreto_em_Ribeir%C3%A3o_Preto._On%C3%A7a_Pintada_%28Panthera_onca%29_-_panoramio.jpg",
+      "credito_foto": "Onça-pintada no Bosque Fábio Barreto: Marco Aurélio Esparza / Wikimedia Commons, CC BY-SA 3.0",
+      "evento": {
+        "data": "2026-11-27",
+        "hora": "9h30 e 15h30",
+        "local": "Bosque e Zoológico Fábio Barreto"
+      }
+    },
+    {
+      "id": "2026-11-25-mutirao-oferece-mais-de-1-8-mil-vagas-de-emprego-neste-sabad",
+      "data": "2026-11-25",
+      "editoria": "EMPREGO",
+      "titulo": "Mutirão oferece mais de 1,8 mil vagas de emprego neste sábado (28)",
+      "resumo": "O Emprega Mais Ribeirão acontece no sábado, 28 de novembro, das 9h às 13h, na Praça Pedro Biagi, no início da Avenida Dom Pedro I (Ipiranga). São mais de 1.800 vagas em 65 funções, de 23 empresas, com carteira assinada e salários de até R$ 6.500.",
+      "texto": [
+        "O Emprega Mais Ribeirão acontece no sábado, 28 de novembro, das 9h às 13h, na Praça Pedro Biagi, no início da Avenida Dom Pedro I (Ipiranga). São mais de 1.800 vagas em 65 funções, de 23 empresas, com carteira assinada e salários de até R$ 6.500.",
+        "As áreas incluem saúde, logística, comércio, varejo e indústria. Leve documento com foto e currículo impresso. A participação é gratuita."
+      ],
+      "fonte": "Tribuna Ribeirão, ACidade ON e CBN Ribeirão",
+      "link": "https://www.tribunaribeirao.com.br/mutirao-abre-mais-1-800-vagas/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Vista_a%C3%A9rea_Ribeir%C3%A3o_Preto_2025.jpg/1280px-Vista_a%C3%A9rea_Ribeir%C3%A3o_Preto_2025.jpg",
+      "credito_foto": "Vista aérea de Ribeirão (ilustrativa): And Ribeirão 1980 / Wikimedia Commons, CC0",
+      "evento": {
+        "data": "2026-11-28",
+        "hora": "9h às 13h",
+        "local": "Praça Pedro Biagi, Ipiranga"
+      }
+    },
+    {
+      "id": "2026-11-25-coren-sp-abre-concurso-com-salario-de-ate-r-10-6-mil-e-prova",
+      "data": "2026-11-25",
+      "editoria": "CONCURSOS",
+      "titulo": "Coren-SP abre concurso com salário de até R$ 10,6 mil e prova em Ribeirão",
+      "resumo": "O Conselho Regional de Enfermagem de São Paulo abriu concurso para cargos de nível médio e superior, com salários de R$ 5.389 a R$ 10.692 e cadastro de reserva.",
+      "texto": [
+        "O Conselho Regional de Enfermagem de São Paulo abriu concurso para cargos de nível médio e superior, com salários de R$ 5.389 a R$ 10.692 e cadastro de reserva.",
+        "Inscrições pela internet, no site da banca Quadrix, de 26 de novembro a 11 de janeiro, com taxa de R$ 93,83 a R$ 109,60. As provas serão em 7 de março de 2027, e Ribeirão Preto é uma das cidades de prova."
+      ],
+      "fonte": "ACidade ON",
+      "link": "https://www.acidadeon.com/ribeiraopreto/economia/concurso-publico-abre-inscricoes-com-salarios-de-ate-r-106-mil-e-provas-em-ribeirao-preto/",
+      "imagem": ""
+    },
+    {
+      "id": "2026-11-25-cestas-de-natal-de-servidores-e-alunos-custarao-quase-r-13-m",
+      "data": "2026-11-25",
+      "editoria": "ECONOMIA",
+      "titulo": "Cestas de Natal de servidores e alunos custarão quase R$ 13 milhões",
+      "resumo": "A licitação das cestas natalinas da Prefeitura foi vencida por R$ 12,95 milhões, 2,18% abaixo do valor estimado. São 9.601 cestas para servidores, a R$ 489,90 cada, e 46.903 kits para estudantes, a R$ 175,90 cada.",
+      "texto": [
+        "A licitação das cestas natalinas da Prefeitura foi vencida por R$ 12,95 milhões, 2,18% abaixo do valor estimado. São 9.601 cestas para servidores, a R$ 489,90 cada, e 46.903 kits para estudantes, a R$ 175,90 cada.",
+        "Os kits dos estudantes serão retirados em 21 escolas, de 7 a 11 de dezembro, das 8h às 17h."
+      ],
+      "fonte": "Tribuna Ribeirão",
+      "link": "https://www.tribunaribeirao.com.br/cestas-de-servidores-custarao-quase-r-13-mi/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Vista_do_Centro_Expandido_de_Ribeir%C3%A3o_Preto_em_2026.jpg/1280px-Vista_do_Centro_Expandido_de_Ribeir%C3%A3o_Preto_em_2026.jpg",
+      "credito_foto": "Centro de Ribeirão (ilustrativa): And Ribeirão 1980 / Wikimedia Commons, CC0"
+    },
+    {
+      "id": "2026-11-25-prefeitura-propoe-auxilio-de-r-1-2-mil-a-vitimas-do-vendaval",
+      "data": "2026-11-25",
+      "editoria": "POLÍTICA",
+      "titulo": "Prefeitura propõe auxílio de R$ 1,2 mil a vítimas do vendaval",
+      "resumo": "A Prefeitura enviou à Câmara um projeto que cria um auxílio de R$ 1.200, em parcela única, para famílias atingidas pelo vendaval de 24 de julho. O dinheiro vem de um repasse estadual de R$ 628.425, e a estimativa é atender 523 famílias.",
+      "texto": [
+        "A Prefeitura enviou à Câmara um projeto que cria um auxílio de R$ 1.200, em parcela única, para famílias atingidas pelo vendaval de 24 de julho. O dinheiro vem de um repasse estadual de R$ 628.425, e a estimativa é atender 523 famílias.",
+        "Para receber, a família precisa morar no imóvel na data do vendaval, em área mapeada pela Defesa Civil, e ter tido dano na casa ou nos bens. O pagamento só sai depois da aprovação da Câmara e da sanção; ainda não há prazo nem local de inscrição."
+      ],
+      "fonte": "Tribuna Ribeirão e CBN Ribeirão",
+      "link": "https://www.tribunaribeirao.com.br/prefeitura-pagara-r-12-mil-a-vitimas-de-vendaval/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Pal%C3%A1cio_do_Rio_Branco.JPG/1280px-Pal%C3%A1cio_do_Rio_Branco.JPG",
+      "credito_foto": "Palácio Rio Branco: Leandro Maranghetti Lourenço / Wikimedia Commons, CC BY-SA 3.0"
+    },
+    {
+      "id": "2026-11-25-chuva-derruba-arvore-e-bloqueia-rua-perto-do-santa-cruz",
+      "data": "2026-11-25",
+      "editoria": "TRÂNSITO",
+      "titulo": "Chuva derruba árvore e bloqueia rua perto do Santa Cruz",
+      "resumo": "Durante a chuva de quarta-feira (25), parte de uma árvore caiu e bloqueou as duas faixas da Rua José Loureiro Júnior, em frente ao Parque Primavera, na região do Estádio Santa Cruz.",
+      "texto": [
+        "Durante a chuva de quarta-feira (25), parte de uma árvore caiu e bloqueou as duas faixas da Rua José Loureiro Júnior, em frente ao Parque Primavera, na região do Estádio Santa Cruz.",
+        "No mesmo período houve um engavetamento de cinco carros no Anel Viário Norte, sentido Sertãozinho, já liberado, e lentidão nas avenidas Independência e Amadeu Amaral."
+      ],
+      "fonte": "CBN Ribeirão",
+      "link": "https://cbnribeirao.com.br/queda-de-quedainterdita-rua-jose-loureiro-junior-durante-chuva-em-ribeirao-preto/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/0/08/Ribeir%C3%A3o_Preto_-_2018.jpg",
+      "credito_foto": "Ribeirão Preto (ilustrativa): Anderson Bueno Pereira / Wikimedia Commons, CC BY-SA 4.0"
+    },
+    {
+      "id": "2026-11-25-frente-fria-traz-risco-de-chuva-forte-a-ribeirao-preto",
+      "data": "2026-11-25",
+      "editoria": "TEMPO",
+      "titulo": "Frente fria traz risco de chuva forte a Ribeirão Preto",
+      "resumo": "Segundo a Climatempo, uma nova frente fria ganha força entre quarta (25) e quinta-feira (26), com previsão de volumes altos de chuva para Ribeirão Preto e cidades vizinhas como Jardinópolis, Brodowski, Sertãozinho e Cravinhos.",
+      "texto": [
+        "Segundo a Climatempo, uma nova frente fria ganha força entre quarta (25) e quinta-feira (26), com previsão de volumes altos de chuva para Ribeirão Preto e cidades vizinhas como Jardinópolis, Brodowski, Sertãozinho e Cravinhos.",
+        "Há risco de alagamentos e enxurradas. Na quinta, a instabilidade diminui na maior parte do estado e fica concentrada no extremo norte paulista."
+      ],
+      "fonte": "ACidade ON",
+      "link": "https://www.acidadeon.com/ribeiraopreto/cotidiano/chuva-forte-queda-de-temperatura-nova-frente-fria-atinge-ribeirao-preto-e-interior-de-sp/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Vista_a%C3%A9rea_do_Rio_Pardo_e_Ribeir%C3%A3o_Preto_em_dia_chuvoso._-_panoramio.jpg/1280px-Vista_a%C3%A9rea_do_Rio_Pardo_e_Ribeir%C3%A3o_Preto_em_dia_chuvoso._-_panoramio.jpg",
+      "credito_foto": "Ribeirão em dia de chuva (ilustrativa): Marco Aurélio Esparza / Wikimedia Commons, CC BY-SA 3.0"
+    },
+    {
+      "id": "2026-11-24-pitty-faz-show-em-ribeirao-preto-em-12-de-dezembro",
+      "data": "2026-11-24",
+      "editoria": "SHOW",
+      "titulo": "Pitty faz show em Ribeirão Preto em 12 de dezembro",
+      "resumo": "A cantora Pitty se apresenta em 12 de dezembro no CHF Espaço Cultural. Quatro bandas da School of Rock (São Paulo, Fortaleza, São José do Rio Preto e Ribeirão) fazem a abertura.",
+      "texto": [
+        "A cantora Pitty se apresenta em 12 de dezembro no CHF Espaço Cultural. Quatro bandas da School of Rock (São Paulo, Fortaleza, São José do Rio Preto e Ribeirão) fazem a abertura.",
+        "Ingressos pela Ticketmaster, pelo site pittyemribeirao.com.br e na School of Rock de Ribeirão (Av. Antônio Diederichsen, 612). Há meia-entrada e ingresso solidário, com 1 kg de alimento não perecível."
+      ],
+      "fonte": "ACidade ON",
+      "link": "https://www.acidadeon.com/ribeiraopreto/lazer-e-cultura/bandas-de-quatro-cidades-farao-abertura-do-show-de-pitty-em-ribeirao-preto/",
+      "imagem": ""
+    },
+    {
+      "id": "2026-11-24-festival-de-orquideas-tem-entrada-gratis-neste-fim-de-semana",
+      "data": "2026-11-24",
+      "editoria": "LAZER",
+      "titulo": "Festival de Orquídeas tem entrada grátis neste fim de semana",
+      "resumo": "O 7º Festival de Orquídeas de Ribeirão Preto acontece no sábado (28) e no domingo (29), a partir das 8h, no Hotel Dan Inn (Rua Coronel Luiz da Cunha, 404, Vila Tibério). A entrada é gratuita.",
+      "texto": [
+        "O 7º Festival de Orquídeas de Ribeirão Preto acontece no sábado (28) e no domingo (29), a partir das 8h, no Hotel Dan Inn (Rua Coronel Luiz da Cunha, 404, Vila Tibério). A entrada é gratuita.",
+        "Haverá orquídeas, suculentas, insumos e acessórios para cultivo, além de opções de presente de Natal e orientação sobre como cultivar. O evento é da Associação Orquidófila de Ribeirão Preto (Assorp)."
+      ],
+      "fonte": "Revide e ACidade ON",
+      "link": "https://www.revide.com.br/noticias/cidades/festival-de-orquideas-reune-opcoes-de-presentes-para-o-natal-em-ribeirao-preto/",
+      "imagem": "",
+      "evento": {
+        "data": "2026-11-28",
+        "fim": "2026-11-29",
+        "hora": "a partir das 8h",
+        "local": "Hotel Dan Inn, Vila Tibério"
+      }
+    },
+    {
+      "id": "2026-11-24-clinica-meu-pet-volta-a-agendar-consultas-as-segundas",
+      "data": "2026-11-24",
+      "editoria": "SERVIÇO",
+      "titulo": "Clínica Meu Pet volta a agendar consultas às segundas",
+      "resumo": "A partir de 30 de novembro, o agendamento na Clínica Meu Pet volta a ser feito às segundas-feiras, das 7h às 17h. O atendimento a cães e gatos é gratuito.",
+      "texto": [
+        "A partir de 30 de novembro, o agendamento na Clínica Meu Pet volta a ser feito às segundas-feiras, das 7h às 17h. O atendimento a cães e gatos é gratuito.",
+        "A clínica funciona de segunda a sábado, das 7h às 17h, na Avenida Luiz Galvão César, 50, Jardim José Sampaio (Zona Norte). Urgência e emergência não precisam de agendamento."
+      ],
+      "fonte": "Tribuna Ribeirão",
+      "link": "https://www.tribunaribeirao.com.br/clinica-meu-pet-fara-agendamentos-hoje/",
+      "imagem": ""
+    },
+    {
+      "id": "2026-11-24-prefeitura-regulamenta-lei-de-combate-ao-vicio-em-apostas",
+      "data": "2026-11-24",
+      "editoria": "BEM-ESTAR",
+      "titulo": "Prefeitura regulamenta lei de combate ao vício em apostas",
+      "resumo": "Decreto publicado no Diário Oficial de 23 de novembro regulamenta a Lei Rafael Silva Neto, de combate à ludopatia (vício em jogos e apostas). O Dia Municipal de Combate à Ludopatia será em 14 de janeiro.",
+      "texto": [
+        "Decreto publicado no Diário Oficial de 23 de novembro regulamenta a Lei Rafael Silva Neto, de combate à ludopatia (vício em jogos e apostas). O Dia Municipal de Combate à Ludopatia será em 14 de janeiro.",
+        "O atendimento é gratuito pelo SUS e pela Assistência Social, principalmente nos Caps. A publicidade de apostas passa a ser fiscalizada pelo Procon. Um comitê intersetorial será nomeado em até 60 dias."
+      ],
+      "fonte": "Tribuna Ribeirão",
+      "link": "https://www.tribunaribeirao.com.br/prefeito-regulamenta-lei-da-ludopatia/",
+      "imagem": ""
+    },
+    {
+      "id": "2026-11-24-saude-alerta-para-alta-da-covid-19-e-pede-vacina-para-idosos",
+      "data": "2026-11-24",
+      "editoria": "SAÚDE",
+      "titulo": "Saúde alerta para alta da covid-19 e pede vacina para idosos",
+      "resumo": "A Secretaria da Saúde espera mais casos de covid-19 em dezembro e janeiro. Até 13 de novembro, Ribeirão teve 51 casos de síndrome respiratória grave por coronavírus, 38 deles em pessoas com mais de 60 anos.",
+      "texto": [
+        "A Secretaria da Saúde espera mais casos de covid-19 em dezembro e janeiro. Até 13 de novembro, Ribeirão teve 51 casos de síndrome respiratória grave por coronavírus, 38 deles em pessoas com mais de 60 anos.",
+        "A vacina é gratuita nas 39 salas de vacina da cidade, de segunda a sexta. Idosos e imunocomprometidos tomam 2 doses por ano, com 6 meses de intervalo; gestantes, 1 dose por gestação. Com sintomas, procure uma UBS ou UPA, que fazem o teste."
+      ],
+      "fonte": "Tribuna Ribeirão, ACidade ON e CBN Ribeirão",
+      "link": "https://www.tribunaribeirao.com.br/saude-alerta-para-a-alta-de-covid-19/",
+      "imagem": ""
+    },
+    {
+      "id": "2026-11-23-campus-da-usp-tem-tres-pecas-gratuitas-nesta-semana",
+      "data": "2026-11-23",
+      "editoria": "TEATRO",
+      "titulo": "Campus da USP tem três peças gratuitas nesta semana",
+      "resumo": "O 23º Circuito TUSP de Teatro apresenta três espetáculos gratuitos no Teatro do Campus da USP em Ribeirão Preto (Balão Central), sempre às 20h.",
+      "texto": [
+        "O 23º Circuito TUSP de Teatro apresenta três espetáculos gratuitos no Teatro do Campus da USP em Ribeirão Preto (Balão Central), sempre às 20h.",
+        "Quarta (25): \"Medea Depois do Sol\". Quinta (26): \"Las Neuronas\". Sexta (27): \"Chernobyl\". Os ingressos são retirados no local 1 hora antes de cada sessão."
+      ],
+      "fonte": "ACidade ON",
+      "link": "https://www.acidadeon.com/ribeiraopreto/lazer-e-cultura/gosta-de-teatro-ribeirao-preto-tera-tres-espetaculos-gratuitos-nesta-semana/",
+      "imagem": "",
+      "evento": {
+        "data": "2026-11-25",
+        "fim": "2026-11-27",
+        "hora": "20h",
+        "local": "Teatro do Campus da USP"
+      }
+    },
+    {
+      "id": "2026-11-23-hospital-oferece-200-exames-gratuitos-de-prostata-neste-saba",
+      "data": "2026-11-23",
+      "editoria": "SAÚDE",
+      "titulo": "Hospital oferece 200 exames gratuitos de próstata neste sábado (28)",
+      "resumo": "O Centro Médico do Hospital São Lucas (Rua Quintino Bocaiuva, 895, Vila Seixas) faz um mutirão gratuito do Novembro Azul no sábado, 28 de novembro, das 7h às 13h.",
+      "texto": [
+        "O Centro Médico do Hospital São Lucas (Rua Quintino Bocaiuva, 895, Vila Seixas) faz um mutirão gratuito do Novembro Azul no sábado, 28 de novembro, das 7h às 13h.",
+        "São 200 vagas para homens a partir de 50 anos, com consulta médica e coleta de sangue para o exame de PSA. É preciso agendar antes pelo telefone ou WhatsApp (16) 3902-1449."
+      ],
+      "fonte": "ACidade ON",
+      "link": "https://www.acidadeon.com/ribeiraopreto/saude/hospital-em-ribeirao-preto-abre-200-vagas-gratuitas-para-exame-de-prostata-neste-sabado-28/",
+      "imagem": "",
+      "evento": {
+        "data": "2026-11-28",
+        "hora": "7h às 13h (com agendamento)",
+        "local": "Hospital São Lucas, Rua Quintino Bocaiuva, 895"
+      }
+    },
+    {
+      "id": "2026-11-23-ivete-sangalo-faz-show-no-estadio-do-comercial-neste-sabado",
+      "data": "2026-11-23",
+      "editoria": "SHOW",
+      "titulo": "Ivete Sangalo faz show no Estádio do Comercial neste sábado (28)",
+      "resumo": "O projeto \"Ivete Clareou\" chega a Ribeirão Preto no sábado, 28 de novembro, a partir das 14h, no Estádio do Comercial. Ainda há ingressos à venda.",
+      "texto": [
+        "O projeto \"Ivete Clareou\" chega a Ribeirão Preto no sábado, 28 de novembro, a partir das 14h, no Estádio do Comercial. Ainda há ingressos à venda.",
+        "No setor Open Bar as bebidas estão incluídas e a entrada é só para maiores de 18 anos. No setor Arena as bebidas são vendidas à parte; a classificação é 16 anos, e menores de 18 precisam de termo de responsabilidade assinado pelos pais."
+      ],
+      "fonte": "ACidade ON",
+      "link": "https://www.acidadeon.com/ribeiraopreto/lazer-e-cultura/ivete-sangalo-chega-a-ribeirao-preto-nesta-semana-ainda-ha-ingressos/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Palma_Travassos_2013.JPG/1280px-Palma_Travassos_2013.JPG",
+      "credito_foto": "Estádio Palma Travassos: Anderson Bueno Pereira / Wikimedia Commons, CC BY-SA 3.0",
+      "evento": {
+        "data": "2026-11-28",
+        "hora": "14h",
+        "local": "Estádio do Comercial (Palma Travassos)"
+      }
+    },
+    {
+      "id": "2026-11-20-botafogo-sp-volta-aos-treinos-em-7-de-dezembro",
+      "data": "2026-11-20",
+      "editoria": "FUTEBOL",
+      "titulo": "Botafogo-SP volta aos treinos em 7 de dezembro",
+      "resumo": "O elenco profissional do Botafogo-SP se reapresenta na segunda-feira, 7 de dezembro, para começar a preparação para a temporada 2027.",
+      "texto": [
+        "O elenco profissional do Botafogo-SP se reapresenta na segunda-feira, 7 de dezembro, para começar a preparação para a temporada 2027.",
+        "Serão pouco mais de 30 dias de pré-temporada até a estreia no Paulistão, marcada para o fim de semana de 10 de janeiro."
+      ],
+      "fonte": "Tribuna Ribeirão",
+      "link": "https://www.tribunaribeirao.com.br/botafogo-define-data-para-iniciar-pre-temporada/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Est%C3%A1dio_Santa_Cruz_BFC.JPG/1280px-Est%C3%A1dio_Santa_Cruz_BFC.JPG",
+      "credito_foto": "Estádio Santa Cruz: Anderson Bueno Pereira / Wikimedia Commons, domínio público"
     }
   ]
 }
