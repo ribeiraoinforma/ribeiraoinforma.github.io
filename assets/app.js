@@ -122,9 +122,12 @@ const MESES = [
   "dez",
 ];
 const dataBR = (iso) => {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(String(iso))) return "";
   const [a, m, d] = iso.split("-");
-  return `${+d} ${MESES[+m - 1]} ${a}`;
+  return `${+d} ${MESES[+m - 1] || ""} ${a}`;
 };
+// só aceita links http(s); qualquer outra coisa vira texto
+const urlSegura = (u) => (/^https?:\/\//i.test(String(u || "")) ? esc(u) : "");
 const hojeISO = () =>
   new Date().toLocaleDateString("en-CA", { timeZone: "America/Sao_Paulo" });
 const params = new URLSearchParams(location.search);
@@ -373,8 +376,8 @@ async function materia() {
   document.title = `${n.titulo} | Ribeirão Informa`;
   const url = location.href;
   const zap = `https://wa.me/?text=${encodeURIComponent(n.titulo + " " + url)}`;
-  const fonte = n.link
-    ? `<a href="${esc(n.link)}" target="_blank" rel="noopener">${esc(n.fonte)}</a>`
+  const fonte = urlSegura(n.link)
+    ? `<a href="${urlSegura(n.link)}" target="_blank" rel="noopener">${esc(n.fonte)}</a>`
     : esc(n.fonte);
   const [primeiro, ...demais] = n.texto || [n.resumo];
   const outras = lista

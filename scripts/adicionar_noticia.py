@@ -82,6 +82,12 @@ def main():
         help='ex.: "Unsplash/Fulano" ou "Prefeitura de RP (divulgação)"',
     )
     a = ap.parse_args()
+    for nome in ("data", "evento_data", "evento_fim"):
+        v = getattr(a, nome)
+        if v is not None and not re.fullmatch(r"\d{4}-\d{2}-\d{2}", v):
+            sys.exit(f"--{nome.replace('_', '-')} deve ser AAAA-MM-DD (recebi {v!r}).")
+    if a.link and not re.match(r"https?://", a.link):
+        sys.exit("--link deve começar com http:// ou https://")
 
     titulo, paragrafos, fonte = ler_legenda(a.legenda)
     if not fonte:
