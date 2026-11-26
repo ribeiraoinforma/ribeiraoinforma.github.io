@@ -17,7 +17,9 @@
         "data": "2026-11-26",
         "hora": "20h",
         "local": "Teatro do Sesi"
-      }
+      },
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Musician_performing_on_stage_at_night_during_an_outdoor_concert_in_a_lively_atmosphere_with_dramatic_lighting_effects.jpg/1280px-Musician_performing_on_stage_at_night_during_an_outdoor_concert_in_a_lively_atmosphere_with_dramatic_lighting_effects.jpg",
+      "credito_foto": "Imagem ilustrativa: Shixart1985 / Wikimedia Commons, CC BY 2.0"
     },
     {
       "id": "2026-11-26-orquestra-de-viola-caipira-e-gabriel-sater-fazem-show-gratis",
@@ -57,7 +59,9 @@
         "data": "2026-12-05",
         "hora": "21h",
         "local": "Multiplan Hall, RibeirãoShopping"
-      }
+      },
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Live_band_performs_energetic_music_on_stage_during_evening_concert_in_lively_outdoor_setting.jpg/1280px-Live_band_performs_energetic_music_on_stage_during_evening_concert_in_lively_outdoor_setting.jpg",
+      "credito_foto": "Imagem ilustrativa: Shixart1985 / Wikimedia Commons, CC BY 2.0"
     },
     {
       "id": "2026-11-26-unimed-abre-pronto-atendimento-adulto-24h-na-avenida-indepen",
@@ -71,7 +75,9 @@
       ],
       "fonte": "Revide",
       "link": "https://www.revide.com.br/noticias/saude/unimed-ribeirao-preto-amplia-sua-rede-propria-com-novo-pronto-atendimento-adulto-24h/",
-      "imagem": ""
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Consulting_Clinic_Blood_Draws.jpg/1280px-Consulting_Clinic_Blood_Draws.jpg",
+      "credito_foto": "Imagem ilustrativa: atendimento de saúde, Hope2018 / Wikimedia Commons, CC BY-SA 4.0"
     },
     {
       "id": "2026-11-26-agenda-ribeirao-lota-teatro-do-sesi-para-falar-de-empreended",
@@ -85,7 +91,9 @@
       ],
       "fonte": "CBN Ribeirão",
       "link": "https://cbnribeirao.com.br/agenda-ribeirao-reune-publico-para-discutir-empreendedorismo-e-empregabilidade/",
-      "imagem": ""
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/ESIC_Auditorium_with_a_seating_capacity_of_3500.jpg/1280px-ESIC_Auditorium_with_a_seating_capacity_of_3500.jpg",
+      "credito_foto": "Imagem ilustrativa: auditório, Shyjucherian98 / Wikimedia Commons, CC BY-SA 4.0"
     },
     {
       "id": "2026-11-26-usinas-do-futuro-reune-setor-de-bioenergia-em-ribeirao",
@@ -99,7 +107,9 @@
       ],
       "fonte": "CBN Ribeirão",
       "link": "https://cbnribeirao.com.br/ribeirao-preto-recebe-evento-sobre-inovacao-e-o-futuro-das-usinas-de-bioenergia/",
-      "imagem": ""
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Colheita_mecanizada_da_cana_de_a%C3%A7ucar_-_Mechanized_harvesting_of_sugarcane_-_panoramio.jpg/1280px-Colheita_mecanizada_da_cana_de_a%C3%A7ucar_-_Mechanized_harvesting_of_sugarcane_-_panoramio.jpg",
+      "credito_foto": "Imagem ilustrativa: colheita de cana, Marco Aurélio Esparza / Wikimedia Commons, CC BY-SA 3.0"
     },
     {
       "id": "2026-11-26-camara-mantem-dois-vetos-da-prefeitura-e-derruba-um",
@@ -113,7 +123,9 @@
       ],
       "fonte": "CBN Ribeirão",
       "link": "https://cbnribeirao.com.br/camara-de-ribeirao-preto-acolhe-dois-vetos-do-executivo-e-derruba-outro-em-sessao/",
-      "imagem": ""
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/b/bb/C%C3%A2mara_municipal_de_Ribeir%C3%A3o_Preto_17%C2%AA_legislatura.png",
+      "credito_foto": "Gráfico das cadeiras da Câmara de Ribeirão Preto (17ª legislatura): Nelsolino / Wikimedia Commons, CC BY-SA 4.0"
     },
     {
       "id": "2026-11-26-aposentados-ficam-sem-cesta-de-natal-e-sindicato-critica",
@@ -127,7 +139,9 @@
       ],
       "fonte": "Tribuna Ribeirão",
       "link": "https://www.tribunaribeirao.com.br/sindicato-critica-restricao-de-cestas-a-aposentados/",
-      "imagem": ""
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Food-with-physiological-energy-value-example.jpg/1280px-Food-with-physiological-energy-value-example.jpg",
+      "credito_foto": "Imagem ilustrativa: alimentos, epSos.de / Wikimedia Commons, CC BY 2.0"
     },
     {
       "id": "2026-11-26-copinha-2027-comercial-joga-em-casa-e-botafogo-sp-em-cravinh",
@@ -189,7 +203,9 @@
       ],
       "fonte": "Tribuna Ribeirão",
       "link": "",
-      "imagem": "midia/2026-11-26/16-8-mil-empresas-de-ribeirao-preto-estao-na-divida-ativa-da.jpg"
+      "imagem": "midia/2026-11-26/16-8-mil-empresas-de-ribeirao-preto-estao-na-divida-ativa-da.jpg",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/1/1d/200_Brazil_real_Second_Reverse.jpg",
+      "credito_foto": "Imagem ilustrativa: cédula de R$ 200, Banco Central do Brasil / Wikimedia Commons, domínio público"
     },
     {
       "id": "2026-11-26-feira-de-natal-da-ceagesp-tera-chegada-do-papai-noel",
@@ -273,7 +289,9 @@
         "data": "2026-11-28",
         "hora": "16h às 22h",
         "local": "Aldeia Caboclo Pena Vermelha, Ipiranga"
-      }
+      },
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Roda_de_Capoeira_tradicional_do_Engenho_da_Rainha_1.jpg/1280px-Roda_de_Capoeira_tradicional_do_Engenho_da_Rainha_1.jpg",
+      "credito_foto": "Imagem ilustrativa: roda de capoeira, Estela Neto / Wikimedia Commons, CC BY-SA 4.0"
     },
     {
       "id": "2026-11-25-chocolate-premiado-no-mundo-abre-loja-no-iguatemi-na-segunda",
@@ -292,7 +310,9 @@
         "data": "2026-11-30",
         "hora": "18h às 22h",
         "local": "Shopping Iguatemi Ribeirão Preto"
-      }
+      },
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Truffles_with_nuts_and_chocolate_dusting_in_detail.jpg",
+      "credito_foto": "Imagem ilustrativa: trufas de chocolate, David Leggett / Wikimedia Commons, CC BY 2.0"
     },
     {
       "id": "2026-11-25-caminhada-gratuita-mostra-o-patrimonio-italiano-do-centro-ne",
@@ -353,7 +373,9 @@
         "data": "2026-11-28",
         "hora": "9h às 13h",
         "local": "Praça Pedro Biagi, Ipiranga"
-      }
+      },
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Job_Fair_in_Sofia_-_2015.jpg",
+      "credito_foto": "Imagem ilustrativa: feira de empregos, Bianca ciw / Wikimedia Commons, CC BY-SA 4.0"
     },
     {
       "id": "2026-11-25-coren-sp-abre-concurso-com-salario-de-ate-r-10-6-mil-e-prova",
@@ -367,7 +389,9 @@
       ],
       "fonte": "ACidade ON",
       "link": "https://www.acidadeon.com/ribeiraopreto/economia/concurso-publico-abre-inscricoes-com-salarios-de-ate-r-106-mil-e-provas-em-ribeirao-preto/",
-      "imagem": ""
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Enfermeira_aplica_medica%C3%A7%C3%A3o_no_Hospital_Central_da_Marinha_%2852661543200%29.jpg/1280px-Enfermeira_aplica_medica%C3%A7%C3%A3o_no_Hospital_Central_da_Marinha_%2852661543200%29.jpg",
+      "credito_foto": "Imagem ilustrativa: enfermeira, Marinha do Brasil / Wikimedia Commons, CC BY-SA 2.0"
     },
     {
       "id": "2026-11-25-cestas-de-natal-de-servidores-e-alunos-custarao-quase-r-13-m",
@@ -381,7 +405,9 @@
       ],
       "fonte": "Tribuna Ribeirão",
       "link": "https://www.tribunaribeirao.com.br/cestas-de-servidores-custarao-quase-r-13-mi/",
-      "imagem": ""
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/6/64/200_Brazil_real_Second_Obverse.jpg",
+      "credito_foto": "Imagem ilustrativa: cédula de R$ 200, Banco Central do Brasil / Wikimedia Commons, domínio público"
     },
     {
       "id": "2026-11-25-prefeitura-propoe-auxilio-de-r-1-2-mil-a-vitimas-do-vendaval",
@@ -411,7 +437,9 @@
       ],
       "fonte": "CBN Ribeirão",
       "link": "https://cbnribeirao.com.br/queda-de-quedainterdita-rua-jose-loureiro-junior-durante-chuva-em-ribeirao-preto/",
-      "imagem": ""
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Tree_fallen_after_a_storm.jpg/1280px-Tree_fallen_after_a_storm.jpg",
+      "credito_foto": "Imagem ilustrativa: árvore caída, Drummyfish / Wikimedia Commons, CC0"
     },
     {
       "id": "2026-11-25-frente-fria-traz-risco-de-chuva-forte-a-ribeirao-preto",
@@ -441,7 +469,9 @@
       ],
       "fonte": "ACidade ON",
       "link": "https://www.acidadeon.com/ribeiraopreto/lazer-e-cultura/bandas-de-quatro-cidades-farao-abertura-do-show-de-pitty-em-ribeirao-preto/",
-      "imagem": ""
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Live_rock_band_performance_under_stage_lights_during_an_outdoor_festival_in_the_evening.jpg/1280px-Live_rock_band_performance_under_stage_lights_during_an_outdoor_festival_in_the_evening.jpg",
+      "credito_foto": "Imagem ilustrativa: Shixart1985 / Wikimedia Commons, CC BY 2.0"
     },
     {
       "id": "2026-11-24-festival-de-orquideas-tem-entrada-gratis-neste-fim-de-semana",
@@ -461,7 +491,9 @@
         "fim": "2026-11-29",
         "hora": "a partir das 8h",
         "local": "Hotel Dan Inn, Vila Tibério"
-      }
+      },
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Purple_and_White_Orchids.jpg/1280px-Purple_and_White_Orchids.jpg",
+      "credito_foto": "Imagem ilustrativa: Corey Leopold / Wikimedia Commons, CC BY 2.0"
     },
     {
       "id": "2026-11-24-clinica-meu-pet-volta-a-agendar-consultas-as-segundas",
@@ -475,7 +507,9 @@
       ],
       "fonte": "Tribuna Ribeirão",
       "link": "https://www.tribunaribeirao.com.br/clinica-meu-pet-fara-agendamentos-hoje/",
-      "imagem": ""
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/6/61/Guantanamo_dog_handler_comforts_his_partner_during_a_veterinary_exam.jpg",
+      "credito_foto": "Imagem ilustrativa: cão em consulta veterinária, Stephen E. Lewald / Wikimedia Commons, domínio público"
     },
     {
       "id": "2026-11-24-prefeitura-regulamenta-lei-de-combate-ao-vicio-em-apostas",
@@ -489,7 +523,9 @@
       ],
       "fonte": "Tribuna Ribeirão",
       "link": "https://www.tribunaribeirao.com.br/prefeito-regulamenta-lei-da-ludopatia/",
-      "imagem": ""
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Poker_set_2.JPG/1280px-Poker_set_2.JPG",
+      "credito_foto": "Imagem ilustrativa: fichas e cartas, Frisko / Wikimedia Commons, CC BY 3.0"
     },
     {
       "id": "2026-11-24-saude-alerta-para-alta-da-covid-19-e-pede-vacina-para-idosos",
@@ -503,7 +539,9 @@
       ],
       "fonte": "Tribuna Ribeirão, ACidade ON e CBN Ribeirão",
       "link": "https://www.tribunaribeirao.com.br/saude-alerta-para-a-alta-de-covid-19/",
-      "imagem": ""
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/4/43/COVID-19_Vaccine_vial_and_syringe_-_US_Census.jpg",
+      "credito_foto": "Imagem ilustrativa: vacina contra covid-19, US Census / Wikimedia Commons, domínio público"
     },
     {
       "id": "2026-11-23-campus-da-usp-tem-tres-pecas-gratuitas-nesta-semana",
@@ -523,7 +561,9 @@
         "fim": "2026-11-27",
         "hora": "20h",
         "local": "Teatro do Campus da USP"
-      }
+      },
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Juliusz_S%C5%82owacki_Theatre_%28curtain%29.JPG/1280px-Juliusz_S%C5%82owacki_Theatre_%28curtain%29.JPG",
+      "credito_foto": "Imagem ilustrativa: Marycha80 / Wikimedia Commons, CC BY-SA 4.0"
     },
     {
       "id": "2026-11-23-hospital-oferece-200-exames-gratuitos-de-prostata-neste-saba",
@@ -542,7 +582,9 @@
         "data": "2026-11-28",
         "hora": "7h às 13h (com agendamento)",
         "local": "Hospital São Lucas, Rua Quintino Bocaiuva, 895"
-      }
+      },
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Checking_Blood_Sample_%289955279835%29.jpg/1280px-Checking_Blood_Sample_%289955279835%29.jpg",
+      "credito_foto": "Imagem ilustrativa: National Eye Institute / Wikimedia Commons, CC BY 2.0"
     },
     {
       "id": "2026-11-23-ivete-sangalo-faz-show-no-estadio-do-comercial-neste-sabado",
