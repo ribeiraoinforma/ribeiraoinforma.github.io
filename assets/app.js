@@ -512,7 +512,7 @@ function passo(n, html) {
 }
 
 function guiaHTML() {
-  const linkSite = location.origin + location.pathname.replace(/[^/]*$/, "");
+  const linkSite = location.origin + "/app";
   if (ehInterno()) {
     const ios = ehIOS();
     return `<h2>Abra no ${ios ? "Safari" : "Chrome"} para instalar</h2>
@@ -551,6 +551,11 @@ function guiaHTML() {
         ${passo(3, `Toque em <b>Adicionar</b>, no <b>canto de cima, à direita</b>. Pronto: o ícone do Ribeirão Informa aparece na sua tela, junto com os outros apps.`)}
       </ol>
       <div class="seta-baixo" aria-hidden="true"><span>Compartilhar fica aqui embaixo</span>⬇︎</div>`;
+  }
+  if (ehAndroid() && pedidoInstalar) {
+    return `<h2>Instale com 1 toque</h2>
+      <p class="sub">Toque no botão abaixo e depois em <b>Instalar</b>.</p>
+      <button class="btn" id="instalar-agora">📲 Instalar agora</button>`;
   }
   if (ehAndroid()) {
     return `<h2>Instale em 2 toques</h2>
@@ -591,6 +596,12 @@ function abrirGuia() {
       } catch {
         prompt("Copie o link:", cp.dataset.link);
       }
+    };
+  const ja = el.querySelector("#instalar-agora");
+  if (ja)
+    ja.onclick = () => {
+      fechar();
+      instalar();
     };
 }
 
@@ -657,7 +668,14 @@ function mostrarInstalar() {
 window.addEventListener("beforeinstallprompt", (e) => {
   e.preventDefault();
   pedidoInstalar = e;
+  // se o passo a passo já está aberto, troca para o botão de 1 toque
+  if (document.getElementById("guia")) abrirGuia();
 });
+// link curto /app chega aqui com ?instalar=1 e já abre a instalação
+if (/[?&]instalar=1/.test(location.search) && !ehApp()) {
+  history.replaceState(null, "", location.pathname);
+  setTimeout(abrirGuia, 900);
+}
 window.addEventListener("appinstalled", esconderInstalar);
 setTimeout(mostrarInstalar, 600);
 // link no rodapé abre o passo a passo a qualquer hora
