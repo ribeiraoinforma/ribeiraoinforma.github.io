@@ -618,3 +618,13 @@ h2.secao::before {
 .destaque.foto{min-height:200px}
 .destaque.foto.falhou{min-height:0;background:linear-gradient(160deg,var(--cor,#0b2a5b),#071a3a)}
 .destaque.foto.falhou .sobre{position:static;background:none;padding:28px}
+
+/* ===== app: aviso de instalar ===== */
+#instalar{position:fixed;left:12px;right:12px;bottom:12px;z-index:50;max-width:520px;margin:0 auto;display:flex;gap:12px;align-items:flex-start;background:#fff;color:var(--tinta);border-top:4px solid var(--ouro);border-radius:12px;padding:14px 40px 14px 14px;box-shadow:0 12px 32px rgba(7,26,58,.28);animation:sobe .3s ease-out}
+#instalar img{border-radius:10px;flex:none}
+#instalar p{font-size:15px;line-height:1.45}
+#instalar .btn{margin-top:10px;padding:10px 18px}
+#instalar .fechar{position:absolute;top:6px;right:8px;width:34px;height:34px;border:0;background:none;font-size:26px;line-height:1;color:var(--cinza);cursor:pointer}
+#instalar .ic-share{display:inline-block;border:1.5px solid currentColor;border-radius:4px;padding:0 4px;font-size:12px}
+@keyframes sobe{from{transform:translateY(20px);opacity:0}to{transform:none;opacity:1}}
+@media (display-mode: standalone){ .topo{padding-top:env(safe-area-inset-top)} }

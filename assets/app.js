@@ -451,3 +451,51 @@ if (pagina === "capa") capa();
 else if (pagina === "materia") materia();
 else if (pagina === "agenda") agenda();
 else montarTopo("");
+
+// ---------- app instalável (PWA) ----------
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
+}
+const ehApp = () => matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
+const ehIOS = () => /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+const ehCelular = () => /android|iphone|ipad|ipod|mobile/i.test(navigator.userAgent) || ehIOS();
+let pedidoInstalar = null;
+const guardado = (k, v) => { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch { return null; } };
+
+function avisoInstalar(forcar) {
+  if (ehApp() || document.getElementById("instalar")) return;
+  const fechado = +guardado("ri-instalar-fechado") || 0;
+  if (!forcar && Date.now() - fechado < 14 * 864e5) return;
+  let corpo;
+  if (pedidoInstalar) {
+    corpo = `<p><b>Tenha o Ribeirão Informa no celular.</b> Abre rápido, direto da tela inicial.</p>
+      <button class="btn" id="instalar-ok">Instalar o app</button>`;
+  } else if (ehIOS()) {
+    corpo = `<p><b>Instale o app no iPhone:</b> toque em <b>Compartilhar</b> <span class="ic-share" aria-hidden="true">⬆︎</span> na barra do Safari e depois em <b>Adicionar à Tela de Início</b>.</p>`;
+  } else if (ehCelular()) {
+    corpo = `<p><b>Instale o app no Android:</b> toque no menu <b>⋮</b> do navegador e depois em <b>Instalar app</b> ou <b>Adicionar à tela inicial</b>.</p>`;
+  } else if (forcar) {
+    corpo = `<p><b>Abra este site no celular</b> (ribeiraoinforma.github.io) para instalar o app. No computador, use o ícone de instalar na barra de endereço do Chrome.</p>`;
+  } else return;
+  const el = document.createElement("div");
+  el.id = "instalar";
+  el.setAttribute("role", "dialog");
+  el.innerHTML = `<img src="icones/icone-192.png" alt="" width="48" height="48"><div class="txt">${corpo}</div><button class="fechar" aria-label="Fechar">×</button>`;
+  document.body.appendChild(el);
+  el.querySelector(".fechar").onclick = () => { guardado("ri-instalar-fechado", Date.now()); el.remove(); };
+  const ok = el.querySelector("#instalar-ok");
+  if (ok) ok.onclick = async () => { pedidoInstalar.prompt(); await pedidoInstalar.userChoice.catch(() => {}); pedidoInstalar = null; el.remove(); };
+}
+window.addEventListener("beforeinstallprompt", (e) => { e.preventDefault(); pedidoInstalar = e; setTimeout(() => avisoInstalar(), 3000); });
+window.addEventListener("appinstalled", () => document.getElementById("instalar")?.remove());
+setTimeout(() => { if (!pedidoInstalar && ehCelular()) avisoInstalar(); }, 5000);
+// link "Baixe o app" no rodapé abre as instruções a qualquer hora
+setTimeout(() => {
+  const mapa = document.querySelector(".rodape .mapa");
+  if (mapa && !ehApp()) {
+    const a = document.createElement("a");
+    a.href = "#"; a.textContent = "📲 Baixe o app";
+    a.onclick = (ev) => { ev.preventDefault(); document.getElementById("instalar")?.remove(); avisoInstalar(true); };
+    mapa.appendChild(a);
+  }
+}, 500);
