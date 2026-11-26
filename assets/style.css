@@ -533,3 +533,23 @@ h2.secao::before {
   .lista{grid-template-columns:1fr}
   .secoes a{padding:12px 9px;font-size:13px}
 }
+
+/* ===== v3: celular mais fácil ===== */
+@media (max-width:640px){
+  .secoes{position:static}
+  .secoes .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:0;padding:0}
+  .secoes a{text-align:center;padding:12px 4px;font-size:13px;border-bottom:1px solid var(--linha);border-right:1px solid var(--linha)}
+  .secoes a:nth-child(3n){border-right:0}
+  .secoes a[aria-current=page]{background:var(--azul);color:#fff;border-bottom-color:var(--azul)}
+  .hoje .wrap{flex-direction:column;gap:2px}
+  .hoje a{display:inline-block;padding:6px 0}
+  .destaque img,.destaque .sem-img{max-width:280px;margin:0 auto}
+  .materia img{max-width:300px}
+  .fones a{padding:6px 0;font-size:16px}
+  .evento{padding:12px 0}
+  .mais{padding:8px 0}
+  .voltar{padding:8px 0}
+  .rodape .mapa a{padding:6px 0}
+  .card h3,.item h3{font-size:18px}
+  .materia .texto p{font-size:17px}
+}
