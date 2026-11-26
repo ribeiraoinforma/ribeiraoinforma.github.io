@@ -613,3 +613,6 @@ h2.secao::before {
 .materia .foto-mat img{max-width:none;margin:0}
 .destaque.foto img{max-width:none;margin:0}
 .item .bloco-cor span{font-size:12px;white-space:nowrap}
+.thumb.de-card img{object-position:center 42%}
+.thumb{background:var(--cor,#dfe5ee)}
+.destaque.foto{min-height:200px}

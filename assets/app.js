@@ -190,9 +190,30 @@ const metaHTML = (n, fonte) =>
   `<div class="meta">${dataBR(n.data)} · Fonte: <span class="fonte">${fonte || esc(n.fonte)}</span></div>`;
 
 // Miniatura horizontal: foto se houver; senão um quadro na cor da seção.
-function thumbHTML(n, lazy = true) {
-  if (n.foto)
-    return `<div class="thumb"><img src="${esc(n.foto)}" alt="" ${lazy ? 'loading="lazy"' : ""} width="1200" height="675"></div>`;
+// Foto padrão por seção (uso livre, com crédito) para quando a notícia não trouxer foto.
+const FOTO_PADRAO = {
+  cultura: {
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Vista_do_Theatro_Pedro_II_em_2022.jpg/1280px-Vista_do_Theatro_Pedro_II_em_2022.jpg",
+    credito: "Mtvdanilo / Wikimedia Commons, CC BY-SA 4.0",
+  },
+};
+// Sempre que possível, uma foto: a da notícia, a padrão da seção ou o card da notícia.
+const fotoDe = (n) =>
+  n.foto || (FOTO_PADRAO[secaoDe(n).slug] || {}).url || n.imagem || "";
+// largura: miniaturas do Wikimedia em tamanho menor para carregar rápido no celular
+const fotoSrc = (u, largura) => {
+  u = String(u || "");
+  if (largura) u = u.replace(/\/(\d+)px-([^/]+)$/, `/${largura}px-$2`);
+  return /^https?:\/\//i.test(u) || /^midia\//.test(u) ? esc(u) : "";
+};
+// Se a foto externa falhar: troca pelo card da notícia; sem card, some e fica o fundo na cor da seção.
+const reserva = (n) =>
+  `onerror="this.onerror=null;${n.imagem && /^midia\//.test(n.imagem) ? `this.src='${esc(n.imagem)}';this.parentNode.classList.add('de-card')` : "this.remove()"}"`;
+
+function thumbHTML(n, lazy = true, largura = 500) {
+  const f = fotoSrc(fotoDe(n), largura);
+  if (f)
+    return `<div class="thumb${!n.foto && f === esc(n.imagem) ? " de-card" : ""}" style="--cor:${corDe(n)}"><img src="${f}" alt="" ${lazy ? 'loading="lazy"' : ""} decoding="async" ${reserva(n)} width="1200" height="675"></div>`;
   const s = secaoDe(n);
   return `<div class="thumb bloco-cor" style="--cor:${corDe(n)}"><span>${(n.editoria || "").toUpperCase() === "URGENTE" ? "Urgente" : esc(s.nome)}</span></div>`;
 }
@@ -203,14 +224,15 @@ function cardHTML(n) {
 }
 
 function itemHTML(n) {
-  return `<a class="item" href="${linkMateria(n)}" style="--cor:${corDe(n)}">${thumbHTML(n)}
+  return `<a class="item" href="${linkMateria(n)}" style="--cor:${corDe(n)}">${thumbHTML(n, true, 330)}
     <div>${tagHTML(n)}<h3>${esc(n.titulo)}</h3>${metaHTML(n)}</div></a>`;
 }
 
 function destaqueHTML(n) {
-  if (n.foto) {
+  const fd = fotoSrc(n.foto || (FOTO_PADRAO[secaoDe(n).slug] || {}).url || "");
+  if (fd) {
     return `<a class="destaque foto" href="${linkMateria(n)}">
-      <img src="${esc(n.foto)}" alt="" width="1200" height="675">
+      <img src="${fd}" alt="" fetchpriority="high" ${reserva(n)} width="1200" height="675">
       <div class="sobre">${tagHTML(n)}<h1>${esc(n.titulo)}</h1><p>${esc(n.resumo)}</p>${metaHTML(n)}</div></a>`;
   }
   const arte = n.imagem
@@ -384,11 +406,18 @@ async function materia() {
     .filter((x) => x.id !== n.id && secaoDe(x) === s)
     .slice(0, 3);
   const e = n.evento;
-  const midia = n.foto
-    ? `<figure class="foto-mat"><img src="${esc(n.foto)}" alt="" width="1200" height="675">${n.credito_foto ? `<figcaption>Foto: ${esc(n.credito_foto)}</figcaption>` : ""}</figure>`
-    : n.imagem
-      ? `<img class="card-mat" src="${esc(n.imagem)}" alt="Card da notícia: ${esc(n.titulo)}" width="1080" height="1350">`
-      : "";
+  const pad = FOTO_PADRAO[s.slug];
+  const fm = n.foto
+    ? { url: n.foto, credito: n.credito_foto }
+    : pad && !n.imagem
+      ? pad
+      : null;
+  const midia =
+    fm && fotoSrc(fm.url)
+      ? `<figure class="foto-mat"><img src="${fotoSrc(fm.url)}" alt="" ${reserva(n)} width="1200" height="675">${fm.credito ? `<figcaption>Foto: ${esc(fm.credito)}</figcaption>` : ""}</figure>`
+      : n.imagem
+        ? `<img class="card-mat" src="${esc(n.imagem)}" alt="Card da notícia: ${esc(n.titulo)}" width="1080" height="1350">`
+        : "";
   $("#conteudo").innerHTML = `
     <a class="voltar" href="./?secao=${s.slug}">← ${s.nome}</a>
     <article class="materia" style="--cor:${corDe(n)}">
