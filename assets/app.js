@@ -186,7 +186,7 @@ function montarTopo(ativa) {
       <img class="selo" src="${SELO}" alt="" onerror="this.remove()">
       <div class="nome">RIBEIRÃO <span>INFORMA</span><small>NOTÍCIAS DE RIBEIRÃO PRETO</small></div>
     </a>
-    <div class="topo-dir"><button class="btn-instalar" type="button" hidden>📲 Instalar o app</button><nav class="redes" aria-label="Redes sociais">${redesHTML()}</nav></div>
+    <div class="topo-dir"><button class="btn-avisos" type="button" hidden aria-label="Ativar avisos no celular">🔔 <span>Ativar avisos</span></button><button class="btn-instalar" type="button" hidden>📲 Instalar o app</button><nav class="redes" aria-label="Redes sociais">${redesHTML()}</nav></div>
   </div></header>
   <nav class="secoes" aria-label="Seções"><div class="wrap">
     ${link("./", "Início", "inicio")}
@@ -399,6 +399,7 @@ async function capa() {
     ${blocos}`;
   carregarTempo();
   mostrarInstalar();
+  mostrarAvisos();
 }
 
 function paginaSecao(lista, s) {
@@ -805,14 +806,19 @@ async function ativarAvisos() {
     );
     return;
   }
-  const OS = await carregarOneSignal();
-  if (!OS) {
-    alertaCurto("Não deu para ativar agora. Tente de novo em instantes.");
+  // o pedido do celular tem que sair NA HORA do toque (o iPhone ignora se demorar),
+  // então pedimos a permissão primeiro e só depois ligamos o OneSignal
+  let perm = Notification.permission;
+  try {
+    if (perm !== "granted") perm = await Notification.requestPermission();
+  } catch {}
+  if (perm !== "granted") {
+    alertaCurto("Sem permissão, não dá para avisar. Toque de novo em 🔔 e escolha Permitir.");
     return;
   }
+  const OS = await carregarOneSignal();
   try {
-    await OS.Notifications.requestPermission();
-    if (OS.User?.PushSubscription && !OS.User.PushSubscription.optedIn)
+    if (OS?.User?.PushSubscription && !OS.User.PushSubscription.optedIn)
       await OS.User.PushSubscription.optIn();
   } catch {}
   atualizarAvisos();
@@ -833,7 +839,7 @@ function alertaCurto(txt) {
 function atualizarAvisos() {
   if (!avisosLigados()) return;
   document
-    .querySelectorAll(".avisos-faixa,#avisos-convite")
+    .querySelectorAll(".avisos-faixa,#avisos-convite,.btn-avisos")
     .forEach((e) => e.remove());
 }
 
@@ -855,29 +861,37 @@ function mostrarAvisos() {
     f.onclick = ativarAvisos;
     ref.after(f);
   }
-  // dentro do app instalado: convite no rodapé da tela (no máximo a cada 7 dias)
+  // botão com sino no topo, sempre à vista enquanto os avisos estiverem desligados
+  document.querySelectorAll(".btn-avisos").forEach((bt) => {
+    bt.hidden = false;
+    bt.onclick = ativarAvisos;
+  });
+  // dentro do app instalado: tela grande no meio, impossível de não ver
   const fechado = +guardado("ri-avisos-fechado") || 0;
-  if (
-    ehApp() &&
-    Date.now() - fechado > 7 * 864e5 &&
-    !document.getElementById("avisos-convite")
-  ) {
+  if (ehApp() && Date.now() - fechado > 3 * 864e5 && !document.getElementById("avisos-convite")) {
+    carregarOneSignal(); // já deixa pronto
     setTimeout(() => {
-      if (avisosLigados() || document.getElementById("avisos-convite")) return;
+      if (avisosLigados() || document.getElementById("avisos-convite") || document.getElementById("guia")) return;
       const el = document.createElement("div");
       el.id = "avisos-convite";
-      el.innerHTML = `<span class="sino" aria-hidden="true">🔔</span><div class="txt"><p><b>Quer saber na hora quando sair notícia?</b></p>
-        <button class="btn" type="button">🔔 Ativar avisos</button></div><button class="fechar" aria-label="Fechar">×</button>`;
+      el.setAttribute("role", "dialog");
+      el.setAttribute("aria-modal", "true");
+      el.innerHTML = `<div class="guia-caixa"><div class="sino-grande" aria-hidden="true">🔔</div>
+        <h2>Quer receber as notícias importantes no celular?</h2>
+        <p class="sub">Chegou notícia importante de Ribeirão, aparece na sua tela. É grátis e você pode desligar quando quiser.</p>
+        <button class="btn btn-grande" type="button" id="avisos-sim">🔔 Sim, ativar avisos</button>
+        <p class="sub">Depois toque em <b>Permitir</b>.</p>
+        <button class="btn claro" type="button" id="avisos-nao">Agora não</button></div>`;
       document.body.appendChild(el);
-      el.querySelector(".btn").onclick = () => {
+      el.querySelector("#avisos-sim").onclick = () => {
         el.remove();
         ativarAvisos();
       };
-      el.querySelector(".fechar").onclick = () => {
+      el.querySelector("#avisos-nao").onclick = () => {
         guardado("ri-avisos-fechado", Date.now());
         el.remove();
       };
-    }, 2500);
+    }, 1200);
   }
 }
 setTimeout(mostrarAvisos, 800);

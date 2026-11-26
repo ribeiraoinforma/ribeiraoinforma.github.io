@@ -6,7 +6,7 @@
 try {
   importScripts("https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.sw.js");
 } catch (e) {}
-const VERSAO = "ri-v4";
+const VERSAO = "ri-v5";
 const BASICOS = [
   "./",
   "index.html",
