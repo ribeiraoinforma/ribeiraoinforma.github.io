@@ -1,0 +1,35 @@
+name: Baixar SDK de avisos
+# copia os arquivos do OneSignal para dentro do site (assets/onesignal/),
+# para os avisos funcionarem mesmo em celular que bloqueia cdn.onesignal.com
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [.github/workflows/baixar-sdk.yml]
+permissions:
+  contents: write
+jobs:
+  baixar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          mkdir -p assets/onesignal
+          cd assets/onesignal
+          B=https://cdn.onesignal.com/sdks/web/v16
+          for f in OneSignalSDK.page.js OneSignalSDK.page.es6.js OneSignalSDK.sw.js OneSignalSDK.page.styles.css; do
+            curl -fsSL "$B/$f" -o "$f" || echo "falhou $f"
+          done
+          ls -la
+          # outros arquivos citados dentro do SDK
+          grep -ohE 'OneSignalSDK[A-Za-z0-9._-]*\.(js|css)' *.js | sort -u > citados.txt || true
+          cat citados.txt
+          for f in $(cat citados.txt); do [ -f "$f" ] || curl -fsSL "$B/$f" -o "$f" || echo "falhou $f"; done
+          grep -oE 'https?://[a-z0-9.-]*onesignal\.com[^"'"'"' )]*' *.js | sort -u | head -50 > urls.txt || true
+          cat urls.txt
+      - run: |
+          git config user.name "Ribeirão Informa"
+          git config user.email "noreply@ribeiraoinforma.invalid"
+          git add assets/onesignal
+          git commit -m "Cópia local do SDK de avisos" || echo "nada novo"
+          git push
