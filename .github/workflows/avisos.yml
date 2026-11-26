@@ -1,0 +1,23 @@
+name: Avisos no celular
+on:
+  push:
+    branches: [main]
+    paths: [data/noticias.json]
+permissions:
+  contents: read
+concurrency:
+  group: avisos
+  cancel-in-progress: false
+jobs:
+  avisar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      # espera o GitHub Pages publicar a notícia antes de avisar (o link precisa abrir)
+      - run: sleep 90
+      - run: python3 scripts/avisar_novas.py
+        env:
+          ONESIGNAL_APP_ID: 7140f1ac-f0cf-4cee-a53d-76f94e300c79
+          ONESIGNAL_API_KEY: ${{ secrets.ONESIGNAL_API_KEY }}

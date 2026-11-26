@@ -6,6 +6,7 @@ Uso (rodar da raiz do site):
       [--data 2026-11-26] [--link URL_DA_MATERIA] [--destaque]
       [--evento-data 2026-12-04 [--evento-fim 2026-12-05] [--evento-hora "20h"] [--evento-local "Theatro Pedro II"]]
       [--foto foto.jpg|https://... --credito-foto "Unsplash/Fulano"]
+      [--notificar]   (aviso no celular; URGENTE sempre avisa. Use só nas notícias principais)
 
 Editorias e a seção do site onde cada uma aparece:
   Cidade ....... CIDADE, TRÂNSITO, TEMPO, SEGURANÇA, POLÍTICA, EDUCAÇÃO
@@ -86,6 +87,11 @@ def main():
         default="",
         help='ex.: "Unsplash/Fulano" ou "Prefeitura de RP (divulgação)"',
     )
+    ap.add_argument(
+        "--notificar",
+        action="store_true",
+        help="manda aviso no celular de quem ativou (sai sozinho depois do git push)",
+    )
     a = ap.parse_args()
     for nome in ("data", "evento_data", "evento_fim"):
         v = getattr(a, nome)
@@ -135,6 +141,8 @@ def main():
             )
             noticia["foto"] = foto_rel
         noticia["credito_foto"] = a.credito_foto
+    if a.notificar:
+        noticia["notificar"] = True
     if a.destaque:
         noticia["destaque"] = True
     if a.evento_data:
