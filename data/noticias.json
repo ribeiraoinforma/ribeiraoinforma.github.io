@@ -1,6 +1,22 @@
 {
   "noticias": [
     {
+      "id": "2026-11-26-pix-tera-novas-regras-de-seguranca-e-melhorias-a-partir-de-2",
+      "data": "2026-11-26",
+      "editoria": "BRASIL",
+      "titulo": "Pix terá novas regras de segurança e melhorias a partir de 2027",
+      "resumo": "O Banco Central anunciou nesta quinta-feira (26), na reunião plenária do Fórum Pix, mudanças previstas para 2027. Entre elas estão regras para as mensagens enviadas junto com as transferências, com ferramenta para mascarar textos inapropriados, e um indicador de probabilidade de fraude calculado em tempo real para cada transação e compartilhado com os bancos.",
+      "texto": [
+        "O Banco Central anunciou nesta quinta-feira (26), na reunião plenária do Fórum Pix, mudanças previstas para 2027. Entre elas estão regras para as mensagens enviadas junto com as transferências, com ferramenta para mascarar textos inapropriados, e um indicador de probabilidade de fraude calculado em tempo real para cada transação e compartilhado com os bancos.",
+        "O Pix Automático também será aprimorado, e há uma ferramenta prevista para facilitar a devolução de Pix enviado por engano, ainda sem detalhes nem data. Segundo o BC, as medidas dependem de implementação e não estarão necessariamente disponíveis no início de 2027."
+      ],
+      "fonte": "Agência Brasil",
+      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/pix-tera-novas-regras-de-seguranca-e-melhorias-em-2027",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/1/1d/200_Brazil_real_Second_Reverse.jpg",
+      "credito_foto": "Imagem ilustrativa: cédula de R$ 200 / Banco Central do Brasil, Wikimedia Commons, domínio público"
+    },
+    {
       "id": "2026-11-26-governo-de-sp-abre-inscricoes-para-concurso-com-5-mil-vagas",
       "data": "2026-11-26",
       "editoria": "ESTADO",
@@ -626,6 +642,22 @@
       "imagem": "",
       "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Vista_a%C3%A9rea_do_Rio_Pardo_e_Ribeir%C3%A3o_Preto_em_dia_chuvoso._-_panoramio.jpg/1280px-Vista_a%C3%A9rea_do_Rio_Pardo_e_Ribeir%C3%A3o_Preto_em_dia_chuvoso._-_panoramio.jpg",
       "credito_foto": "Ribeirão em dia de chuva (ilustrativa): Marco Aurélio Esparza / Wikimedia Commons, CC BY-SA 3.0"
+    },
+    {
+      "id": "2026-11-24-primeira-parcela-do-13o-salario-deve-ser-paga-ate-segunda-30",
+      "data": "2026-11-24",
+      "editoria": "BRASIL",
+      "titulo": "Primeira parcela do 13º salário deve ser paga até segunda (30)",
+      "resumo": "Empresas e órgãos públicos têm até segunda-feira, 30 de novembro, para pagar a primeira parcela do 13º salário de 2026. Em regra, ela corresponde a 50% do valor, sem descontos de INSS ou Imposto de Renda. A segunda parcela vence em 20 de dezembro, mas como cai num domingo deve ser antecipada para sexta, dia 18, já com os descontos.",
+      "texto": [
+        "Empresas e órgãos públicos têm até segunda-feira, 30 de novembro, para pagar a primeira parcela do 13º salário de 2026. Em regra, ela corresponde a 50% do valor, sem descontos de INSS ou Imposto de Renda. A segunda parcela vence em 20 de dezembro, mas como cai num domingo deve ser antecipada para sexta, dia 18, já com os descontos.",
+        "Têm direito trabalhadores com carteira assinada, domésticos registrados, servidores, avulsos, intermitentes (proporcional) e aposentados e pensionistas. Autônomos, informais, estagiários e beneficiários do Bolsa Família e do BPC não recebem. Se o pagamento atrasar, o trabalhador pode procurar o RH, o sindicato, o Ministério do Trabalho ou a Justiça do Trabalho."
+      ],
+      "fonte": "Agência Brasil",
+      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/empresas-tem-ate-30-de-novembro-para-pagar-primeira-parcela-do-13o",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/6/64/200_Brazil_real_Second_Obverse.jpg",
+      "credito_foto": "Imagem ilustrativa: cédula de R$ 200 / Banco Central do Brasil, Wikimedia Commons, domínio público"
     },
     {
       "id": "2026-11-24-pitty-faz-show-em-ribeirao-preto-em-12-de-dezembro",
