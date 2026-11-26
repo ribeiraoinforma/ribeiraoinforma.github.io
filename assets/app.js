@@ -191,12 +191,8 @@ const metaHTML = (n, fonte) =>
 
 // Miniatura horizontal: foto se houver; senão um quadro na cor da seção.
 // Foto padrão por seção (uso livre, com crédito) para quando a notícia não trouxer foto.
-const FOTO_PADRAO = {
-  cultura: {
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Vista_do_Theatro_Pedro_II_em_2022.jpg/1280px-Vista_do_Theatro_Pedro_II_em_2022.jpg",
-    credito: "Mtvdanilo / Wikimedia Commons, CC BY-SA 4.0",
-  },
-};
+// Foto padrão por seção: só foto genérica, que não indique lugar ou fato específico. Vazio por enquanto.
+const FOTO_PADRAO = {};
 // Sempre que possível, uma foto: a da notícia, a padrão da seção ou o card da notícia.
 const fotoDe = (n) =>
   n.foto || (FOTO_PADRAO[secaoDe(n).slug] || {}).url || n.imagem || "";
