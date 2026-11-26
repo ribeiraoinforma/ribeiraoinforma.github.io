@@ -1,6 +1,101 @@
 {
   "noticias": [
     {
+      "id": "2026-11-26-governo-de-sp-abre-inscricoes-para-concurso-com-5-mil-vagas",
+      "data": "2026-11-26",
+      "editoria": "ESTADO",
+      "titulo": "Governo de SP abre inscrições para concurso com 5 mil vagas de professor",
+      "resumo": "A Secretaria da Educação do Estado de São Paulo abriu nesta quinta-feira (26), a partir das 16h, as inscrições do concurso para 5.000 professores efetivos de Ensino Fundamental e Médio. As inscrições vão até as 16h de 15 de fevereiro de 2027, só pelo site da FGV (conhecimento.fgv.br/concursos/concursoseducsp27), com taxa de R$ 64.",
+      "texto": [
+        "A Secretaria da Educação do Estado de São Paulo abriu nesta quinta-feira (26), a partir das 16h, as inscrições do concurso para 5.000 professores efetivos de Ensino Fundamental e Médio. As inscrições vão até as 16h de 15 de fevereiro de 2027, só pelo site da FGV (conhecimento.fgv.br/concursos/concursoseducsp27), com taxa de R$ 64.",
+        "São 3.000 vagas de 40 horas semanais, com salário inicial de R$ 5.565, e 2.000 vagas de 25 horas, com R$ 3.478,13; 5% das vagas são reservadas a pessoas com deficiência. A prova objetiva presencial está prevista para 25 de abril de 2027."
+      ],
+      "fonte": "Agência SP (Governo do Estado)",
+      "link": "https://www.agenciasp.sp.gov.br/educacao/concurso-5-000-professores/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Klassenraum_Grundschule.jpg/1280px-Klassenraum_Grundschule.jpg",
+      "credito_foto": "Imagem ilustrativa: sala de aula / Martin Kraft, Wikimedia Commons, CC BY-SA 3.0"
+    },
+    {
+      "id": "2026-11-26-aluno-de-ribeirao-e-ouro-no-rugby-em-cadeira-de-rodas-nas-pa",
+      "data": "2026-11-26",
+      "editoria": "ESPORTE",
+      "titulo": "Aluno de Ribeirão é ouro no rugby em cadeira de rodas nas Paralimpíadas Escolares",
+      "resumo": "Um estudante do Marista Escola Social Irmão Rui, de Ribeirão Preto, conquistou a medalha de ouro no rugby em cadeira de rodas nas Paralimpíadas Escolares, integrando a equipe de São Paulo, que foi bicampeã.",
+      "texto": [
+        "Um estudante do Marista Escola Social Irmão Rui, de Ribeirão Preto, conquistou a medalha de ouro no rugby em cadeira de rodas nas Paralimpíadas Escolares, integrando a equipe de São Paulo, que foi bicampeã.",
+        "As disputas foram de 18 a 20 de novembro, no Centro de Treinamento Paralímpico Brasileiro, na capital paulista. O Distrito Federal ficou com a prata e a Paraíba com o bronze."
+      ],
+      "fonte": "Tribuna Ribeirão",
+      "link": "https://www.tribunaribeirao.com.br/estudante-de-ribeirao-preto-conquista-ouro-nas-paralimpiadas-escolares/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Wheelchair_rugby_191020a3.jpg/1280px-Wheelchair_rugby_191020a3.jpg",
+      "credito_foto": "Imagem ilustrativa: rugby em cadeira de rodas / 江戸村のとくぞう, Wikimedia Commons, CC BY-SA 4.0"
+    },
+    {
+      "id": "2026-11-26-moura-lacerda-dragons-decide-titulo-nacional-de-futebol-amer",
+      "data": "2026-11-26",
+      "editoria": "ESPORTE",
+      "titulo": "Moura Lacerda Dragons decide título nacional de futebol americano em casa",
+      "resumo": "O Moura Lacerda Dragons disputa a final da Superliga D2 no dia 5 de dezembro, às 16h, na Casa do Dragão, no campus do Centro Universitário Moura Lacerda, contra o Arapongas Golden Phoenix (PR). A equipe venceu o Tritões FA, de Vila Velha (ES), por 20 a 6 e garantiu o acesso à primeira divisão.",
+      "texto": [
+        "O Moura Lacerda Dragons disputa a final da Superliga D2 no dia 5 de dezembro, às 16h, na Casa do Dragão, no campus do Centro Universitário Moura Lacerda, contra o Arapongas Golden Phoenix (PR). A equipe venceu o Tritões FA, de Vila Velha (ES), por 20 a 6 e garantiu o acesso à primeira divisão.",
+        "Os ingressos custam R$ 20 no Ingresso.com e saem por R$ 15 nesta sexta, em promoção de Black Friday. O técnico do time é Francisco Araújo."
+      ],
+      "fonte": "CBN Ribeirão",
+      "link": "https://cbnribeirao.com.br/moura-lacerda-dragons-disputa-titulo-nacional-da-superliga-d2-em-ribeirao-preto/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/High_School_Football_Game_at_New_Canaan_High_School%2C_CT.jpg/1280px-High_School_Football_Game_at_New_Canaan_High_School%2C_CT.jpg",
+      "credito_foto": "Imagem ilustrativa: futebol americano / Redditaddict69, Wikimedia Commons, CC BY-SA 4.0",
+      "evento": {
+        "data": "2026-12-05",
+        "hora": "16:00",
+        "local": "Casa do Dragão, campus Moura Lacerda"
+      }
+    },
+    {
+      "id": "2026-11-26-7o-festival-de-orquideas-tem-entrada-gratis-neste-fim-de-sem",
+      "data": "2026-11-26",
+      "editoria": "LAZER",
+      "titulo": "7º Festival de Orquídeas tem entrada grátis neste fim de semana",
+      "resumo": "O 7º Festival de Orquídeas de Ribeirão Preto acontece no sábado (28), das 8h às 19h, e no domingo (29), das 8h às 17h, no Hotel Dan Inn, na rua Coronel Luiz da Cunha, 404, Vila Tibério. A entrada é gratuita.",
+      "texto": [
+        "O 7º Festival de Orquídeas de Ribeirão Preto acontece no sábado (28), das 8h às 19h, e no domingo (29), das 8h às 17h, no Hotel Dan Inn, na rua Coronel Luiz da Cunha, 404, Vila Tibério. A entrada é gratuita.",
+        "Promovido pela Assorp, o festival reúne orquídeas, suculentas, insumos e acessórios, com orientações de produtores e colecionadores."
+      ],
+      "fonte": "Tribuna Ribeirão",
+      "link": "https://www.tribunaribeirao.com.br/ribeirao-recebe-o-7o-festival-de-orquideas/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Purple_and_White_Orchids.jpg/1280px-Purple_and_White_Orchids.jpg",
+      "credito_foto": "Imagem ilustrativa: orquídeas / Corey Leopold, Wikimedia Commons, CC BY 2.0",
+      "evento": {
+        "data": "2026-11-28",
+        "hora": "08:00",
+        "local": "Hotel Dan Inn, rua Coronel Luiz da Cunha, 404, Vila Tibério"
+      }
+    },
+    {
+      "id": "2026-11-26-feira-de-artesanato-e-empreendedorismo-feminino-e-hoje-na-fa",
+      "data": "2026-11-26",
+      "editoria": "CULTURA",
+      "titulo": "Feira de artesanato e empreendedorismo feminino é hoje na Fatec",
+      "resumo": "A 5ª edição da Feira de Artesanato e Empreendedorismo Feminino acontece nesta quinta-feira (26), das 17h30 às 22h, na Fatec Ribeirão Preto, na avenida Pio XII, 1.255, Vila Virgínia. A entrada é gratuita.",
+      "texto": [
+        "A 5ª edição da Feira de Artesanato e Empreendedorismo Feminino acontece nesta quinta-feira (26), das 17h30 às 22h, na Fatec Ribeirão Preto, na avenida Pio XII, 1.255, Vila Virgínia. A entrada é gratuita.",
+        "A feira é promovida pelo projeto social Empef, com participação de integrantes do projeto Afroempreendedorismo. As expositoras vendem os produtos que elas mesmas desenvolvem, e a renda fica com elas."
+      ],
+      "fonte": "Revide",
+      "link": "https://www.revide.com.br/noticias/cultura/5-edicao-da-feira-de-artesanato-empreendedorismo-feminino-ocorre-nesta-quinta-feira-em-ribeirao-preto/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Artesanatos_na_feira_de_pedra_sab%C3%A3o_no_Largo_de_Coimbra%2C_Ouro_Preto%2C_Minas_Gerais.jpg/1280px-Artesanatos_na_feira_de_pedra_sab%C3%A3o_no_Largo_de_Coimbra%2C_Ouro_Preto%2C_Minas_Gerais.jpg",
+      "credito_foto": "Imagem ilustrativa: artesanato / EricaAzzellini, Wikimedia Commons, CC BY 4.0",
+      "evento": {
+        "data": "2026-11-26",
+        "hora": "17:30",
+        "local": "Fatec Ribeirão Preto, av. Pio XII, 1.255"
+      }
+    },
+    {
       "id": "2026-11-26-brasileirao-flamengo-ja-e-campeao-e-briga-contra-a-queda-esq",
       "data": "2026-11-26",
       "editoria": "FUTEBOL-BRASIL",
