@@ -12,7 +12,9 @@
       ],
       "fonte": "Tribuna Ribeirão",
       "link": "",
-      "imagem": "midia/2026-11-26/16-8-mil-empresas-de-ribeirao-preto-estao-na-divida-ativa-da.jpg"
+      "imagem": "midia/2026-11-26/16-8-mil-empresas-de-ribeirao-preto-estao-na-divida-ativa-da.jpg",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Vista_do_Centro_Expandido_de_Ribeir%C3%A3o_Preto_em_2026.jpg/1280px-Vista_do_Centro_Expandido_de_Ribeir%C3%A3o_Preto_em_2026.jpg",
+      "credito_foto": "Centro de Ribeirão Preto (ilustrativa): And Ribeirão 1980 / Wikimedia Commons, CC0"
     },
     {
       "id": "2026-11-26-feira-de-natal-da-ceagesp-tera-chegada-do-papai-noel",
@@ -33,7 +35,9 @@
         "fim": "2026-12-05",
         "hora": "sex 6h às 16h, sáb 8h às 15h",
         "local": "Polo Ribeirão Preto da Ceagesp (Rod. Anhanguera, km 322)"
-      }
+      },
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Ceagesp_de_Ribeir%C3%A3o_Preto.jpg/1280px-Ceagesp_de_Ribeir%C3%A3o_Preto.jpg",
+      "credito_foto": "And Ribeirão 1980 / Wikimedia Commons, CC0"
     },
     {
       "id": "2026-11-26-concerto-gratuito-no-theatro-pedro-ii-nesta-terca-1o",
@@ -52,7 +56,9 @@
         "data": "2026-12-01",
         "hora": "20h",
         "local": "Theatro Pedro II"
-      }
+      },
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Vista_do_Theatro_Pedro_II_em_2022.jpg/1280px-Vista_do_Theatro_Pedro_II_em_2022.jpg",
+      "credito_foto": "Mtvdanilo / Wikimedia Commons, CC BY-SA 4.0"
     }
   ]
 }
