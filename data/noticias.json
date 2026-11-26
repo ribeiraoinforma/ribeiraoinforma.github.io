@@ -1,6 +1,48 @@
 {
   "noticias": [
     {
+      "id": "2026-11-26-aeaarp-promove-simposio-sobre-saude-e-seguranca-no-trabalho",
+      "data": "2026-11-26",
+      "editoria": "SAÚDE",
+      "titulo": "AEAARP promove simpósio sobre saúde e segurança no trabalho nesta sexta",
+      "resumo": "A AEAARP realiza nesta sexta-feira (27), das 8h às 13h, o 1º Simpósio de Segurança e Saúde Ocupacional do CPR, na sede da entidade, em Ribeirão Preto.",
+      "texto": [
+        "A AEAARP realiza nesta sexta-feira (27), das 8h às 13h, o 1º Simpósio de Segurança e Saúde Ocupacional do CPR, na sede da entidade, em Ribeirão Preto.",
+        "O encontro vai discutir a NR-1, com foco em prevenção de riscos ocupacionais, saúde mental, ergonomia e exposição a agentes químicos, em cinco palestras sobre gestão de riscos psicossociais e segurança no ambiente de trabalho."
+      ],
+      "fonte": "Tribuna Ribeirão",
+      "link": "https://www.tribunaribeirao.com.br/aeaarp-promove-simposio-sobre-saude-e-seguranca-no-trabalho/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/ESIC_Auditorium_with_a_seating_capacity_of_3500.jpg/1280px-ESIC_Auditorium_with_a_seating_capacity_of_3500.jpg",
+      "credito_foto": "Imagem ilustrativa: auditório / Shyjucherian98, Wikimedia Commons, CC BY-SA 4.0",
+      "evento": {
+        "data": "2026-11-27",
+        "hora": "08:00",
+        "local": "Sede da AEAARP"
+      }
+    },
+    {
+      "id": "2026-11-26-cidadania-por-elas-oferece-servicos-gratuitos-as-mulheres-no",
+      "data": "2026-11-26",
+      "editoria": "SERVIÇO",
+      "titulo": "Cidadania por Elas oferece serviços gratuitos às mulheres no Parque Maurílio Biagi",
+      "resumo": "O evento Cidadania por Elas acontece nesta quinta (26) e sexta-feira (27), das 9h às 17h, no Parque Maurílio Biagi, na avenida Elpídio Gomes, 327, Vila Amélia. A entrada é gratuita.",
+      "texto": [
+        "O evento Cidadania por Elas acontece nesta quinta (26) e sexta-feira (27), das 9h às 17h, no Parque Maurílio Biagi, na avenida Elpídio Gomes, 327, Vila Amélia. A entrada é gratuita.",
+        "A programação inclui atendimento psicossocial no Ônibus SP por Todas, do Governo do Estado, rodas de conversa, oficinas e exposição de trabalhos manuais."
+      ],
+      "fonte": "Revide",
+      "link": "https://www.revide.com.br/noticias/cidades/ribeirao-preto-recebe-evento-com-servicos-gratuitos-de-acolhimento-e-orientacao-as-mulheres/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Parque_Maur%C3%ADlio_Biagi.JPG/1280px-Parque_Maur%C3%ADlio_Biagi.JPG",
+      "credito_foto": "Parque Maurílio Biagi / Anderson Bueno Pereira, Wikimedia Commons, domínio público",
+      "evento": {
+        "data": "2026-11-27",
+        "hora": "09:00",
+        "local": "Parque Maurílio Biagi, av. Elpídio Gomes, 327"
+      }
+    },
+    {
       "id": "2026-11-26-pix-tera-novas-regras-de-seguranca-e-melhorias-a-partir-de-2",
       "data": "2026-11-26",
       "editoria": "BRASIL",
