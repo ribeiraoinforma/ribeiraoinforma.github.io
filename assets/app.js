@@ -207,7 +207,7 @@ const fotoSrc = (u, largura) => {
 };
 // Se a foto externa falhar: troca pelo card da notícia; sem card, some e fica o fundo na cor da seção.
 const reserva = (n) =>
-  `onerror="this.onerror=null;${n.imagem && /^midia\//.test(n.imagem) ? `this.src='${esc(n.imagem)}';this.parentNode.classList.add('de-card')` : "this.remove()"}"`;
+  `onerror="this.onerror=null;${n.imagem && /^midia\/[A-Za-z0-9._\/-]+$/.test(n.imagem) ? `this.src='${esc(n.imagem)}';this.parentNode.classList.add('de-card')` : "this.remove()"}"`;
 
 function thumbHTML(n, lazy = true, largura = 500) {
   const f = fotoSrc(fotoDe(n), largura);
