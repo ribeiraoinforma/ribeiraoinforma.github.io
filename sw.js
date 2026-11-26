@@ -1,7 +1,12 @@
 // Service worker do app Ribeirão Informa.
 // Notícias (data/noticias.json) e páginas: sempre tenta a rede primeiro (nunca prende versão velha);
 // sem sinal, usa a última cópia salva. Imagens e arquivos fixos: cópia salva primeiro, para abrir rápido.
-const VERSAO = "ri-v3";
+// avisos no celular (OneSignal): o mesmo service worker recebe as notificações.
+// Se estiver sem internet na instalação, o app segue funcionando, só sem avisos.
+try {
+  importScripts("https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.sw.js");
+} catch (e) {}
+const VERSAO = "ri-v4";
 const BASICOS = [
   "./",
   "index.html",

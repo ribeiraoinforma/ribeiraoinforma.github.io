@@ -721,3 +721,177 @@ setTimeout(() => {
     mapa.appendChild(a);
   }
 }, 700);
+
+// ---------- notificações no celular (OneSignal, grátis) ----------
+// Android/computador: um toque em "Ativar avisos" e pronto.
+// iPhone: a Apple só deixa receber avisos com o app instalado na Tela de Início (iOS 16.4+),
+// então fora do app explicamos isso e abrimos o passo a passo de instalação.
+const ONESIGNAL_APP_ID = "7140f1ac-f0cf-4cee-a53d-76f94e300c79";
+const temPush = () =>
+  "Notification" in window &&
+  "serviceWorker" in navigator &&
+  "PushManager" in window;
+let osPronto = null;
+function carregarOneSignal() {
+  if (osPronto) return osPronto;
+  osPronto = new Promise((ok) => {
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    OneSignalDeferred.push(async (OS) => {
+      try {
+        await OS.init({
+          appId: ONESIGNAL_APP_ID,
+          serviceWorkerPath: "sw.js",
+          serviceWorkerParam: { scope: "/" },
+          notifyButton: { enable: false },
+          allowLocalhostAsSecureOrigin: true,
+        });
+        OS.Notifications.addEventListener("permissionChange", atualizarAvisos);
+        ok(OS);
+      } catch {
+        ok(null);
+      }
+    });
+    const s = document.createElement("script");
+    s.src = "https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js";
+    s.defer = true;
+    s.onerror = () => ok(null);
+    document.head.appendChild(s);
+  });
+  return osPronto;
+}
+const avisosLigados = () => temPush() && Notification.permission === "granted";
+
+function explicarIphone() {
+  document.getElementById("guia")?.remove();
+  const el = document.createElement("div");
+  el.id = "guia";
+  el.setAttribute("role", "dialog");
+  el.setAttribute("aria-modal", "true");
+  el.innerHTML = `<div class="guia-caixa"><button class="fechar" aria-label="Fechar">×</button>
+    <img src="icones/icone-192.png" alt="" width="64" height="64" class="guia-icone">
+    <h2>🔔 Avisos no iPhone</h2>
+    <p class="sub">No iPhone, os avisos só funcionam <b>com o app instalado</b>. É rápido:</p>
+    <ol class="passos">
+      ${passo(1, `Instale o app (toque no botão abaixo e siga os 3 toques).`)}
+      ${passo(2, `Abra o <b>Ribeirão Informa</b> pelo ícone na sua tela.`)}
+      ${passo(3, `Toque em <b>🔔 Ativar avisos</b> e depois em <b>Permitir</b>.`)}
+    </ol>
+    <button class="btn" id="ir-instalar">📲 Instalar o app</button>
+    <button class="btn claro" id="guia-ok">Entendi</button></div>`;
+  document.body.appendChild(el);
+  const fechar = () => el.remove();
+  el.querySelector(".fechar").onclick = fechar;
+  el.querySelector("#guia-ok").onclick = fechar;
+  el.querySelector("#ir-instalar").onclick = () => {
+    fechar();
+    abrirGuia();
+  };
+  el.addEventListener("click", (e) => {
+    if (e.target === el) fechar();
+  });
+}
+
+async function ativarAvisos() {
+  if (ehIOS() && !ehApp()) return explicarIphone();
+  if (!temPush()) {
+    alertaCurto(
+      "Este navegador não recebe avisos. Use o Chrome ou instale o app.",
+    );
+    return;
+  }
+  if (Notification.permission === "denied") {
+    alertaCurto(
+      "Os avisos estão bloqueados. Libere nas configurações do navegador, em Notificações.",
+    );
+    return;
+  }
+  const OS = await carregarOneSignal();
+  if (!OS) {
+    alertaCurto("Não deu para ativar agora. Tente de novo em instantes.");
+    return;
+  }
+  try {
+    await OS.Notifications.requestPermission();
+    if (OS.User?.PushSubscription && !OS.User.PushSubscription.optedIn)
+      await OS.User.PushSubscription.optIn();
+  } catch {}
+  atualizarAvisos();
+  if (avisosLigados())
+    alertaCurto("Pronto! Você vai receber as notícias importantes. 🔔");
+}
+
+function alertaCurto(txt) {
+  document.getElementById("aviso-curto")?.remove();
+  const d = document.createElement("div");
+  d.id = "aviso-curto";
+  d.setAttribute("role", "status");
+  d.textContent = txt;
+  document.body.appendChild(d);
+  setTimeout(() => d.remove(), 5000);
+}
+
+function atualizarAvisos() {
+  if (!avisosLigados()) return;
+  document
+    .querySelectorAll(".avisos-faixa,#avisos-convite")
+    .forEach((e) => e.remove());
+}
+
+function mostrarAvisos() {
+  if (avisosLigados()) {
+    carregarOneSignal(); // mantém a inscrição em dia
+    return;
+  }
+  if (!ehIOS() && !temPush()) return;
+  // faixa na capa, logo abaixo da faixa de instalar / do WhatsApp
+  const ref =
+    document.querySelector(".capa .instalar-faixa") ||
+    document.querySelector(".capa .zap-faixa");
+  if (ref && !document.querySelector(".avisos-faixa")) {
+    const f = document.createElement("button");
+    f.type = "button";
+    f.className = "avisos-faixa";
+    f.innerHTML = `<span class="sino" aria-hidden="true">🔔</span><span><b>Receba as notícias importantes no celular</b><small>Ative os avisos: chegou notícia, aparece na sua tela.</small></span><em>Ativar</em>`;
+    f.onclick = ativarAvisos;
+    ref.after(f);
+  }
+  // dentro do app instalado: convite no rodapé da tela (no máximo a cada 7 dias)
+  const fechado = +guardado("ri-avisos-fechado") || 0;
+  if (
+    ehApp() &&
+    Date.now() - fechado > 7 * 864e5 &&
+    !document.getElementById("avisos-convite")
+  ) {
+    setTimeout(() => {
+      if (avisosLigados() || document.getElementById("avisos-convite")) return;
+      const el = document.createElement("div");
+      el.id = "avisos-convite";
+      el.innerHTML = `<span class="sino" aria-hidden="true">🔔</span><div class="txt"><p><b>Quer saber na hora quando sair notícia?</b></p>
+        <button class="btn" type="button">🔔 Ativar avisos</button></div><button class="fechar" aria-label="Fechar">×</button>`;
+      document.body.appendChild(el);
+      el.querySelector(".btn").onclick = () => {
+        el.remove();
+        ativarAvisos();
+      };
+      el.querySelector(".fechar").onclick = () => {
+        guardado("ri-avisos-fechado", Date.now());
+        el.remove();
+      };
+    }, 2500);
+  }
+}
+setTimeout(mostrarAvisos, 800);
+// link no rodapé
+setTimeout(() => {
+  const mapa = document.querySelector(".rodape .mapa");
+  if (mapa && !avisosLigados() && (ehIOS() || temPush())) {
+    const a = document.createElement("a");
+    a.href = "#";
+    a.textContent = "🔔 Ativar avisos";
+    a.onclick = (ev) => {
+      ev.preventDefault();
+      ativarAvisos();
+    };
+    mapa.appendChild(a);
+  }
+}, 750);
