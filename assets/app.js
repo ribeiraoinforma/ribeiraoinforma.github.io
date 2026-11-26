@@ -70,6 +70,31 @@ const SECOES = [
     desc: "Empregos, empresas, preços e o bolso de quem vive em Ribeirão.",
     editorias: ["ECONOMIA", "NEGÓCIOS"],
   },
+  // seções de fora da cidade: ganham bloco próprio na capa, nunca viram a manchete
+  {
+    slug: "estado",
+    nome: "Estado",
+    cor: "#1f4e9c",
+    fora: true,
+    desc: "Governo de São Paulo e o que muda no estado para quem mora em Ribeirão.",
+    editorias: ["ESTADO", "SÃO PAULO", "GOVERNO SP"],
+  },
+  {
+    slug: "brasil",
+    nome: "Brasil",
+    cor: "#8a5a00",
+    fora: true,
+    desc: "Governo federal e as decisões de Brasília que mexem com o seu dia a dia.",
+    editorias: ["BRASIL", "GOVERNO FEDERAL", "NACIONAL"],
+  },
+  {
+    slug: "futebol",
+    nome: "Futebol",
+    cor: "#c2255c",
+    fora: true,
+    desc: "Os grandes times do Brasil, Brasileirão, Copa do Brasil e Seleção.",
+    editorias: ["FUTEBOL-BRASIL", "BRASILEIRÃO", "SELEÇÃO"],
+  },
 ];
 const URGENTE = "#b3122e";
 const secaoDe = (n) =>
@@ -339,16 +364,20 @@ async function capa() {
       `<p class="vazio">Nenhuma notícia por aqui ainda.</p>`;
     return;
   }
-  const d =
-    lista.find((n) => n.destaque && n.data === lista[0].data) || lista[0];
-  const resto = lista.filter((n) => n !== d);
+  // a manchete e as últimas são sempre da cidade; Estado, Brasil e Futebol vão em blocos próprios
+  const locais = lista.filter((n) => !secaoDe(n).fora);
+  const base = locais.length ? locais : lista;
+  const d = base.find((n) => n.destaque && n.data === base[0].data) || base[0];
+  const resto = base.filter((n) => n !== d);
   const dupla = resto.slice(0, 2),
     ultimas = resto.slice(2, 8),
     depois = resto.slice(8);
 
   // blocos por seção: 1 grande + até 3 em lista, cada um na cor da seção
   const blocos = SECOES.map((s) => {
-    const ns = depois.filter((n) => secaoDe(n) === s).slice(0, 4);
+    const ns = (s.fora ? lista : depois)
+      .filter((n) => secaoDe(n) === s)
+      .slice(0, 4);
     if (!ns.length) return "";
     const [p, ...r] = ns;
     return `<section class="bloco" style="--cor:${s.cor}">

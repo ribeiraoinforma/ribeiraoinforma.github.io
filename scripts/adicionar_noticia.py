@@ -15,7 +15,12 @@ Editorias e a seção do site onde cada uma aparece:
   Cultura ...... CULTURA, SHOW, TEATRO, MÚSICA, CINEMA
   Bem-estar .... BEM-ESTAR, SAÚDE, VIDA
   Economia ..... ECONOMIA, NEGÓCIOS
+  Estado ....... ESTADO, SÃO PAULO, GOVERNO SP      (governo e notícias do estado de SP)
+  Brasil ....... BRASIL, GOVERNO FEDERAL, NACIONAL  (governo federal, decisões de Brasília)
+  Futebol ...... FUTEBOL-BRASIL, BRASILEIRÃO, SELEÇÃO (times grandes do país; Botafogo-SP
+                 e Comercial continuam em ESPORTE/FUTEBOL, que é o esporte local)
   (qualquer outra editoria cai em Cidade)
+  Estado, Brasil e Futebol nunca viram a manchete do site: têm bloco próprio na capa.
 
 Lê a legenda no formato do manual de redação (1ª linha = manchete,
 parágrafos, "📰 Fonte: <veículo>"). Se houver card, converte para JPG leve em
@@ -125,7 +130,9 @@ def main():
             foto_rel = f"midia/{a.data}/{slug(titulo)}-foto.jpg"
             im = Image.open(a.foto).convert("RGB")
             im.thumbnail((1200, 1200))
-            im.save(RAIZ / foto_rel, "JPEG", quality=78, optimize=True, progressive=True)
+            im.save(
+                RAIZ / foto_rel, "JPEG", quality=78, optimize=True, progressive=True
+            )
             noticia["foto"] = foto_rel
         noticia["credito_foto"] = a.credito_foto
     if a.destaque:

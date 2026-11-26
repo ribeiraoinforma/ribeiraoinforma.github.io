@@ -14,6 +14,11 @@ Capa, seções, agenda e página de cada matéria são montadas sozinhas a parti
 | Cultura | CULTURA, SHOW, TEATRO, MÚSICA, CINEMA |
 | Bem-estar | BEM-ESTAR, SAÚDE, VIDA |
 | Economia | ECONOMIA, NEGÓCIOS |
+| Estado | ESTADO, SÃO PAULO, GOVERNO SP |
+| Brasil | BRASIL, GOVERNO FEDERAL, NACIONAL |
+| Futebol | FUTEBOL-BRASIL, BRASILEIRÃO, SELEÇÃO (times grandes do país; o futebol local segue em ESPORTE/FUTEBOL) |
+
+Estado, Brasil e Futebol nunca viram manchete: aparecem em blocos próprios na capa.
 
 ## Rotina (cada notícia principal do feed)
 Da raiz do site:
