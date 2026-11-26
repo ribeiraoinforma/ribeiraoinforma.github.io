@@ -1,5 +1,0 @@
-OneSignalSDK.page.es6.js
-OneSignalSDK.page.js
-OneSignalSDK.page.styles.css
-OneSignalSDK.sw.js
-OneSignalSDKWorker.js

@@ -771,10 +771,11 @@ function carregarOneSignal() {
       }
     });
     const s = document.createElement("script");
-    s.src = "https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js";
+    // cópia do SDK hospedada no próprio site (o iPhone não carregava do cdn.onesignal.com)
+    s.src = "/assets/onesignal/OneSignalSDK.page.es6.js?v=160900";
     s.defer = true;
     s.onerror = () => {
-      osErro = "não carregou o serviço de avisos (cdn.onesignal.com)";
+      osErro = "não carregou o arquivo de avisos do site";
       ok(null);
     };
     setTimeout(() => {
@@ -854,10 +855,10 @@ async function testarConexao(linha) {
     }
   };
   const [cdn, api] = await Promise.all([
-    alvo("https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js"),
+    alvo("/assets/onesignal/OneSignalSDK.page.es6.js?v=160900"),
     alvo("https://api.onesignal.com/"),
   ]);
-  if (linha) linha.textContent += ` · cdn: ${cdn} · api: ${api} · v${VERSAO_SITE}`;
+  if (linha) linha.textContent += ` · sdk: ${cdn} · api: ${api} · v${VERSAO_SITE}`;
 }
 
 async function ativarAvisos() {
@@ -1024,7 +1025,7 @@ setTimeout(() => {
 }, 750);
 
 // número da versão no rodapé (para saber se o celular está com a versão nova)
-const VERSAO_SITE = "10";
+const VERSAO_SITE = "11";
 setTimeout(() => {
   const r = document.querySelector(".rodape .wrap");
   if (r && !document.querySelector(".versao")) {
