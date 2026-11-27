@@ -182,6 +182,22 @@
       "destaque": true
     },
     {
+      "id": "2026-11-26-concurso-miss-e-mister-sao-paulo-doa-745-itens-a-criancas-de",
+      "data": "2026-11-26",
+      "editoria": "CIDADE",
+      "titulo": "Concurso Miss e Mister São Paulo doa 745 itens a crianças de Ribeirão",
+      "resumo": "O Fundo Social de Solidariedade de Ribeirão Preto recebeu 745 itens arrecadados pelo Miss e Mister São Paulo CNB 2027, cuja final foi na cidade no sábado (21), com 17 candidatas e 17 candidatos. Foram 535 brinquedos, 110 cestas básicas e 100 produtos de higiene.",
+      "texto": [
+        "O Fundo Social de Solidariedade de Ribeirão Preto recebeu 745 itens arrecadados pelo Miss e Mister São Paulo CNB 2027, cuja final foi na cidade no sábado (21), com 17 candidatas e 17 candidatos. Foram 535 brinquedos, 110 cestas básicas e 100 produtos de higiene.",
+        "As doações vão para crianças e adolescentes acolhidos em abrigos municipais e atendidos por organizações sociais da cidade. A arrecadação fez parte da prova \"Beleza pelo Bem\"."
+      ],
+      "fonte": "Revide",
+      "link": "https://www.revide.com.br/noticias/cidades/miss-e-mister-sao-paulo-arrecada-mais-de-700-itens-para-criancas-e-adolescentes-de-ribeirao-preto/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Pal%C3%A1cio_do_Rio_Branco.JPG/1280px-Pal%C3%A1cio_do_Rio_Branco.JPG",
+      "credito_foto": "Imagem ilustrativa: Palácio Rio Branco (Prefeitura), Leandro Maranghetti Lourenço / Wikimedia Commons, CC BY-SA 3.0"
+    },
+    {
       "id": "2026-11-26-ccj-do-senado-aprova-fim-da-fianca-para-quem-mata-no-transit",
       "data": "2026-11-26",
       "editoria": "BRASIL",
@@ -714,6 +730,22 @@
       },
       "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Vista_do_Theatro_Pedro_II_em_2022.jpg/1280px-Vista_do_Theatro_Pedro_II_em_2022.jpg",
       "credito_foto": "Mtvdanilo / Wikimedia Commons, CC BY-SA 4.0"
+    },
+    {
+      "id": "2026-11-25-revitalizacao-do-centro-de-ribeirao-comeca-com-seis-frentes",
+      "data": "2026-11-25",
+      "editoria": "CIDADE",
+      "titulo": "Revitalização do Centro de Ribeirão começa com seis frentes e R$ 4 milhões para praças",
+      "resumo": "A comissão que vai cuidar da revitalização do Centro de Ribeirão Preto começou os trabalhos na segunda-feira (23) e definiu seis eixos: retrofit e habitação; mobilidade, espaço público e prédios históricos; desenvolvimento econômico; segurança pública; soluções sociais; e incentivo ao comércio e ao turismo. O grupo foi criado por decreto e é coordenado pelo vice-prefeito e secretário da Casa Civil, Alessandro Maraca.",
+      "texto": [
+        "A comissão que vai cuidar da revitalização do Centro de Ribeirão Preto começou os trabalhos na segunda-feira (23) e definiu seis eixos: retrofit e habitação; mobilidade, espaço público e prédios históricos; desenvolvimento econômico; segurança pública; soluções sociais; e incentivo ao comércio e ao turismo. O grupo foi criado por decreto e é coordenado pelo vice-prefeito e secretário da Casa Civil, Alessandro Maraca.",
+        "Estão previstos R$ 4 milhões para recuperar cinco praças centrais, além de obras em prédios históricos e incentivo ao retrofit. Segundo o prefeito Ricardo Silva, as propostas terão responsabilidades e prazos definidos. Haverá subcomissões técnicas e reuniões abertas com a população."
+      ],
+      "fonte": "Revide",
+      "link": "https://www.revide.com.br/noticias/cidades/revitalizacao-do-centro-de-ribeirao-preto-avanca-com-definicao-de-seis-eixos-de-atuacao/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Sp-ribeirao-pca-xv.jpg/1280px-Sp-ribeirao-pca-xv.jpg",
+      "credito_foto": "Praça XV, no Centro: Eduardo Verderame / Wikimedia Commons, CC BY-SA 4.0"
     },
     {
       "id": "2026-11-25-black-friday-governo-federal-lanca-guia-para-nao-cair-em-gol",
