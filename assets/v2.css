@@ -1108,3 +1108,32 @@ body.v2.v2-interna main h1 { font-size: clamp(1.7rem, 4vw, 2.6rem); line-height:
 body.v2.v2-interna main h2 { margin: 28px 0 12px; }
 body.v2.v2-interna main p { line-height: 1.65; }
 body.v2.v2-interna .v2-rodape .versao { opacity: 0.6; font-size: 0.8rem; margin-top: 10px; }
+
+/* ---------- celular: capa estilo portal (foto em cima, título embaixo; lista compacta) ---------- */
+@media (max-width: 600px) {
+  .v2-sobre.gigante { min-height: 0; background: var(--azul2); }
+  .v2-sobre.gigante .v2-img { position: relative; inset: auto; aspect-ratio: 16 / 9; }
+  .v2-sobre.gigante .v2-grad { display: none; }
+  .v2-sobre.gigante .v2-txt { position: relative; transform: none; padding: 16px 18px 20px; }
+  .v2-sobre.gigante h3 { font-size: 23px; line-height: 1.12; text-shadow: none; }
+  .v2-sobre.gigante p {
+    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+  }
+  .v2-mosaico { gap: 12px; margin-top: 14px; }
+  .v2-lado { gap: 10px; }
+  body.v2 .v2-lado .v2-sobre {
+    display: grid; grid-template-columns: 118px 1fr; min-height: 0;
+    background: #fff; color: var(--tinta); box-shadow: 0 6px 18px -10px rgba(7, 25, 58, 0.35);
+    border-radius: 12px;
+  }
+  .v2-lado .v2-sobre .v2-img { position: relative; inset: auto; min-height: 104px; }
+  .v2-lado .v2-sobre .v2-grad { display: none; }
+  .v2-lado .v2-sobre .v2-txt { position: relative; transform: none; padding: 10px 12px; }
+  .v2-lado .v2-sobre h3 { color: var(--tinta); font-size: 15.5px; text-shadow: none; margin-top: 6px; }
+  .v2-lado .v2-sobre .v2-meta { color: var(--cinza); font-size: 12px; }
+  .v2-lado .v2-sobre .v2-tag { font-size: 10px; padding: 3px 7px; }
+  .v2-sobre.largo h3 { font-size: 20px; }
+  .v2-bloco-c > .v2-sobre { min-height: 260px; }
+  .v2-sobre h3 { font-size: 18px; }
+  .v2-faixa { grid-auto-columns: 72%; }
+}

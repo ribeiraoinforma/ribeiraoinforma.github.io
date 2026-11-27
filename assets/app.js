@@ -1026,7 +1026,7 @@ setTimeout(() => {
 }, 750);
 
 // número da versão no rodapé (para saber se o celular está com a versão nova)
-const VERSAO_SITE = "14";
+const VERSAO_SITE = "15";
 setTimeout(() => {
   const r = document.querySelector(".rodape .wrap, .v2-rodape .v2-wrap");
   if (r && !document.querySelector(".versao")) {
