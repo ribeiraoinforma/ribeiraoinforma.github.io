@@ -1,6 +1,38 @@
 {
   "noticias": [
     {
+      "id": "2026-11-27-fundador-do-bradesco-amador-aguiar-nasceu-em-ribeirao-preto",
+      "data": "2026-11-27",
+      "editoria": "ECONOMIA",
+      "titulo": "Fundador do Bradesco, Amador Aguiar nasceu em Ribeirão Preto",
+      "resumo": "O anúncio de Luiz Carlos Trabuco, presidente do conselho do Bradesco, para o Ministério da Fazenda trouxe de volta a história do fundador do banco: Amador Aguiar, nascido em Ribeirão Preto, que deixou uma fortuna estimada em US$ 860 milhões ao morrer, em 1990. Ele foi homenageado em sessão solene na Câmara dos Deputados na quarta-feira (25).",
+      "texto": [
+        "O anúncio de Luiz Carlos Trabuco, presidente do conselho do Bradesco, para o Ministério da Fazenda trouxe de volta a história do fundador do banco: Amador Aguiar, nascido em Ribeirão Preto, que deixou uma fortuna estimada em US$ 860 milhões ao morrer, em 1990. Ele foi homenageado em sessão solene na Câmara dos Deputados na quarta-feira (25).",
+        "Filho de agricultores, Aguiar estudou só até o quarto ano do primário. Aos 16 anos trabalhava de madrugada numa tipografia de Sertãozinho, onde fazia o jornal Gazeta, e terminou os estudos por conta própria. Depois de um acidente em que perdeu parte de um dedo, mudou de profissão e, aos 21, entrou como contínuo no Banco do Noroeste, em Birigui, onde virou contador e depois diretor, antes de fundar o Bradesco."
+      ],
+      "fonte": "ACidade ON",
+      "link": "https://www.acidadeon.com/ribeiraopreto/economia/quem-foi-banqueiro-nascido-em-ribeirao-preto-que-fundou-o-bradesco-e-deixou-fortuna-de-us-860-milhoes/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Amador_Aguiar-Laudo_Natel-Henri_Couri_Aidar_%281972%29.jpg/1280px-Amador_Aguiar-Laudo_Natel-Henri_Couri_Aidar_%281972%29.jpg",
+      "credito_foto": "Foto de arquivo (1972): Governo de SP / Wikimedia Commons"
+    },
+    {
+      "id": "2026-11-27-joao-fiusa-segue-interditada-nos-dois-sentidos-arvore-sera-r",
+      "data": "2026-11-27",
+      "editoria": "CIDADE",
+      "titulo": "João Fiúsa segue interditada nos dois sentidos; árvore será removida nesta sexta",
+      "resumo": "A avenida Professor João Fiúsa continua bloqueada nos dois sentidos no cruzamento com a rua Maestro Inácio Stábile, na zona Sul, depois que um galho de grande porte caiu sobre dois carros na manhã desta sexta-feira (27). Ninguém se feriu. No começo da tarde, o bloqueio formava filas da Praça Marcos Vilela até a altura da avenida Itatiaia.",
+      "texto": [
+        "A avenida Professor João Fiúsa continua bloqueada nos dois sentidos no cruzamento com a rua Maestro Inácio Stábile, na zona Sul, depois que um galho de grande porte caiu sobre dois carros na manhã desta sexta-feira (27). Ninguém se feriu. No começo da tarde, o bloqueio formava filas da Praça Marcos Vilela até a altura da avenida Itatiaia.",
+        "A RP Mobi e a Defesa Civil orientam os motoristas e sinalizam desvios. Segundo a Secretaria de Meio Ambiente, a árvore teve a estrutura comprometida, mesmo parecendo saudável, e será totalmente removida ainda nesta sexta. A pasta lembra que chuvas fortes aumentam o risco de queda de galhos."
+      ],
+      "fonte": "ACidade ON",
+      "link": "https://www.acidadeon.com/ribeiraopreto/cotidiano/transito-interditado-na-avenida-joao-fiusa-causa-lentidao-na-zona-sul-de-ribeirao-preto/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Avenida_Professor_Jo%C3%A3o_Fi%C3%BAsa_%28Zona_Sul%29.JPG/1280px-Avenida_Professor_Jo%C3%A3o_Fi%C3%BAsa_%28Zona_Sul%29.JPG",
+      "credito_foto": "Av. João Fiúsa: Anderson Bueno Pereira / Wikimedia Commons"
+    },
+    {
       "id": "2026-11-27-rompimento-de-cabos-deixa-sistemas-do-estado-instaveis-deleg",
       "data": "2026-11-27",
       "editoria": "ESTADO",
