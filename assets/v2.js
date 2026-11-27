@@ -1,6 +1,7 @@
-// Ribeirão Informa: visual novo (prévia). Carregado ANTES do app.js só na previa.html.
+// Ribeirão Informa: visual novo da capa (index.html e previa.html). Carregado ANTES do app.js.
 // Usa as peças do app.js (SECOES, carregar, fotoSrc, esc...) na hora em que a capa é montada.
 (function () {
+  const HOME = /previa\.html$/.test(location.pathname) ? "previa.html" : "./";
   const reduzir = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // capas de editoria: por enquanto gradiente + desenho em CSS; depois, imagem própria (capas/<slug>.jpg)
@@ -25,7 +26,7 @@
       <span class="v2-selo-conf">✔ Notícia confirmada, sempre com a fonte</span>
     </div></div>
     <header class="v2-topo"><div class="v2-wrap">
-      <a class="v2-marca" href="previa.html">
+      <a class="v2-marca" href="${HOME}">
         <span class="v2-logo3d"><img src="${SELO}" alt=""></span>
         <span class="v2-nome"><b>RIBEIRÃO</b> <i>INFORMA</i><small>Notícias de Ribeirão Preto</small></span>
       </a>
@@ -36,15 +37,15 @@
       </div>
     </div></header>
     <nav class="v2-nav" aria-label="Seções"><div class="v2-wrap">
-      ${link("previa.html", "Início", "inicio")}
-      ${SECOES.map((s) => link(`previa.html?secao=${s.slug}`, s.nome, s.slug, s.cor)).join("")}
+      ${link(HOME, "Início", "inicio")}
+      ${SECOES.map((s) => link(`${HOME}?secao=${s.slug}`, s.nome, s.slug, s.cor)).join("")}
       ${link("agenda.html", "Agenda", "agenda", "#d9480f")}
     </div></nav>`;
     $("#rodape").innerHTML = `
     <footer class="v2-rodape"><div class="v2-wrap">
       <div class="v2-rod-marca"><span class="v2-logo3d"><img src="${SELO}" alt=""></span>
         <div><b>RIBEIRÃO <i>INFORMA</i></b><p>Tudo o que acontece em Ribeirão Preto/SP. Cada notícia cita o veículo que publicou primeiro.</p></div></div>
-      <nav>${SECOES.map((s) => `<a href="previa.html?secao=${s.slug}">${s.nome}</a>`).join("")}<a href="agenda.html">Agenda</a><a href="sobre.html">Quem somos</a></nav>
+      <nav>${SECOES.map((s) => `<a href="${HOME}?secao=${s.slug}">${s.nome}</a>`).join("")}<a href="agenda.html">Agenda</a><a href="sobre.html">Quem somos</a></nav>
       <nav class="redes v2-redes">${redesHTML()}</nav>
     </div></footer>`;
   }
@@ -80,7 +81,7 @@
     `<div class="v2-capa-ed" style="--cor:${s.cor}${CAPA_ED[s.slug] ? `;--capa:url(${CAPA_ED[s.slug]})` : ""}"${CAPA_ED[s.slug] ? ' data-capa' : ""}>
       <div class="v2-capa-fundo"${CAPA_ED[s.slug] ? ` style="background-image:url(${CAPA_ED[s.slug]})"` : ""}></div>
       <h2 data-t="${s.nome}">${s.nome}</h2><p>${s.desc}</p>
-      <a href="previa.html?secao=${s.slug}">Ver tudo →</a></div>`;
+      <a href="${HOME}?secao=${s.slug}">Ver tudo →</a></div>`;
 
   function ticker(lista) {
     const itens = lista
