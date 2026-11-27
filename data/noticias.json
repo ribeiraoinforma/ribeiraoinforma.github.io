@@ -1,6 +1,63 @@
 {
   "noticias": [
     {
+      "id": "2026-11-27-palmeiras-decide-a-libertadores-neste-sabado-as-17h-contra-o",
+      "data": "2026-11-27",
+      "editoria": "FUTEBOL-BRASIL",
+      "titulo": "Palmeiras decide a Libertadores neste sábado, às 17h, contra o Estudiantes",
+      "resumo": "O Palmeiras enfrenta o Estudiantes, da Argentina, na final da Copa Libertadores neste sábado (28), às 17h (horário de Brasília), no Estádio Centenário, em Montevidéu, no Uruguai. A decisão é em jogo único.",
+      "texto": [
+        "O Palmeiras enfrenta o Estudiantes, da Argentina, na final da Copa Libertadores neste sábado (28), às 17h (horário de Brasília), no Estádio Centenário, em Montevidéu, no Uruguai. A decisão é em jogo único.",
+        "A final tem transmissão da TV Globo, na TV aberta, e da ESPN, na TV fechada, além do Disney+ e do Paramount+."
+      ],
+      "fonte": "Conmebol, via Trivela e DGABC",
+      "link": "https://trivela.com.br/onde-assistir/palpite-escalacoes-palmeiras-x-estudiantes-28-11-2026/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Estadio_Centenario_%28vista_a%C3%A9rea%29.jpg/1280px-Estadio_Centenario_%28vista_a%C3%A9rea%29.jpg",
+      "credito_foto": "Estádio Centenário, em Montevidéu: Marcelo Campi / Wikimedia Commons, CC BY-SA 2.0"
+    },
+    {
+      "id": "2026-11-27-festival-panela-preta-tem-seis-horas-de-cultura-afro-brasile",
+      "data": "2026-11-27",
+      "editoria": "EVENTO",
+      "titulo": "Festival Panela Preta tem seis horas de cultura afro-brasileira de graça no sábado",
+      "resumo": "O 4º Festival Panela Preta acontece neste sábado (28), das 16h às 22h, na Aldeia Caboclo Pena Vermelha, na rua Espírito Santo, 2016, no Ipiranga. A entrada é gratuita.",
+      "texto": [
+        "O 4º Festival Panela Preta acontece neste sábado (28), das 16h às 22h, na Aldeia Caboclo Pena Vermelha, na rua Espírito Santo, 2016, no Ipiranga. A entrada é gratuita.",
+        "A programação tem shows, roda de capoeira, oficinas de samba e de estamparia, exposição e feira de artesanato. Às 18h, tem roda de conversa com o tema \"Terreiro é território: fé, política e resistência\".",
+        "O prato desta edição é o cuscuz nordestino. As porções são limitadas e podem ser reservadas com antecedência."
+      ],
+      "fonte": "Revide",
+      "link": "https://www.revide.com.br/noticias/cultura/festival-gratuito-de-cultura-afro-brasileira-tera-seis-horas-de-programacao-em-ribeirao-preto/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Roda_de_Samba_-_Tijuca_-_RJ.jpg/1280px-Roda_de_Samba_-_Tijuca_-_RJ.jpg",
+      "credito_foto": "Imagem ilustrativa: roda de samba, Lgjunior / Wikimedia Commons, CC BY-SA 4.0",
+      "evento": {
+        "data": "2026-11-28",
+        "hora": "16h às 22h",
+        "local": "Aldeia Caboclo Pena Vermelha (Ipiranga)"
+      }
+    },
+    {
+      "id": "2026-11-27-ribeirao-esta-em-alerta-amarelo-para-chuva-forte-nesta-sexta",
+      "data": "2026-11-27",
+      "editoria": "TEMPO",
+      "titulo": "Ribeirão está em alerta amarelo para chuva forte nesta sexta",
+      "resumo": "O Inmet colocou Ribeirão Preto, Franca e cidades da região em alerta amarelo (perigo potencial) das 9h30 às 23h59 desta sexta-feira (27).",
+      "texto": [
+        "O Inmet colocou Ribeirão Preto, Franca e cidades da região em alerta amarelo (perigo potencial) das 9h30 às 23h59 desta sexta-feira (27).",
+        "A previsão é de chuva de até 30 mm por hora, ou até 50 mm no dia, com ventos de até 60 km/h. Há risco de queda de galhos, alagamentos pontuais, raios e falta de energia.",
+        "Em caso de emergência, ligue para a Defesa Civil (199) ou para os Bombeiros (193). Evite ficar debaixo de árvores e não atravesse ruas alagadas."
+      ],
+      "fonte": "Inmet, via O Tempo",
+      "link": "https://www.otempo.com.br/tempo/2026/11/26/ribeirao-preto-e-regiao-em-alerta-amarelo-do-inmet-ate-50-mm-e-vento-de-60-km-h-podem-derrubar-galhos",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/0/08/Ribeir%C3%A3o_Preto_-_2018.jpg",
+      "credito_foto": "Imagem ilustrativa: Ribeirão Preto, Anderson Bueno Pereira / Wikimedia Commons, CC BY-SA 4.0",
+      "notificar": true,
+      "destaque": true
+    },
+    {
       "id": "2026-11-26-sp-paga-auxilio-aluguel-de-r-500-a-mulheres-vitimas-de-viole",
       "data": "2026-11-26",
       "editoria": "ESTADO",
