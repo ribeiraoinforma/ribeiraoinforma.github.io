@@ -61,16 +61,22 @@
       : "";
   };
 
+  // crédito da foto, pequeno, no canto da imagem
+  const cred = (n) =>
+    n.foto && n.credito_foto
+      ? `<small class="v2-cred">${/^(imagem ilustrativa|foto de arquivo)/i.test(n.credito_foto) ? "" : "Foto: "}${esc(n.credito_foto)}</small>`
+      : "";
+
   // cartão com foto de fundo e texto por cima (estilo portal internacional)
   const sobre = (n, cls, w, prio) =>
     `<a class="v2-sobre ${cls || ""} tilt" href="${linkMateria(n)}" style="--cor:${corDe(n)}">
-      <div class="v2-img">${img(n, w, prio)}</div><div class="v2-grad"></div>
+      <div class="v2-img">${img(n, w, prio)}${cred(n)}</div><div class="v2-grad"></div>
       <div class="v2-txt">${tag(n)}<h3>${esc(n.titulo)}</h3>${cls === "gigante" ? `<p>${esc(n.resumo || "")}</p>` : ""}${meta(n)}</div></a>`;
 
   // cartão com foto em cima e texto embaixo
   const cartao = (n) =>
     `<a class="v2-cartao tilt" href="${linkMateria(n)}" style="--cor:${corDe(n)}">
-      <div class="v2-img">${img(n, 500)}</div>
+      <div class="v2-img">${img(n, 500)}${cred(n)}</div>
       <div class="v2-corpo">${tag(n)}<h3>${esc(n.titulo)}</h3>${meta(n)}</div></a>`;
 
   const linha = (n) =>

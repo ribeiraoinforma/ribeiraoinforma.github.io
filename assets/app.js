@@ -459,7 +459,7 @@ async function materia() {
       : null;
   const midia =
     fm && fotoSrc(fm.url)
-      ? `<figure class="foto-mat"><img src="${fotoSrc(fm.url)}" alt="" ${reserva(n)} width="1200" height="675">${fm.credito ? `<figcaption>Foto: ${esc(fm.credito)}</figcaption>` : ""}</figure>`
+      ? `<figure class="foto-mat"><img src="${fotoSrc(fm.url)}" alt="" ${reserva(n)} width="1200" height="675">${fm.credito ? `<figcaption>${/^(imagem ilustrativa|foto de arquivo)/i.test(fm.credito) ? "" : "Foto: "}${esc(fm.credito)}</figcaption>` : ""}</figure>`
       : n.imagem
         ? `<img class="card-mat" src="${esc(n.imagem)}" alt="Card da notícia: ${esc(n.titulo)}" width="1080" height="1350">`
         : "";
@@ -1026,7 +1026,7 @@ setTimeout(() => {
 }, 750);
 
 // número da versão no rodapé (para saber se o celular está com a versão nova)
-const VERSAO_SITE = "16";
+const VERSAO_SITE = "17";
 setTimeout(() => {
   const r = document.querySelector(".rodape .wrap, .v2-rodape .v2-wrap");
   if (r && !document.querySelector(".versao")) {
