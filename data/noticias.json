@@ -1,6 +1,59 @@
 {
   "noticias": [
     {
+      "id": "2026-11-27-expectativa-de-vida-do-brasileiro-sobe-para-76-9-anos-diz-ib",
+      "data": "2026-11-27",
+      "editoria": "BRASIL",
+      "titulo": "Expectativa de vida do brasileiro sobe para 76,9 anos, diz IBGE",
+      "resumo": "A expectativa de vida ao nascer no Brasil chegou a 76,9 anos em 2025, segundo o IBGE, acima dos 76,6 anos registrados em 2024. A tabela completa, com a expectativa para todas as idades, foi publicada no Diário Oficial da União nesta sexta-feira (27).",
+      "texto": [
+        "A expectativa de vida ao nascer no Brasil chegou a 76,9 anos em 2025, segundo o IBGE, acima dos 76,6 anos registrados em 2024. A tabela completa, com a expectativa para todas as idades, foi publicada no Diário Oficial da União nesta sexta-feira (27).",
+        "Pelos dados, quem tem 18 anos pode viver, em média, mais 60,3 anos, chegando aos 78,3. Já quem tem 65 anos pode viver mais 18,9 anos, até os 83,9."
+      ],
+      "fonte": "IBGE, via Tribuna Ribeirão",
+      "link": "https://www.tribunaribeirao.com.br/expectativa-de-vida-no-brasil-sobe-para-769-anos-diz-ibge/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Vista_a%C3%A9rea_Ribeir%C3%A3o_Preto_2025.jpg/1280px-Vista_a%C3%A9rea_Ribeir%C3%A3o_Preto_2025.jpg",
+      "credito_foto": "Imagem ilustrativa: vista aérea de Ribeirão Preto, And Ribeirão 1980 / Wikimedia Commons, CC0"
+    },
+    {
+      "id": "2026-11-27-palmeiras-corre-para-ter-murilo-e-piquerez-na-final-da-liber",
+      "data": "2026-11-27",
+      "editoria": "FUTEBOL-BRASIL",
+      "titulo": "Palmeiras corre para ter Murilo e Piquerez na final da Libertadores",
+      "resumo": "Já em Montevidéu, o Palmeiras trata o zagueiro Murilo e o lateral Piquerez como dúvidas para a final da Libertadores contra o Estudiantes, neste sábado (28), às 17h, no Estádio Centenário. Os dois se recuperam de lesões musculares e estão na fase de transição física; Murilo, que começou o tratamento antes, tem mais chance de jogar.",
+      "texto": [
+        "Já em Montevidéu, o Palmeiras trata o zagueiro Murilo e o lateral Piquerez como dúvidas para a final da Libertadores contra o Estudiantes, neste sábado (28), às 17h, no Estádio Centenário. Os dois se recuperam de lesões musculares e estão na fase de transição física; Murilo, que começou o tratamento antes, tem mais chance de jogar.",
+        "Se Piquerez não tiver condições, Arthur deve assumir a lateral esquerda. No meio e no ataque, Marlon Freitas, Evangelista e Andreas Pereira disputam duas vagas, e Vitor Roque e Mauricio brigam por outra. O jogo tem transmissão da Globo e da ESPN."
+      ],
+      "fonte": "Tribuna Ribeirão",
+      "link": "https://www.tribunaribeirao.com.br/ja-no-uruguai-palmeiras-corre-contra-o-tempo-para-ter-murilo-e-piquerez-na-final/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Estadio_Centenario_%28vista_a%C3%A9rea%29.jpg/1280px-Estadio_Centenario_%28vista_a%C3%A9rea%29.jpg",
+      "credito_foto": "Estádio Centenário: Marcelo Campi / Wikimedia Commons, CC BY-SA 2.0"
+    },
+    {
+      "id": "2026-11-27-maratona-de-ribeirao-da-200-inscricoes-gratis-neste-sabado",
+      "data": "2026-11-27",
+      "editoria": "ESPORTE",
+      "titulo": "Maratona de Ribeirão dá 200 inscrições grátis neste sábado",
+      "resumo": "A Maratona Oficial de Ribeirão Preto vai distribuir 200 inscrições gratuitas neste sábado (28), das 11h30 às 14h30, em um \"adesivaço\" feito pela organização com os patrocinadores. Ganham a vaga os 200 primeiros motoristas que adesivarem o carro conforme as orientações da organização.",
+      "texto": [
+        "A Maratona Oficial de Ribeirão Preto vai distribuir 200 inscrições gratuitas neste sábado (28), das 11h30 às 14h30, em um \"adesivaço\" feito pela organização com os patrocinadores. Ganham a vaga os 200 primeiros motoristas que adesivarem o carro conforme as orientações da organização.",
+        "As instruções são passadas no grupo VIP da Equilíbrio Sports no WhatsApp, onde quem quiser participar precisa entrar antes. Segundo o organizador, é a primeira ação desse tipo no estado de São Paulo."
+      ],
+      "fonte": "Revide",
+      "link": "https://www.revide.com.br/noticias/esporte/maratona-de-ribeirao-preto-oferece-200-inscricoes-gratuitas-neste-sabado/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/0/08/Ribeir%C3%A3o_Preto_-_2018.jpg",
+      "credito_foto": "Imagem ilustrativa: Ribeirão Preto, Anderson Bueno Pereira / Wikimedia Commons, CC BY-SA 4.0",
+      "evento": {
+        "data": "2026-11-28",
+        "hora": "11:30",
+        "local": "Adesivaço da Maratona de Ribeirão (orientações no grupo da Equilíbrio Sports)"
+      }
+    },
+    {
       "id": "2026-11-27-botafogo-sp-recusou-parceria-com-a-furia-por-exigencia-de-mu",
       "data": "2026-11-27",
       "editoria": "ESPORTE",
