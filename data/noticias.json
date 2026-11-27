@@ -1,6 +1,93 @@
 {
   "noticias": [
     {
+      "id": "2026-11-27-mega-sena-acumula-em-r-82-milhoes-apostas-de-barrinha-e-barr",
+      "data": "2026-11-27",
+      "editoria": "ECONOMIA",
+      "titulo": "Mega-Sena acumula em R$ 82 milhões; apostas de Barrinha e Barretos acertam a quina",
+      "resumo": "Ninguém acertou as seis dezenas do concurso 3.091 da Mega-Sena, sorteado na quinta-feira (26), e o prêmio principal acumulou em cerca de R$ 82 milhões para o próximo sorteio. Na região de Ribeirão Preto, duas apostas acertaram cinco números e levam R$ 25.521,49 cada.",
+      "texto": [
+        "Ninguém acertou as seis dezenas do concurso 3.091 da Mega-Sena, sorteado na quinta-feira (26), e o prêmio principal acumulou em cerca de R$ 82 milhões para o próximo sorteio. Na região de Ribeirão Preto, duas apostas acertaram cinco números e levam R$ 25.521,49 cada.",
+        "Uma delas foi feita em Barrinha, na lotérica Tio Patinhas. A outra saiu em Barretos, em um bolão de oito cotas da lotérica Campeã da Sorte. As apostas podem ser feitas até as 19h do dia do sorteio, nas lotéricas ou pelo site e aplicativo Loterias Caixa."
+      ],
+      "fonte": "ACidade ON",
+      "link": "https://www.acidadeon.com/ribeiraopreto/economia/mega-sena-acumula-em-82-milhoes-mas-duas-apostas-da-regiao-de-ribeirao-levam-r-255-mil-cada/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/1/1d/200_Brazil_real_Second_Reverse.jpg",
+      "credito_foto": "Imagem ilustrativa: Banco Central do Brasil / Wikimedia Commons"
+    },
+    {
+      "id": "2026-11-27-castramovel-atende-em-bonfim-paulista-a-partir-de-2-de-dezem",
+      "data": "2026-11-27",
+      "editoria": "CIDADE",
+      "titulo": "Castramóvel atende em Bonfim Paulista a partir de 2 de dezembro",
+      "resumo": "O mutirão de castração gratuita de cães e gatos chega a Bonfim Paulista na próxima semana. O Castramóvel atende cães a partir de quarta-feira (2) e gatos a partir de sexta-feira (4). O mutirão de dezembro também terá cirurgias em clínicas conveniadas, e o serviço vale para moradores de qualquer bairro de Ribeirão Preto.",
+      "texto": [
+        "O mutirão de castração gratuita de cães e gatos chega a Bonfim Paulista na próxima semana. O Castramóvel atende cães a partir de quarta-feira (2) e gatos a partir de sexta-feira (4). O mutirão de dezembro também terá cirurgias em clínicas conveniadas, e o serviço vale para moradores de qualquer bairro de Ribeirão Preto.",
+        "As inscrições presenciais são nos dias 1º, 8 e 15 de dezembro, das 9h às 12h, na Paróquia Senhor Bom Jesus, na rua Coronel Furquim, 389, com documento oficial com foto e comprovante de residência (não é preciso levar o animal). Também dá para se cadastrar pelo sistema CADPET, escolhendo a data da cirurgia."
+      ],
+      "fonte": "Revide",
+      "link": "https://www.revide.com.br/noticias/pet/castramovel-inicia-atendimentos-em-bonfim-paulista-na-proxima-semana/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/A_Golden_Retriever-9_%28Barras%29.JPG/1280px-A_Golden_Retriever-9_%28Barras%29.JPG",
+      "credito_foto": "Imagem ilustrativa: Barras / Wikimedia Commons"
+    },
+    {
+      "id": "2026-11-27-trem-de-natal-traz-papai-noel-a-ribeirao-na-quinta-feira-3",
+      "data": "2026-11-27",
+      "editoria": "EVENTO",
+      "titulo": "Trem de Natal traz Papai Noel a Ribeirão na quinta-feira (3)",
+      "resumo": "O trem iluminado do Natal da VLI, concessionária de ferrovias, passa por Ribeirão Preto na próxima quinta-feira (3). A chegada do Papai Noel está prevista para as 18h, na rua Artur de Jesus Campos, 160, no bairro Quintino Facci II, na zona Norte.",
+      "texto": [
+        "O trem iluminado do Natal da VLI, concessionária de ferrovias, passa por Ribeirão Preto na próxima quinta-feira (3). A chegada do Papai Noel está prevista para as 18h, na rua Artur de Jesus Campos, 160, no bairro Quintino Facci II, na zona Norte.",
+        "Neste ano a programação foi ampliada: Ribeirão é uma das seis cidades do país escolhidas para receber o espetáculo \"Pareolhescute\", do grupo mineiro de teatro de bonecos Giramundo."
+      ],
+      "fonte": "ACidade ON",
+      "link": "https://www.acidadeon.com/ribeiraopreto/lazer-e-cultura/trem-de-natal-chega-a-ribeirao-preto-com-papai-noel-e-apresentacao-teatral/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/7/77/Locomotivas_VLI_GE_ES43BBi.jpg",
+      "credito_foto": "Imagem ilustrativa: VLI / Wikimedia Commons",
+      "evento": {
+        "data": "2026-12-03",
+        "hora": "18:00",
+        "local": "Rua Artur de Jesus Campos, 160, Quintino Facci II"
+      }
+    },
+    {
+      "id": "2026-11-27-minha-casa-minha-vida-prefeitura-convoca-familias-selecionad",
+      "data": "2026-11-27",
+      "editoria": "CIDADE",
+      "titulo": "Minha Casa, Minha Vida: Prefeitura convoca famílias selecionadas para o Francisco Izidoro da Silva 2",
+      "resumo": "A Prefeitura de Ribeirão Preto convocou na quinta-feira (26) os candidatos selecionados para o residencial Francisco Izidoro da Silva 2 (Área 2), do programa Minha Casa, Minha Vida, para entregar documentos. O material vai para a pesquisa de enquadramento da Caixa, etapa que define quais famílias recebem os imóveis da Faixa Urbano 1.",
+      "texto": [
+        "A Prefeitura de Ribeirão Preto convocou na quinta-feira (26) os candidatos selecionados para o residencial Francisco Izidoro da Silva 2 (Área 2), do programa Minha Casa, Minha Vida, para entregar documentos. O material vai para a pesquisa de enquadramento da Caixa, etapa que define quais famílias recebem os imóveis da Faixa Urbano 1.",
+        "A lista de documentos exigidos está no site da Secretaria de Planejamento e Desenvolvimento Urbano, na página da Subsecretaria de Habitação. Os selecionados precisam cumprir os prazos e manter os dados atualizados; se a Caixa apontar alguma pendência, a equipe da Habitação orienta a família sobre como regularizar."
+      ],
+      "fonte": "ACidade ON",
+      "link": "https://www.acidadeon.com/ribeiraopreto/economia/minha-casa-minha-vida-em-ribeirao-preto-veja-quem-foi-convocado-e-os-documentos-exigidos-pela-caixa/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Pal%C3%A1cio_do_Rio_Branco.JPG/1280px-Pal%C3%A1cio_do_Rio_Branco.JPG",
+      "credito_foto": "Imagem ilustrativa: Palácio Rio Branco / Wikimedia Commons",
+      "notificar": true,
+      "destaque": true
+    },
+    {
+      "id": "2026-11-27-galho-cai-sobre-dois-carros-na-avenida-joao-fiusa-e-interdit",
+      "data": "2026-11-27",
+      "editoria": "CIDADE",
+      "titulo": "Galho cai sobre dois carros na avenida João Fiúsa e interdita trecho",
+      "resumo": "Um galho de árvore caiu sobre dois carros na manhã desta sexta-feira (27) na avenida Professor João Fiúsa, na zona Sul de Ribeirão Preto. A queda foi na altura do cruzamento com a rua Maestro Inácio Stábile, no sentido da avenida Independência.",
+      "texto": [
+        "Um galho de árvore caiu sobre dois carros na manhã desta sexta-feira (27) na avenida Professor João Fiúsa, na zona Sul de Ribeirão Preto. A queda foi na altura do cruzamento com a rua Maestro Inácio Stábile, no sentido da avenida Independência.",
+        "O trecho foi interditado e agentes da RP Mobi e da Defesa Civil atuam no local. A cidade está sob alerta amarelo do Inmet para chuva e vento até o fim desta sexta. Quem passa pela região deve redobrar a atenção e evitar parar sob árvores."
+      ],
+      "fonte": "ACidade ON",
+      "link": "https://www.acidadeon.com/ribeiraopreto/cotidiano/galho-de-arvore-cai-e-atinge-carros-na-avenida-joao-fiusa-video/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Avenida_Professor_Jo%C3%A3o_Fi%C3%BAsa_%28Zona_Sul%29.JPG/1280px-Avenida_Professor_Jo%C3%A3o_Fi%C3%BAsa_%28Zona_Sul%29.JPG",
+      "credito_foto": "Av. João Fiúsa: Anderson Bueno Pereira / Wikimedia Commons"
+    },
+    {
       "id": "2026-11-27-documentario-sobre-mauricio-e-marcelo-tem-sessoes-no-domingo",
       "data": "2026-11-27",
       "editoria": "CINEMA",
@@ -180,6 +267,22 @@
       "credito_foto": "Imagem ilustrativa: Ribeirão Preto, Anderson Bueno Pereira / Wikimedia Commons, CC BY-SA 4.0",
       "notificar": true,
       "destaque": true
+    },
+    {
+      "id": "2026-11-26-anvisa-manda-apreender-tirzepatida-e-retatrutida-sem-registr",
+      "data": "2026-11-26",
+      "editoria": "BRASIL",
+      "titulo": "Anvisa manda apreender tirzepatida e retatrutida sem registro",
+      "resumo": "A Anvisa determinou a apreensão dos produtos TZ Gold (tirzepatida 20 mg/0,6 mL), Retatrutide (Ayus Genetics, 20 mg/1 mL) e GHK-CU (Ayus Genetics, 100 mg). A resolução saiu no Diário Oficial da União na quinta-feira (26). Segundo a agência, eles não têm registro, são feitos por empresa não identificada e não podem ser importados, vendidos, distribuídos, divulgados nem usados.",
+      "texto": [
+        "A Anvisa determinou a apreensão dos produtos TZ Gold (tirzepatida 20 mg/0,6 mL), Retatrutide (Ayus Genetics, 20 mg/1 mL) e GHK-CU (Ayus Genetics, 100 mg). A resolução saiu no Diário Oficial da União na quinta-feira (26). Segundo a agência, eles não têm registro, são feitos por empresa não identificada e não podem ser importados, vendidos, distribuídos, divulgados nem usados.",
+        "A tirzepatida é o princípio ativo do Mounjaro, uma das canetas usadas para emagrecer. A retatrutida ainda é experimental e não teve registro pedido em nenhuma agência reguladora. A fiscalização vale para pessoas, empresas e veículos que vendam ou divulguem esses produtos."
+      ],
+      "fonte": "Revide",
+      "link": "https://www.revide.com.br/noticias/brasil/anvisa-proibe-tirzepatida-e-retatrutida-sem-registro/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Logotipo_da_Anvisa.jpg",
+      "credito_foto": "Logotipo da Anvisa / Wikimedia Commons"
     },
     {
       "id": "2026-11-26-concurso-miss-e-mister-sao-paulo-doa-745-itens-a-criancas-de",
