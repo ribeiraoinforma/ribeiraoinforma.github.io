@@ -1023,3 +1023,19 @@ body.v2 .v2-vidro .mais { color: var(--ouro); }
 body.v2 .v2-capa-ed > a { color: var(--azul2); }
 body.v2 .v2-sobre { color: #fff; }
 @media (max-width: 600px) { .v2-faixa > .v2-cartao { align-self: start; } }
+/* capas do Higgsfield nas editorias */
+.v2-capa-ed[data-capa] { min-height: 230px; background: #050f24; display: flex; flex-direction: column; justify-content: center; }
+.v2-capa-ed[data-capa] .v2-capa-fundo { opacity: 1; background-position: right center; background-size: cover; }
+.v2-capa-ed[data-capa] .v2-capa-fundo::before { display: none; }
+.v2-capa-ed[data-capa] .v2-capa-fundo::after {
+  inset: 0; width: auto; height: auto; border-radius: 0; right: 0; top: 0;
+  background: linear-gradient(90deg, #050f24 0%, rgba(5,15,36,.88) 32%, rgba(5,15,36,.2) 62%, transparent 80%),
+    linear-gradient(0deg, color-mix(in srgb, var(--cor) 55%, transparent) 0, transparent 6px);
+}
+.v2-capa-ed[data-capa] h2 { color: #fff; }
+.v2-capa-ed[data-capa] h2::after { content: ""; display: block; width: 64px; height: 5px; border-radius: 3px; background: var(--cor); box-shadow: 0 0 0 1px rgba(255,255,255,.25); margin-top: 12px; }
+@media (max-width: 600px) {
+  .v2-capa-ed[data-capa] { min-height: 210px; }
+  .v2-capa-ed[data-capa] .v2-capa-fundo { background-position: 70% center; }
+  .v2-capa-ed[data-capa] .v2-capa-fundo::after { background: linear-gradient(90deg, rgba(5,15,36,.92) 0%, rgba(5,15,36,.7) 50%, rgba(5,15,36,.15) 100%); }
+}

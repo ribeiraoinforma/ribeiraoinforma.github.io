@@ -4,7 +4,9 @@
   const reduzir = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // capas de editoria: por enquanto gradiente + desenho em CSS; depois, imagem própria (capas/<slug>.jpg)
-  const CAPA_ED = {};
+  const CAPA_ED = Object.fromEntries(
+    ["cidade", "servico", "esporte", "lazer", "cultura", "bem-estar", "economia", "estado", "brasil", "futebol"].map((s) => [s, `midia/capas/${s}.jpg`]),
+  );
 
   function topoV2(ativa) {
     const hoje = new Date().toLocaleDateString("pt-BR", {
@@ -75,8 +77,8 @@
       <div class="v2-img">${img(n, 330)}</div><div>${tag(n)}<h4>${esc(n.titulo)}</h4>${meta(n)}</div></a>`;
 
   const capaEditoria = (s) =>
-    `<div class="v2-capa-ed" style="--cor:${s.cor}${CAPA_ED[s.slug] ? `;--capa:url(${CAPA_ED[s.slug]})` : ""}">
-      <div class="v2-capa-fundo"></div>
+    `<div class="v2-capa-ed" style="--cor:${s.cor}${CAPA_ED[s.slug] ? `;--capa:url(${CAPA_ED[s.slug]})` : ""}"${CAPA_ED[s.slug] ? ' data-capa' : ""}>
+      <div class="v2-capa-fundo"${CAPA_ED[s.slug] ? ` style="background-image:url(${CAPA_ED[s.slug]})"` : ""}></div>
       <h2 data-t="${s.nome}">${s.nome}</h2><p>${s.desc}</p>
       <a href="previa.html?secao=${s.slug}">Ver tudo →</a></div>`;
 
