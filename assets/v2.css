@@ -1137,3 +1137,17 @@ body.v2.v2-interna .v2-rodape .versao { opacity: 0.6; font-size: 0.8rem; margin-
   .v2-sobre h3 { font-size: 18px; }
   .v2-faixa { grid-auto-columns: 72%; }
 }
+
+/* botão 3D oficial (versão A) no lugar do quadro desenhado em CSS */
+.v2-logo3d {
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.45)) drop-shadow(0 0 1px rgba(245, 183, 0, 0.6));
+  transform: none;
+}
+.v2-logo3d img { width: 64px; height: 64px; }
+@media (max-width: 600px) {
+  .v2-logo3d { box-shadow: none; }
+  .v2-logo3d img { width: 50px; height: 50px; }
+}

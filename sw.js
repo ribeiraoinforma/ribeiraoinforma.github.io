@@ -6,7 +6,7 @@
 try {
   importScripts("assets/onesignal/OneSignalSDK.sw.js");
 } catch (e) {}
-const VERSAO = "ri-v15";
+const VERSAO = "ri-v16";
 const BASICOS = [
   "./",
   "index.html",
@@ -18,8 +18,8 @@ const BASICOS = [
   "assets/v2.css",
   "assets/v2.js",
   "manifest.webmanifest",
-  "icones/icone-192.png",
-  "icones/icone-512.png",
+  "icones/icone-192-3d.png",
+  "icones/icone-512-3d.png",
 ];
 
 self.addEventListener("install", (e) => {
