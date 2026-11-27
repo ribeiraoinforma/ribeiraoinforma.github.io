@@ -58,6 +58,38 @@
       "destaque": true
     },
     {
+      "id": "2026-11-26-bolsa-dispara-6-e-dolar-cai-a-r-5-74-com-trabuco-a-caminho-d",
+      "data": "2026-11-26",
+      "editoria": "BRASIL",
+      "titulo": "Bolsa dispara 6% e dólar cai a R$ 5,74 com Trabuco a caminho da Fazenda",
+      "resumo": "O Ibovespa fechou esta quinta-feira (26) aos 176.799 pontos, alta de 6,07%, a maior em um dia desde o primeiro turno das eleições, em 5 de outubro. O dólar comercial caiu 1,25% e terminou cotado a R$ 5,744, o menor valor desde 13 de novembro e a quarta queda seguida.",
+      "texto": [
+        "O Ibovespa fechou esta quinta-feira (26) aos 176.799 pontos, alta de 6,07%, a maior em um dia desde o primeiro turno das eleições, em 5 de outubro. O dólar comercial caiu 1,25% e terminou cotado a R$ 5,744, o menor valor desde 13 de novembro e a quarta queda seguida.",
+        "O mercado reagiu à expectativa de Luiz Carlos Trabuco no Ministério da Fazenda e à prévia da inflação de novembro (IPCA-15), que subiu 0,22%, abaixo do esperado. No ano, a Bolsa acumula alta de 9,73%."
+      ],
+      "fonte": "Agência Brasil",
+      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/bolsa-sobe-6-e-tem-maior-alta-desde-o-1o-turno-dolar-cai-r-574",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Sao_Paulo_Stock_Exchange.jpg/1280px-Sao_Paulo_Stock_Exchange.jpg",
+      "credito_foto": "Imagem ilustrativa: antigo pregão da Bovespa, Rafael Matsunaga / Wikimedia Commons, CC BY 2.0"
+    },
+    {
+      "id": "2026-11-26-trabuco-aceita-convite-de-lula-e-vai-comandar-a-fazenda-no-p",
+      "data": "2026-11-26",
+      "editoria": "BRASIL",
+      "titulo": "Trabuco aceita convite de Lula e vai comandar a Fazenda no próximo mandato",
+      "resumo": "O Palácio do Planalto confirmou que o banqueiro Luiz Carlos Trabuco Cappi, de 75 anos, aceitou o convite do presidente Lula para ser ministro da Fazenda no próximo mandato. O acerto saiu numa reunião nesta quinta-feira (26), no Palácio da Alvorada, com a presença do atual ministro da Fazenda, Dario Durigan, e do ministro do Planejamento, Bruno Moretti.",
+      "texto": [
+        "O Palácio do Planalto confirmou que o banqueiro Luiz Carlos Trabuco Cappi, de 75 anos, aceitou o convite do presidente Lula para ser ministro da Fazenda no próximo mandato. O acerto saiu numa reunião nesta quinta-feira (26), no Palácio da Alvorada, com a presença do atual ministro da Fazenda, Dario Durigan, e do ministro do Planejamento, Bruno Moretti.",
+        "Trabuco preside o Conselho de Administração do Bradesco e integra o Conselhão do governo. Em 2014 ele já tinha sido convidado para a Fazenda, no governo Dilma, mas recusou o cargo."
+      ],
+      "fonte": "Agência Brasil",
+      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/trabuco-aceita-convite-de-lula-para-comandar-fazenda-diz-planalto",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/5/54/Luiz_Carlos_Trabuco_Cappi.jpg",
+      "credito_foto": "Foto de arquivo: Luiz Carlos Trabuco, Bradesco / Wikimedia Commons, CC BY-SA 3.0"
+    },
+    {
       "id": "2026-11-26-sp-paga-auxilio-aluguel-de-r-500-a-mulheres-vitimas-de-viole",
       "data": "2026-11-26",
       "editoria": "ESTADO",
@@ -572,27 +604,6 @@
         "hora": "16h",
         "local": "Theatro Pedro II"
       }
-    },
-    {
-      "id": "2026-11-25-festival-de-cultura-afro-brasileira-tem-seis-horas-de-progra",
-      "data": "2026-11-25",
-      "editoria": "CULTURA",
-      "titulo": "Festival de cultura afro-brasileira tem seis horas de programação grátis no sábado",
-      "resumo": "O 4º Festival Panela Preta acontece no sábado, 28 de novembro, das 16h às 22h, na Aldeia Caboclo Pena Vermelha (Rua Espírito Santo, 2016, Ipiranga). A entrada é gratuita.",
-      "texto": [
-        "O 4º Festival Panela Preta acontece no sábado, 28 de novembro, das 16h às 22h, na Aldeia Caboclo Pena Vermelha (Rua Espírito Santo, 2016, Ipiranga). A entrada é gratuita.",
-        "Tem shows, roda de capoeira, oficinas de samba e estamparia, exposição, feira de artesanato e, às 18h, a roda de conversa \"Kilombo de Ideias\". O prato da edição é cuscuz nordestino, com porções limitadas e reserva antecipada."
-      ],
-      "fonte": "Revide",
-      "link": "https://www.revide.com.br/noticias/cultura/festival-gratuito-de-cultura-afro-brasileira-tera-seis-horas-de-programacao-em-ribeirao-preto/",
-      "imagem": "",
-      "evento": {
-        "data": "2026-11-28",
-        "hora": "16h às 22h",
-        "local": "Aldeia Caboclo Pena Vermelha, Ipiranga"
-      },
-      "foto": "https://upload.wikimedia.org/wikipedia/commons/0/08/Ribeir%C3%A3o_Preto_-_2018.jpg",
-      "credito_foto": "Imagem ilustrativa: Ribeirão Preto, Anderson Bueno Pereira / Wikimedia Commons, CC BY-SA 4.0"
     },
     {
       "id": "2026-11-25-chocolate-premiado-no-mundo-abre-loja-no-iguatemi-na-segunda",
