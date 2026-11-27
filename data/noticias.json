@@ -1,6 +1,24 @@
 {
   "noticias": [
     {
+      "id": "2026-11-27-black-friday-e-hoje-e-deve-atrair-67-dos-consumidores-de-rib",
+      "data": "2026-11-27",
+      "editoria": "ECONOMIA",
+      "titulo": "Black Friday é hoje e deve atrair 67% dos consumidores de Ribeirão",
+      "resumo": "A Black Friday desta sexta-feira (27) deve levar 67% dos consumidores de Ribeirão Preto às compras, segundo estimativa do Sincovarp e da CDL de Ribeirão. Entre eles, 70% pretendem aproveitar as ofertas para adiantar os presentes de Natal. Os itens mais procurados são eletrodomésticos, eletrônicos, eletroportáteis e produtos de informática.",
+      "texto": [
+        "A Black Friday desta sexta-feira (27) deve levar 67% dos consumidores de Ribeirão Preto às compras, segundo estimativa do Sincovarp e da CDL de Ribeirão. Entre eles, 70% pretendem aproveitar as ofertas para adiantar os presentes de Natal. Os itens mais procurados são eletrodomésticos, eletrônicos, eletroportáteis e produtos de informática.",
+        "O comércio local espera vender de 1,5% a 3% a mais em novembro, depois de queda de 1,5% em 2025 e de 0,9% em 2024. O gasto médio estimado vai de R$ 300 a R$ 350 nas compras menores e chega a R$ 850 nas lojas físicas, nas compras maiores."
+      ],
+      "fonte": "ACidade ON",
+      "link": "https://www.acidadeon.com/ribeiraopreto/economia/black-friday-deve-atrair-67-dos-consumidores-de-ribeirao-preto-confira-os-itens-mais-procurados/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Ribeir%C3%A3o_Shopping_-_Vista_do_Parque_das_Artes.jpg/1280px-Ribeir%C3%A3o_Shopping_-_Vista_do_Parque_das_Artes.jpg",
+      "credito_foto": "Imagem ilustrativa: Ribeirão Shopping, Anderson Bueno Pereira / Wikimedia Commons, CC BY-SA 4.0",
+      "notificar": true,
+      "destaque": true
+    },
+    {
       "id": "2026-11-27-palmeiras-decide-a-libertadores-neste-sabado-as-17h-contra-o",
       "data": "2026-11-27",
       "editoria": "FUTEBOL-BRASIL",
@@ -56,6 +74,27 @@
       "credito_foto": "Imagem ilustrativa: Ribeirão Preto, Anderson Bueno Pereira / Wikimedia Commons, CC BY-SA 4.0",
       "notificar": true,
       "destaque": true
+    },
+    {
+      "id": "2026-11-26-feira-de-tecnologia-mostra-projetos-de-alunos-do-barao-de-ma",
+      "data": "2026-11-26",
+      "editoria": "EDUCAÇÃO",
+      "titulo": "Feira de tecnologia mostra projetos de alunos do Barão de Mauá na quarta (2)",
+      "resumo": "A 5ª Feira de Tecnologia do Centro Universitário Barão de Mauá acontece na quarta-feira (2), das 19h às 21h30, no Átrio do Dabi Business Park, na rua General Augusto Soares dos Santos, 100, no Parque Industrial Lagoinha. A entrada é gratuita.",
+      "texto": [
+        "A 5ª Feira de Tecnologia do Centro Universitário Barão de Mauá acontece na quarta-feira (2), das 19h às 21h30, no Átrio do Dabi Business Park, na rua General Augusto Soares dos Santos, 100, no Parque Industrial Lagoinha. A entrada é gratuita.",
+        "Os projetos expostos foram criados por alunos de Ciência da Computação na disciplina Fábrica de Software."
+      ],
+      "fonte": "ACidade ON",
+      "link": "https://www.acidadeon.com/ribeiraopreto/economia/ribeirao-preto-recebe-feira-de-tecnologia-com-projetos-desenvolvidos-por-estudantes-do-barao-de-maua/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Programming_code.jpg/1280px-Programming_code.jpg",
+      "credito_foto": "Imagem ilustrativa: código de programação, Martin Vorel / Wikimedia Commons, CC BY-SA 4.0",
+      "evento": {
+        "data": "2026-12-02",
+        "hora": "19h às 21h30",
+        "local": "Dabi Business Park (Lagoinha)"
+      }
     },
     {
       "id": "2026-11-26-bolsa-dispara-6-e-dolar-cai-a-r-5-74-com-trabuco-a-caminho-d",
