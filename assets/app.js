@@ -171,6 +171,7 @@ function redesHTML() {
 }
 
 function montarTopo(ativa) {
+  if (window.TOPO_V2 && document.body.dataset.pagina !== "capa") return window.TOPO_V2(ativa);
   const hoje = new Date().toLocaleDateString("pt-BR", {
     weekday: "long",
     day: "numeric",
@@ -715,7 +716,7 @@ window.addEventListener("appinstalled", esconderInstalar);
 setTimeout(mostrarInstalar, 600);
 // link no rodapé abre o passo a passo a qualquer hora
 setTimeout(() => {
-  const mapa = document.querySelector(".rodape .mapa");
+  const mapa = document.querySelector(".rodape .mapa, .v2-rodape nav:not(.redes)");
   if (mapa && !ehApp()) {
     const a = document.createElement("a");
     a.href = "#";
@@ -1011,7 +1012,7 @@ function mostrarAvisos() {
 setTimeout(mostrarAvisos, 800);
 // link no rodapé
 setTimeout(() => {
-  const mapa = document.querySelector(".rodape .mapa");
+  const mapa = document.querySelector(".rodape .mapa, .v2-rodape nav:not(.redes)");
   if (mapa && !avisosLigados() && (ehIOS() || temPush())) {
     const a = document.createElement("a");
     a.href = "#";
@@ -1025,9 +1026,9 @@ setTimeout(() => {
 }, 750);
 
 // número da versão no rodapé (para saber se o celular está com a versão nova)
-const VERSAO_SITE = "13";
+const VERSAO_SITE = "14";
 setTimeout(() => {
-  const r = document.querySelector(".rodape .wrap");
+  const r = document.querySelector(".rodape .wrap, .v2-rodape .v2-wrap");
   if (r && !document.querySelector(".versao")) {
     const v = document.createElement("p");
     v.className = "versao";

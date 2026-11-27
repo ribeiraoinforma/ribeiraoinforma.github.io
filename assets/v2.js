@@ -267,4 +267,10 @@
     mostrarAvisos();
   }
   window.CAPA_V2 = capaV2;
+  // páginas internas (notícia, agenda, quem somos): mesmo topo e rodapé do visual novo
+  window.TOPO_V2 = (ativa) => {
+    document.body.classList.add("v2", "v2-interna");
+    topoV2(ativa === "" ? "-" : ativa);
+    tempoMini();
+  };
 })();
