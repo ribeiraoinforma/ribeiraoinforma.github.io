@@ -492,7 +492,7 @@ async function materia() {
 }
 
 const pagina = document.body.dataset.pagina;
-if (pagina === "capa") capa();
+if (pagina === "capa") (window.CAPA_V2 || capa)();
 else if (pagina === "materia") materia();
 else if (pagina === "agenda") agenda();
 else montarTopo("");
