@@ -1,6 +1,38 @@
 {
   "noticias": [
     {
+      "id": "2026-11-27-rompimento-de-cabos-deixa-sistemas-do-estado-instaveis-deleg",
+      "data": "2026-11-27",
+      "editoria": "ESTADO",
+      "titulo": "Rompimento de cabos deixa sistemas do Estado instáveis; delegacias e Poupatempo podem ser afetados",
+      "resumo": "Dois cabos de fibra óptica foram rompidos durante uma obra em Taboão da Serra, na Grande São Paulo, na manhã desta sexta-feira (27), e deixaram instáveis os sistemas da Prodesp, a empresa de processamento de dados do governo paulista. A falha atingiu serviços de segurança pública em todo o Estado, e delegacias tiveram dificuldade para registrar boletins de ocorrência.",
+      "texto": [
+        "Dois cabos de fibra óptica foram rompidos durante uma obra em Taboão da Serra, na Grande São Paulo, na manhã desta sexta-feira (27), e deixaram instáveis os sistemas da Prodesp, a empresa de processamento de dados do governo paulista. A falha atingiu serviços de segurança pública em todo o Estado, e delegacias tiveram dificuldade para registrar boletins de ocorrência.",
+        "A Polícia Civil acionou planos de contingência. A instabilidade também pode afetar sistemas de saúde e educação, portais do governo, o Detran-SP e o Poupatempo. A Prodesp informou que trabalha com a empresa fornecedora para restabelecer a conexão. Quem precisa desses serviços hoje pode encontrar lentidão."
+      ],
+      "fonte": "Tribuna Ribeirão",
+      "link": "https://www.tribunaribeirao.com.br/rompimento-de-cabos-afeta-servicos-de-seguranca/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pal%C3%A1cio_dos_Bandeirantes_2018_052.jpg/1280px-Pal%C3%A1cio_dos_Bandeirantes_2018_052.jpg",
+      "credito_foto": "Imagem ilustrativa: Palácio dos Bandeirantes / Wikimedia Commons"
+    },
+    {
+      "id": "2026-11-27-nautico-e-punido-por-divida-com-o-botafogo-e-tricolor-segue",
+      "data": "2026-11-27",
+      "editoria": "ESPORTE",
+      "titulo": "Náutico é punido por dívida com o Botafogo, e Tricolor segue atrás do atacante Derek",
+      "resumo": "O Náutico foi proibido de registrar novos jogadores por causa de uma dívida com o Botafogo-SP. O clube pernambucano tinha até 17 de novembro para pagar duas parcelas atrasadas ao Tricolor e não quitou. O transfer ban foi aplicado pela Agência Nacional de Regulação e Sustentabilidade do Futebol (Anresf), e o Náutico é o primeiro punido desde a criação do fair play financeiro.",
+      "texto": [
+        "O Náutico foi proibido de registrar novos jogadores por causa de uma dívida com o Botafogo-SP. O clube pernambucano tinha até 17 de novembro para pagar duas parcelas atrasadas ao Tricolor e não quitou. O transfer ban foi aplicado pela Agência Nacional de Regulação e Sustentabilidade do Futebol (Anresf), e o Náutico é o primeiro punido desde a criação do fair play financeiro.",
+        "Enquanto isso, o Botafogo segue negociando com o atacante Derek, do Atlético-GO, emprestado ao Náutico, que deve assinar quando o contrato terminar, o que pode acontecer na próxima semana. Seria a quarta contratação para o Paulistão e a temporada, que terá também Copa do Brasil e Série B. Já chegaram o lateral Heron (ex-Londrina), o meia Gustavo Barreto (ex-América-MG) e o lateral Reverson (ex-CRB)."
+      ],
+      "fonte": "Tribuna Ribeirão",
+      "link": "https://www.tribunaribeirao.com.br/nautico-sofre-transfer-ban-por-conta-de-dividas-com-o-botafogo/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Est%C3%A1dio_Santa_Cruz_BFC.JPG/1280px-Est%C3%A1dio_Santa_Cruz_BFC.JPG",
+      "credito_foto": "Estádio Santa Cruz: Anderson Bueno Pereira / Wikimedia Commons"
+    },
+    {
       "id": "2026-11-27-mega-sena-acumula-em-r-82-milhoes-apostas-de-barrinha-e-barr",
       "data": "2026-11-27",
       "editoria": "ECONOMIA",
