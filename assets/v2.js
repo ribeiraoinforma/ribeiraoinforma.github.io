@@ -99,7 +99,51 @@
       <div class="v2-box v2-vidro" id="tempo"><h3>Tempo agora em Ribeirão</h3><p class="mini">Carregando…</p></div>
       <div class="v2-box v2-vidro">${agendaBox(lista).replace(/<section class="box">|<\/section>/g, "")}</div>
       <div class="v2-box v2-vidro">${telefonesBox().replace(/<section class="box">|<\/section>/g, "")}</div>
+      <div class="v2-box v2-vidro" id="v2-cotacao"><h2 class="box-t">Dólar e euro hoje</h2><p class="mini">Carregando…</p></div>
+      <div class="v2-box v2-vidro" id="v2-horoscopo"><h2 class="box-t">Horóscopo do dia</h2><p class="mini">Carregando…</p></div>
+      ${anuncie("caixa")}
     </section>`;
+  }
+
+  const EMAIL = "ribeiraoinforma@gmail.com";
+  const anuncie = (tipo) =>
+    tipo === "caixa"
+      ? `<a class="v2-box v2-anuncie" href="mailto:${EMAIL}?subject=Quero%20anunciar%20no%20Ribeir%C3%A3o%20Informa"><span>ESPAÇO PUBLICITÁRIO</span><b>Anuncie aqui</b><p>Sua marca no portal de notícias de Ribeirão Preto, no site, no app e nas redes.</p><i>${EMAIL}</i></a>`
+      : `<a class="v2-anuncie-faixa" href="mailto:${EMAIL}?subject=Quero%20anunciar%20no%20Ribeir%C3%A3o%20Informa"><span>ESPAÇO PUBLICITÁRIO</span><b>Anuncie aqui</b><em>Fale com a gente: ${EMAIL}</em></a>`;
+
+  const brl = (v) => Number(v).toLocaleString("pt-BR", { style: "currency", currency: "BRL", minimumFractionDigits: 2 });
+  async function cotacao() {
+    const el = $("#v2-cotacao");
+    if (!el) return;
+    try {
+      const d = await (await fetch("https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL")).json();
+      const linhaC = (nome, ic, c) => {
+        const p = Number(c.pctChange);
+        return `<div class="v2-moeda"><span>${ic} ${nome}</span><b>${brl(c.bid)}</b><em class="${p >= 0 ? "sobe" : "desce"}">${p >= 0 ? "▲" : "▼"} ${Math.abs(p).toFixed(2).replace(".", ",")}%</em></div>`;
+      };
+      el.innerHTML = `<h2 class="box-t">Dólar e euro hoje</h2>${linhaC("Dólar", "💵", d.USDBRL)}${linhaC("Euro", "💶", d.EURBRL)}<p class="mini">Valor de venda (comercial), atualizado ${new Date(d.USDBRL.create_date.replace(" ", "T")).toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })}. Fonte: AwesomeAPI.</p>`;
+    } catch {
+      el.innerHTML = `<h2 class="box-t">Dólar e euro hoje</h2><p class="mini">Cotação indisponível agora. Tente de novo em instantes.</p>`;
+    }
+  }
+
+  async function horoscopo() {
+    const el = $("#v2-horoscopo");
+    if (!el) return;
+    try {
+      const h = await (await fetch("data/horoscopo.json?t=" + Date.now())).json();
+      const op = h.signos.map((s, i) => `<option value="${i}">${s.emoji} ${esc(s.nome)}</option>`).join("");
+      el.innerHTML = `<h2 class="box-t">Horóscopo do dia</h2><select aria-label="Escolha o seu signo">${op}</select><p class="v2-horo-txt"></p><p class="mini">${dataBR(h.data)} · para se divertir</p>`;
+      const sel = el.querySelector("select"), txt = el.querySelector(".v2-horo-txt");
+      let salvo = 0;
+      try { salvo = +localStorage.getItem("ri-signo") || 0; } catch {}
+      sel.value = salvo;
+      const mostra = () => { txt.textContent = h.signos[sel.value].texto; try { localStorage.setItem("ri-signo", sel.value); } catch {} };
+      sel.onchange = mostra;
+      mostra();
+    } catch {
+      el.remove();
+    }
   }
 
   function convite() {
@@ -198,7 +242,9 @@
       return `<section class="v2-bloco v2-revela" style="--cor:${s.cor}">
         ${capaEditoria(s)}
         <div class="v2-bloco-c">${sobre(p, "largo", 960)}<div class="v2-bloco-g">${r.map(cartao).join("")}</div></div></section>`;
-    }).join("");
+    });
+    const blocosHTML = blocos.filter(Boolean);
+    if (blocosHTML.length > 3) blocosHTML.splice(3, 0, `<div class="v2-anuncie-wrap">${anuncie("faixa")}</div>`);
 
     $("#conteudo").innerHTML = `
       ${ticker(base)}
@@ -212,8 +258,10 @@
         ${convite()}
       </section>
       ${servico(lista)}
-      ${blocos}`;
+      ${blocosHTML.join("")}`;
     carregarTempo();
+    cotacao();
+    horoscopo();
     efeitos();
     mostrarInstalar();
     mostrarAvisos();

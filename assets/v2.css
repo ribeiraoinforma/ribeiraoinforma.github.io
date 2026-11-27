@@ -1039,3 +1039,60 @@ body.v2 .v2-sobre { color: #fff; }
   .v2-capa-ed[data-capa] .v2-capa-fundo { background-position: 70% center; }
   .v2-capa-ed[data-capa] .v2-capa-fundo::after { background: linear-gradient(90deg, rgba(5,15,36,.92) 0%, rgba(5,15,36,.7) 50%, rgba(5,15,36,.15) 100%); }
 }
+
+/* cotação, horóscopo e anuncie */
+.v2-moeda {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  color: #fff;
+}
+.v2-moeda span { flex: 1; }
+.v2-moeda b { font-size: 1.25rem; color: var(--ouro); }
+.v2-moeda em { font-style: normal; font-size: 0.85rem; font-weight: 700; }
+.v2-moeda .sobe { color: #4ade80; }
+.v2-moeda .desce { color: #f87171; }
+#v2-horoscopo select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(7, 25, 58, 0.85);
+  color: #fff;
+  font-size: 1rem;
+  margin: 4px 0 10px;
+}
+.v2-horo-txt { color: #fff; line-height: 1.5; margin: 0 0 8px; }
+body.v2 .v2-anuncie {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  text-decoration: none;
+  border-radius: var(--raio);
+  padding: 18px;
+  background: repeating-linear-gradient(135deg, rgba(245, 183, 0, 0.12) 0 12px, rgba(245, 183, 0, 0.04) 12px 24px);
+  border: 2px dashed var(--ouro);
+  color: #fff;
+}
+.v2-anuncie span, .v2-anuncie-faixa span { font-size: 0.7rem; letter-spacing: 0.14em; opacity: 0.8; }
+body.v2 .v2-anuncie b { font-size: 1.6rem; color: var(--ouro); }
+body.v2 .v2-anuncie p, body.v2 .v2-anuncie i, body.v2 .v2-anuncie span { color: #fff; margin: 0; line-height: 1.4; }
+.v2-anuncie i { font-style: normal; font-weight: 700; word-break: break-all; }
+.v2-anuncie-wrap { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
+body.v2 .v2-anuncie-faixa {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 18px 22px;
+  border-radius: var(--raio);
+  text-decoration: none;
+  color: var(--azul2);
+  background: linear-gradient(90deg, #ffd34d, var(--ouro));
+}
+.v2-anuncie-faixa b { font-size: 1.4rem; }
+.v2-anuncie-faixa em { font-style: normal; margin-left: auto; font-weight: 600; }
+@media (max-width: 700px) { .v2-anuncie-faixa em { margin-left: 0; } }
