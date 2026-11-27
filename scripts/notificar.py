@@ -60,8 +60,8 @@ def main():
         "headings": {"pt": titulo[:90], "en": titulo[:90]},
         "contents": {"pt": texto[:180], "en": texto[:180]},
         "url": url,
-        "chrome_web_icon": SITE + "icones/icone-192-a.png",
-        "chrome_web_badge": SITE + "icones/selo-96-a.png",
+        "chrome_web_icon": SITE + "icones/icone-192-b.png",
+        "chrome_web_badge": SITE + "icones/selo-96-b.png",
     }
     req = urllib.request.Request(
         "https://api.onesignal.com/notifications",
