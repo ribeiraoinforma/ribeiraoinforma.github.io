@@ -1,6 +1,38 @@
 {
   "noticias": [
     {
+      "id": "2026-11-27-botafogo-sp-recusou-parceria-com-a-furia-por-exigencia-de-mu",
+      "data": "2026-11-27",
+      "editoria": "ESPORTE",
+      "titulo": "Botafogo-SP recusou parceria com a Furia por exigência de mudar nome e uniforme",
+      "resumo": "O Botafogo de Ribeirão Preto recusou uma proposta de parceria da Furia, organização de e-sports ligada a Neymar, antes de ela fechar acordo com o Novorizontino. A informação foi confirmada nesta sexta (27) pelo gestor do clube, Adalberto Baptista, em entrevista à rádio CBN Ribeirão.",
+      "texto": [
+        "O Botafogo de Ribeirão Preto recusou uma proposta de parceria da Furia, organização de e-sports ligada a Neymar, antes de ela fechar acordo com o Novorizontino. A informação foi confirmada nesta sexta (27) pelo gestor do clube, Adalberto Baptista, em entrevista à rádio CBN Ribeirão.",
+        "Segundo Baptista, a Furia procurou o Botafogo em agosto de 2025, também atraída pelo mascote em comum, a pantera. A conversa não avançou porque o projeto previa mudanças no nome e no uniforme do Tricolor."
+      ],
+      "fonte": "ACidade ON",
+      "link": "https://www.acidadeon.com/ribeiraopreto/esportes/botafogo-recusou-proposta-da-furia-antes-de-parceria-da-organizacao-com-o-novorizontino/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Est%C3%A1dio_Santa_Cruz_BFC.JPG/1280px-Est%C3%A1dio_Santa_Cruz_BFC.JPG",
+      "credito_foto": "Estádio Santa Cruz: Anderson Bueno Pereira / Wikimedia Commons, domínio público"
+    },
+    {
+      "id": "2026-11-27-fenomeno-de-chuva-forte-deve-atingir-sp-de-29-de-novembro-a",
+      "data": "2026-11-27",
+      "editoria": "CIDADE",
+      "titulo": "Fenômeno de chuva forte deve atingir SP de 29 de novembro a 5 de dezembro",
+      "resumo": "A primeira Zona de Convergência do Atlântico Sul (ZCAS) deste período chuvoso está prevista entre domingo (29) e sexta (5), com atuação também no estado de São Paulo, segundo a Climatempo. O fenômeno costuma despejar grandes volumes de chuva em poucos dias.",
+      "texto": [
+        "A primeira Zona de Convergência do Atlântico Sul (ZCAS) deste período chuvoso está prevista entre domingo (29) e sexta (5), com atuação também no estado de São Paulo, segundo a Climatempo. O fenômeno costuma despejar grandes volumes de chuva em poucos dias.",
+        "A meteorologista Josélia Pegorim, da Climatempo, alerta que a chuva concentrada pode causar transtornos em áreas urbanas e rurais. Em Ribeirão, vale redobrar o cuidado com alagamentos, quedas de árvores e trânsito nos dias de temporal."
+      ],
+      "fonte": "ACidade ON",
+      "link": "https://www.acidadeon.com/ribeiraopreto/cotidiano/fenomeno-pode-trazer-muita-chuva-para-o-estado-de-sp-nos-proximos-dias-veja-regioes/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Vista_do_Centro_Expandido_de_Ribeir%C3%A3o_Preto_em_2026.jpg/1280px-Vista_do_Centro_Expandido_de_Ribeir%C3%A3o_Preto_em_2026.jpg",
+      "credito_foto": "Imagem ilustrativa: Centro de Ribeirão Preto, And Ribeirão 1980 / Wikimedia Commons, CC0"
+    },
+    {
       "id": "2026-11-27-coral-da-filo-faz-concerto-gratis-nesta-sexta-na-usp-de-ribe",
       "data": "2026-11-27",
       "editoria": "CULTURA",
