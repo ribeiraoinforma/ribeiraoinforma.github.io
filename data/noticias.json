@@ -1,6 +1,22 @@
 {
   "noticias": [
     {
+      "id": "2026-11-26-sp-paga-auxilio-aluguel-de-r-500-a-mulheres-vitimas-de-viole",
+      "data": "2026-11-26",
+      "editoria": "ESTADO",
+      "titulo": "SP paga auxílio-aluguel de R$ 500 a mulheres vítimas de violência doméstica",
+      "resumo": "O Governo de São Paulo informou que o auxílio-aluguel para mulheres vítimas de violência doméstica, lançado em fevereiro de 2025, já atendeu 11,3 mil mulheres, com R$ 39,5 milhões investidos. O benefício é de R$ 500 por mês, por seis meses, prorrogáveis por mais seis após avaliação da assistência social. Para ter direito, é preciso ter medida protetiva expedida pela Justiça, morar no Estado, comprovar vulnerabilidade social e ter renda familiar de até dois salários mínimos. O cadastro é feito pela assistência social do município que aderiu ao programa; quem mora em cidade que não aderiu pode procurar a SEDS pelo e-mail auxiliomulher.seds@sp.gov.br.",
+      "texto": [
+        "O Governo de São Paulo informou que o auxílio-aluguel para mulheres vítimas de violência doméstica, lançado em fevereiro de 2025, já atendeu 11,3 mil mulheres, com R$ 39,5 milhões investidos. O benefício é de R$ 500 por mês, por seis meses, prorrogáveis por mais seis após avaliação da assistência social. Para ter direito, é preciso ter medida protetiva expedida pela Justiça, morar no Estado, comprovar vulnerabilidade social e ter renda familiar de até dois salários mínimos. O cadastro é feito pela assistência social do município que aderiu ao programa; quem mora em cidade que não aderiu pode procurar a SEDS pelo e-mail auxiliomulher.seds@sp.gov.br.",
+        "O Estado também cofinancia 47 serviços de acolhimento institucional em 92 municípios, com 1.296 vagas. O acolhimento é voluntário, dura até seis meses (prorrogáveis), oferece moradia protegida e sigilosa, alimentação e acompanhamento psicossocial, e recebe também os filhos menores de 18 anos. Em caso de violência, ligue 190 (Polícia Militar) ou 180 (Central de Atendimento à Mulher)."
+      ],
+      "fonte": "Agência SP",
+      "link": "https://www.agenciasp.sp.gov.br/politicas-para-mulheres/sp-amplia-auxilio/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/1/1d/200_Brazil_real_Second_Reverse.jpg",
+      "credito_foto": "Imagem ilustrativa: Banco Central do Brasil / Wikimedia Commons, domínio público"
+    },
+    {
       "id": "2026-11-26-unimed-abre-novo-pronto-atendimento-adulto-24h-na-avenida-in",
       "data": "2026-11-26",
       "editoria": "SAÚDE",
