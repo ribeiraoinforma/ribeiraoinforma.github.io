@@ -1,6 +1,112 @@
 {
   "noticias": [
     {
+      "id": "2026-11-27-documentario-sobre-mauricio-e-marcelo-tem-sessoes-no-domingo",
+      "data": "2026-11-27",
+      "editoria": "CINEMA",
+      "titulo": "Documentário sobre Maurício e Marcelo tem sessões no domingo em Ribeirão",
+      "resumo": "O documentário \"Maurício e Marcelo: o amor não sai de cena\" será exibido neste domingo (29), às 9h30 e às 10h30, na sala 6 do Cinépolis do Shopping Santa Úrsula.",
+      "texto": [
+        "O documentário \"Maurício e Marcelo: o amor não sai de cena\" será exibido neste domingo (29), às 9h30 e às 10h30, na sala 6 do Cinépolis do Shopping Santa Úrsula.",
+        "O filme conta os 35 anos de carreira da dupla sertaneja dos irmãos gêmeos Maurício e Marcelo Gasparini, com entrevistas, histórias da infância, imagens de arquivo e registros inéditos."
+      ],
+      "fonte": "ACidade ON",
+      "link": "https://www.acidadeon.com/ribeiraopreto/lazer-e-cultura/fim-de-semana-em-ribeirao-tem-ivete-sangalo-evento-geek-shows-e-caravana-de-natal/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Sala_de_Exibi%C3%A7%C3%A3o_CMM.jpg/1280px-Sala_de_Exibi%C3%A7%C3%A3o_CMM.jpg",
+      "credito_foto": "Imagem ilustrativa: sala de cinema, Dalto.Ruiz / Wikimedia Commons, CC BY-SA 4.0",
+      "evento": {
+        "data": "2026-11-29",
+        "hora": "9h30 e 10h30",
+        "local": "Cinépolis Santa Úrsula"
+      }
+    },
+    {
+      "id": "2026-11-27-festival-frescores-fecha-2026-com-duas-noites-gratuitas-na-o",
+      "data": "2026-11-27",
+      "editoria": "MÚSICA",
+      "titulo": "Festival Frescores fecha 2026 com duas noites gratuitas na Oficina Corisco",
+      "resumo": "O Festival Frescores, que reúne artistas LGBTQIAPN+, faz neste sábado (28), a partir das 19h, sua sexta edição na Oficina Corisco, com a banda Quarta Pele, a cantora Levitta e a DJ Xakaw. A entrada é gratuita.",
+      "texto": [
+        "O Festival Frescores, que reúne artistas LGBTQIAPN+, faz neste sábado (28), a partir das 19h, sua sexta edição na Oficina Corisco, com a banda Quarta Pele, a cantora Levitta e a DJ Xakaw. A entrada é gratuita.",
+        "A sétima e última edição do ano será no sábado seguinte (5 de dezembro), também às 19h e no mesmo lugar, com Kamila nas Barras, Avinny e a DJ Shonda."
+      ],
+      "fonte": "ACidade ON",
+      "link": "https://www.acidadeon.com/ribeiraopreto/lazer-e-cultura/fim-de-semana-em-ribeirao-tem-ivete-sangalo-evento-geek-shows-e-caravana-de-natal/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Musician_performing_on_stage_at_night_during_an_outdoor_concert_in_a_lively_atmosphere_with_dramatic_lighting_effects.jpg/1280px-Musician_performing_on_stage_at_night_during_an_outdoor_concert_in_a_lively_atmosphere_with_dramatic_lighting_effects.jpg",
+      "credito_foto": "Imagem ilustrativa: palco, Shixart1985 / Wikimedia Commons, CC BY 2.0",
+      "evento": {
+        "data": "2026-11-28",
+        "hora": "19h",
+        "local": "Oficina Corisco"
+      }
+    },
+    {
+      "id": "2026-11-27-banda-maria-orfina-lanca-o-album-sol-no-mar-com-festa-no-sab",
+      "data": "2026-11-27",
+      "editoria": "MÚSICA",
+      "titulo": "Banda Maria Orfina lança o álbum \"Sol no Mar\" com festa no sábado",
+      "resumo": "A banda Maria Orfina lança o disco \"Sol no Mar\" neste sábado (28), a partir das 22h, na Fábrica de Extintores, com show das músicas novas.",
+      "texto": [
+        "A banda Maria Orfina lança o disco \"Sol no Mar\" neste sábado (28), a partir das 22h, na Fábrica de Extintores, com show das músicas novas.",
+        "A noite também tem discotecagem latina com Ana Colombiana. Os ingressos são vendidos pela internet."
+      ],
+      "fonte": "ACidade ON",
+      "link": "https://www.acidadeon.com/ribeiraopreto/lazer-e-cultura/fim-de-semana-em-ribeirao-tem-ivete-sangalo-evento-geek-shows-e-caravana-de-natal/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Musician_performing_on_stage_at_night_during_an_outdoor_concert_in_a_lively_atmosphere_with_dramatic_lighting_effects.jpg/1280px-Musician_performing_on_stage_at_night_during_an_outdoor_concert_in_a_lively_atmosphere_with_dramatic_lighting_effects.jpg",
+      "credito_foto": "Imagem ilustrativa: palco, Shixart1985 / Wikimedia Commons, CC BY 2.0",
+      "evento": {
+        "data": "2026-11-28",
+        "hora": "22h",
+        "local": "Fábrica de Extintores"
+      }
+    },
+    {
+      "id": "2026-11-27-musical-sonho-encantado-de-cordel-faz-tres-sessoes-no-theatr",
+      "data": "2026-11-27",
+      "editoria": "TEATRO",
+      "titulo": "Musical \"Sonho Encantado de Cordel\" faz três sessões no Theatro Pedro II",
+      "resumo": "O espetáculo \"Sonho Encantado de Cordel, o Musical\" é apresentado no Theatro Pedro II neste sábado (28), às 19h, e no domingo (29), às 16h e às 19h.",
+      "texto": [
+        "O espetáculo \"Sonho Encantado de Cordel, o Musical\" é apresentado no Theatro Pedro II neste sábado (28), às 19h, e no domingo (29), às 16h e às 19h.",
+        "A montagem mistura a literatura de cordel e a cultura nordestina com os contos de fadas de Hans Christian Andersen. Com texto e direção de Thereza Falcão, conta a história de Rosa Cordelista, uma jovem que sonha ser escritora."
+      ],
+      "fonte": "ACidade ON",
+      "link": "https://www.acidadeon.com/ribeiraopreto/lazer-e-cultura/fim-de-semana-em-ribeirao-tem-ivete-sangalo-evento-geek-shows-e-caravana-de-natal/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Vista_do_Theatro_Pedro_II_em_2022.jpg/1280px-Vista_do_Theatro_Pedro_II_em_2022.jpg",
+      "credito_foto": "Theatro Pedro II: Mtvdanilo / Wikimedia Commons, CC BY-SA 4.0",
+      "evento": {
+        "data": "2026-11-28",
+        "fim": "2026-11-29",
+        "hora": "sáb 19h; dom 16h e 19h",
+        "local": "Theatro Pedro II"
+      }
+    },
+    {
+      "id": "2026-11-27-bsj-geek-pop-tem-cosplay-k-pop-e-dubladora-da-viuva-negra-no",
+      "data": "2026-11-27",
+      "editoria": "EVENTO",
+      "titulo": "BSJ Geek Pop tem cosplay, K-pop e dubladora da Viúva Negra no sábado, de graça",
+      "resumo": "A 2ª edição do BSJ Geek Pop acontece neste sábado (28), das 10h às 21h, na Biblioteca Sinhá Junqueira, no Centro de Ribeirão Preto. A entrada é gratuita.",
+      "texto": [
+        "A 2ª edição do BSJ Geek Pop acontece neste sábado (28), das 10h às 21h, na Biblioteca Sinhá Junqueira, no Centro de Ribeirão Preto. A entrada é gratuita.",
+        "A programação tem concurso de cosplay, competições de K-pop, oficinas, contação de histórias, campeonatos de videogame e shows. Às 16h30, a atriz e dubladora Fernanda Baronne, voz de personagens como Viúva Negra, Velma e Vampira, conta histórias dos bastidores da dublagem e encontra os fãs."
+      ],
+      "fonte": "ACidade ON",
+      "link": "https://www.acidadeon.com/ribeiraopreto/lazer-e-cultura/fim-de-semana-em-ribeirao-tem-ivete-sangalo-evento-geek-shows-e-caravana-de-natal/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Biblioteca_Sinh%C3%A1_Junqueira.jpg/1280px-Biblioteca_Sinh%C3%A1_Junqueira.jpg",
+      "credito_foto": "Biblioteca Sinhá Junqueira: Anderson Bueno Pereira / Wikimedia Commons, CC0",
+      "evento": {
+        "data": "2026-11-28",
+        "hora": "10h às 21h",
+        "local": "Biblioteca Sinhá Junqueira"
+      }
+    },
+    {
       "id": "2026-11-27-black-friday-e-hoje-e-deve-atrair-67-dos-consumidores-de-rib",
       "data": "2026-11-27",
       "editoria": "ECONOMIA",
@@ -74,6 +180,22 @@
       "credito_foto": "Imagem ilustrativa: Ribeirão Preto, Anderson Bueno Pereira / Wikimedia Commons, CC BY-SA 4.0",
       "notificar": true,
       "destaque": true
+    },
+    {
+      "id": "2026-11-26-ccj-do-senado-aprova-fim-da-fianca-para-quem-mata-no-transit",
+      "data": "2026-11-26",
+      "editoria": "BRASIL",
+      "titulo": "CCJ do Senado aprova fim da fiança para quem mata no trânsito embriagado",
+      "resumo": "A Comissão de Constituição e Justiça do Senado aprovou na quarta-feira (25) o projeto que acaba com a fiança para motoristas que cometerem homicídio culposo no trânsito sob efeito de álcool. O texto também prevê prisão em flagrante para condutores envolvidos em acidentes com morte, mesmo quando prestarem socorro, e exame toxicológico.",
+      "texto": [
+        "A Comissão de Constituição e Justiça do Senado aprovou na quarta-feira (25) o projeto que acaba com a fiança para motoristas que cometerem homicídio culposo no trânsito sob efeito de álcool. O texto também prevê prisão em flagrante para condutores envolvidos em acidentes com morte, mesmo quando prestarem socorro, e exame toxicológico.",
+        "O PL 1.229/2024, do senador Fabiano Contarato (PT-ES), foi aprovado em caráter terminativo e segue para a Câmara se não houver recurso para o plenário. As mudanças ainda não valem: dependem da Câmara e da sanção presidencial."
+      ],
+      "fonte": "ACidade ON",
+      "link": "https://www.acidadeon.com/ribeiraopreto/politica/senado-aprova-fim-da-fianca-para-casos-de-morte-no-transito-por-embriaguez-entenda/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Imagens_de_Bras%C3%ADlia_-_Fachada_do_Pal%C3%A1cio_do_Congresso_Nacional_%2853457492293%29.jpg/1280px-Imagens_de_Bras%C3%ADlia_-_Fachada_do_Pal%C3%A1cio_do_Congresso_Nacional_%2853457492293%29.jpg",
+      "credito_foto": "Congresso Nacional: Agência Senado / Wikimedia Commons, CC BY 2.0"
     },
     {
       "id": "2026-11-26-feira-de-tecnologia-mostra-projetos-de-alunos-do-barao-de-ma",
