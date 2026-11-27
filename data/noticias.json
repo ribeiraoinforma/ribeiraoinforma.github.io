@@ -1,6 +1,27 @@
 {
   "noticias": [
     {
+      "id": "2026-11-27-coral-da-filo-faz-concerto-gratis-nesta-sexta-na-usp-de-ribe",
+      "data": "2026-11-27",
+      "editoria": "CULTURA",
+      "titulo": "Coral da Filô faz concerto grátis nesta sexta na USP de Ribeirão",
+      "resumo": "O Coral da Filô se apresenta nesta sexta-feira (27), às 19h, na Sala de Concertos da Tulha, no campus da USP em Ribeirão Preto. A entrada é gratuita. O concerto faz parte da avaliação das disciplinas de Canto Coral do curso de Música da FFCLRP, sob a responsabilidade do professor Marcos Câmara de Castro.",
+      "texto": [
+        "O Coral da Filô se apresenta nesta sexta-feira (27), às 19h, na Sala de Concertos da Tulha, no campus da USP em Ribeirão Preto. A entrada é gratuita. O concerto faz parte da avaliação das disciplinas de Canto Coral do curso de Música da FFCLRP, sob a responsabilidade do professor Marcos Câmara de Castro.",
+        "O repertório tem 21 peças e abre com \"Lua Branca\", de Chiquinha Gonzaga. Estão na lista ainda \"Vida de Viajante\" (Luiz Gonzaga e Hervé Cordovil), \"Suíte dos Pescadores\" (Dorival Caymmi) e \"Carinhoso\" (Pixinguinha e Braguinha). O coral foi criado em 2015 pelo Departamento de Música da faculdade."
+      ],
+      "fonte": "Revide",
+      "link": "https://www.revide.com.br/noticias/cultura/coral-da-filo-apresenta-concerto-gratuito-em-ribeirao-preto-nesta-sexta-feira-27/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Entrada_principal_USP_Ribeir%C3%A3o_Preto.jpg/1280px-Entrada_principal_USP_Ribeir%C3%A3o_Preto.jpg",
+      "credito_foto": "Entrada da USP Ribeirão / Anderson Bueno Pereira, Wikimedia Commons, CC BY-SA 3.0",
+      "evento": {
+        "data": "2026-11-27",
+        "hora": "19:00",
+        "local": "Sala de Concertos da Tulha, campus da USP"
+      }
+    },
+    {
       "id": "2026-11-27-fundador-do-bradesco-amador-aguiar-nasceu-em-ribeirao-preto",
       "data": "2026-11-27",
       "editoria": "ECONOMIA",
