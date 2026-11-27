@@ -8,7 +8,7 @@ const REDES = {
   threads: "",
   kwai: "",
 };
-const SELO = "icones/selo-96-3d.png";
+const SELO = "icones/selo-96-a.png";
 
 // Seções do site, com a mesma cor das artes das redes.
 // Cada notícia cai na seção que lista a editoria dela; editoria desconhecida cai em "Cidade".
@@ -613,7 +613,7 @@ function abrirGuia() {
   el.setAttribute("role", "dialog");
   el.setAttribute("aria-modal", "true");
   el.innerHTML = `<div class="guia-caixa"><button class="fechar" aria-label="Fechar">×</button>
-    <img src="icones/icone-192-3d.png" alt="" width="64" height="64" class="guia-icone">
+    <img src="icones/icone-192-a.png" alt="" width="64" height="64" class="guia-icone">
     ${guiaHTML()}
     <button class="btn claro" id="guia-ok">Entendi</button></div>`;
   document.body.appendChild(el);
@@ -671,7 +671,7 @@ function mostrarInstalar() {
     const f = document.createElement("button");
     f.type = "button";
     f.className = "instalar-faixa";
-    f.innerHTML = `<img src="icones/icone-192-3d.png" alt="" width="40" height="40"><span><b>Tenha o Ribeirão Informa no celular</b><small>Instale o app grátis. Abre direto da sua tela.</small></span><em>Instalar</em>`;
+    f.innerHTML = `<img src="icones/icone-192-a.png" alt="" width="40" height="40"><span><b>Tenha o Ribeirão Informa no celular</b><small>Instale o app grátis. Abre direto da sua tela.</small></span><em>Instalar</em>`;
     f.onclick = instalar;
     zap.after(f);
   }
@@ -686,7 +686,7 @@ function mostrarInstalar() {
       if (ehApp() || document.getElementById("instalar")) return;
       const el = document.createElement("div");
       el.id = "instalar";
-      el.innerHTML = `<img src="icones/icone-192-3d.png" alt="" width="44" height="44"><div class="txt"><p><b>Instale o app do Ribeirão Informa</b></p>
+      el.innerHTML = `<img src="icones/icone-192-a.png" alt="" width="44" height="44"><div class="txt"><p><b>Instale o app do Ribeirão Informa</b></p>
         <button class="btn" type="button">📲 Instalar o app</button></div><button class="fechar" aria-label="Fechar">×</button>`;
       document.body.appendChild(el);
       el.querySelector(".btn").onclick = () => {
@@ -799,10 +799,10 @@ function explicarIphone() {
   el.setAttribute("role", "dialog");
   el.setAttribute("aria-modal", "true");
   el.innerHTML = `<div class="guia-caixa"><button class="fechar" aria-label="Fechar">×</button>
-    <img src="icones/icone-192-3d.png" alt="" width="64" height="64" class="guia-icone">
+    <img src="icones/icone-192-a.png" alt="" width="64" height="64" class="guia-icone">
     <h2>Você está no Safari</h2>
     <p class="sub">No iPhone, os avisos <b>só ligam dentro do app</b>, não aqui no navegador.</p>
-    <div class="ja-instalou"><b>Já instalou o app?</b><br>Saia do Safari e toque no ícone <img src="icones/icone-192-3d.png" alt="" width="28" height="28"> <b>Ribeirão Informa</b> na tela do celular. Lá dentro aparece sozinha a pergunta <b>"Quer receber as notícias?"</b>: toque em <b>Sim</b> e depois em <b>Permitir</b>.</div>
+    <div class="ja-instalou"><b>Já instalou o app?</b><br>Saia do Safari e toque no ícone <img src="icones/icone-192-a.png" alt="" width="28" height="28"> <b>Ribeirão Informa</b> na tela do celular. Lá dentro aparece sozinha a pergunta <b>"Quer receber as notícias?"</b>: toque em <b>Sim</b> e depois em <b>Permitir</b>.</div>
     <p class="sub"><b>Ainda não instalou?</b> Toque no botão abaixo.</p>
     <button class="btn" id="ir-instalar">📲 Instalar o app</button>
     <button class="btn claro" id="guia-ok">Entendi</button></div>`;
@@ -1026,7 +1026,7 @@ setTimeout(() => {
 }, 750);
 
 // número da versão no rodapé (para saber se o celular está com a versão nova)
-const VERSAO_SITE = "17";
+const VERSAO_SITE = "18";
 setTimeout(() => {
   const r = document.querySelector(".rodape .wrap, .v2-rodape .v2-wrap");
   if (r && !document.querySelector(".versao")) {

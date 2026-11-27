@@ -1170,3 +1170,4 @@ body.v2.v2-interna .v2-rodape .versao { opacity: 0.6; font-size: 0.8rem; margin-
   pointer-events: none;
 }
 .v2-cartao .v2-img { position: relative; }
+.v2-logo3d img { border-radius: 10px; }
