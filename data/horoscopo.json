@@ -1,14 +1,65 @@
-{"data":"2026-11-27","signos":[
-{"nome":"Áries","emoji":"♈","texto":"Sexta com energia para fechar pendências. Resolva o que ficou da semana e guarde o sábado para descansar."},
-{"nome":"Touro","emoji":"♉","texto":"Dia de Black Friday pede calma: compare preços antes de comprar e fuja de promoções boas demais."},
-{"nome":"Gêmeos","emoji":"♊","texto":"Conversas rendem bem hoje. Uma mensagem para um amigo antigo pode trazer uma boa notícia."},
-{"nome":"Câncer","emoji":"♋","texto":"A família pede atenção. Um almoço simples em casa vale mais do que um grande programa."},
-{"nome":"Leão","emoji":"♌","texto":"Seu brilho aparece no trabalho. Mostre suas ideias, mas ouça também quem está ao lado."},
-{"nome":"Virgem","emoji":"♍","texto":"Organizar a agenda do fim de semana traz alívio. Separe um tempo só para você."},
-{"nome":"Libra","emoji":"♎","texto":"Equilíbrio entre dever e lazer. Um passeio no fim da tarde ajuda a renovar o ânimo."},
-{"nome":"Escorpião","emoji":"♏","texto":"Intuição em alta. Confie no que sente, mas confira os detalhes antes de decidir algo importante."},
-{"nome":"Sagitário","emoji":"♐","texto":"Vontade de sair da rotina. Que tal conhecer um evento gratuito da cidade neste fim de semana?"},
-{"nome":"Capricórnio","emoji":"♑","texto":"Esforço reconhecido. Um retorno positivo pode chegar ainda hoje; siga firme no seu ritmo."},
-{"nome":"Aquário","emoji":"♒","texto":"Ideias novas surgem em grupo. Um projeto com amigos ou vizinhos pode ganhar força."},
-{"nome":"Peixes","emoji":"♓","texto":"Sensibilidade à flor da pele. Reserve um momento tranquilo e evite discussões à toa."}
-]}
+{
+  "data": "2026-11-28",
+  "signos": [
+    {
+      "nome": "Áries",
+      "emoji": "♈",
+      "texto": "Sábado com disposição para sair de casa. Um passeio ao ar livre ou um programa com amigos renova as energias."
+    },
+    {
+      "nome": "Touro",
+      "emoji": "♉",
+      "texto": "Dia bom para curtir o conforto de casa e uma boa refeição. Aproveite o ritmo mais lento."
+    },
+    {
+      "nome": "Gêmeos",
+      "emoji": "♊",
+      "texto": "A agenda social está cheia. Escolha o programa que mais combina com você e aproveite sem pressa."
+    },
+    {
+      "nome": "Câncer",
+      "emoji": "♋",
+      "texto": "Momento de carinho com a família. Um almoço ou uma ligação para quem está longe faz bem ao coração."
+    },
+    {
+      "nome": "Leão",
+      "emoji": "♌",
+      "texto": "Seu brilho pede palco: música, dança e festa combinam com o seu sábado."
+    },
+    {
+      "nome": "Virgem",
+      "emoji": "♍",
+      "texto": "Arrumar a casa ou planejar a semana traz uma sensação boa de ordem. Depois, reserve um tempo só seu."
+    },
+    {
+      "nome": "Libra",
+      "emoji": "♎",
+      "texto": "Encontros e conversas leves marcam o dia. Boa hora para reaproximar quem anda distante."
+    },
+    {
+      "nome": "Escorpião",
+      "emoji": "♏",
+      "texto": "A intuição está afiada. Confie no que sente ao escolher companhias e programas para o fim de semana."
+    },
+    {
+      "nome": "Sagitário",
+      "emoji": "♐",
+      "texto": "Vontade de novidade: um lugar diferente na cidade pode render boas histórias."
+    },
+    {
+      "nome": "Capricórnio",
+      "emoji": "♑",
+      "texto": "Depois de uma semana puxada, desacelerar também é produtivo. Descanse sem culpa."
+    },
+    {
+      "nome": "Aquário",
+      "emoji": "♒",
+      "texto": "Ideias criativas surgem em grupo. Um bate-papo com amigos pode virar um bom plano."
+    },
+    {
+      "nome": "Peixes",
+      "emoji": "♓",
+      "texto": "Dia sensível e inspirado. Música e arte ajudam a recarregar as energias."
+    }
+  ]
+}

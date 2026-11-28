@@ -1,6 +1,29 @@
 {
   "noticias": [
     {
+      "id": "2026-11-28-e-hoje-ivete-sangalo-faz-show-no-estadio-do-comercial-a-part",
+      "data": "2026-11-28",
+      "editoria": "CULTURA",
+      "titulo": "É hoje: Ivete Sangalo faz show no Estádio do Comercial a partir das 14h",
+      "resumo": "O projeto \"Ivete Clareou\" chega a Ribeirão Preto neste sábado (28), com show a partir das 14h no Estádio Palma Travassos, do Comercial. É a penúltima apresentação da turnê neste ano; o encerramento será em Campinas, em 12 de dezembro.",
+      "texto": [
+        "O projeto \"Ivete Clareou\" chega a Ribeirão Preto neste sábado (28), com show a partir das 14h no Estádio Palma Travassos, do Comercial. É a penúltima apresentação da turnê neste ano; o encerramento será em Campinas, em 12 de dezembro.",
+        "O público fica dividido em dois setores. No Open Bar, as bebidas estão incluídas e a entrada é só para maiores de 18 anos. Na Arena, as bebidas são vendidas à parte e a classificação é de 16 anos; menores de 18 precisam de termo de responsabilidade assinado pelos pais. Segundo a organização, ainda havia ingressos à venda pela Ingresse.",
+        "#IveteSangalo #IveteClareou #IveteEmRibeirão #RibeirãoPreto"
+      ],
+      "fonte": "ACidade ON",
+      "link": "https://www.acidadeon.com/ribeiraopreto/lazer-e-cultura/ivete-sangalo-chega-a-ribeirao-preto-nesta-semana-ainda-ha-ingressos/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Palma_Travassos.jpg/1280px-Palma_Travassos.jpg",
+      "credito_foto": "Estádio Palma Travassos: Anderson Bueno Pereira / Wikimedia Commons, domínio público",
+      "destaque": true,
+      "evento": {
+        "data": "2026-11-28",
+        "hora": "14:00",
+        "local": "Estádio Palma Travassos (Comercial)"
+      }
+    },
+    {
       "id": "2026-11-27-expectativa-de-vida-do-brasileiro-sobe-para-76-9-anos-diz-ib",
       "data": "2026-11-27",
       "editoria": "BRASIL",
