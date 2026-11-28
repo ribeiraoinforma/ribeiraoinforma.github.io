@@ -1,6 +1,23 @@
 {
   "noticias": [
     {
+      "id": "2026-11-28-picadas-de-escorpiao-em-ribeirao-passam-de-1-9-mil-em-2026",
+      "data": "2026-11-28",
+      "editoria": "SAÚDE",
+      "titulo": "Picadas de escorpião em Ribeirão passam de 1,9 mil em 2026",
+      "resumo": "Ribeirão Preto registrou 1.938 acidentes com escorpião em 2026 até 18 de novembro, 10% a mais que no mesmo período de 2025 (1.760). No ano passado inteiro foram 2.115 casos, alta de 34% sobre 2024. Os dados são do novo painel da Secretaria Municipal da Saúde. Não há mortes registradas desde 2023.",
+      "texto": [
+        "Ribeirão Preto registrou 1.938 acidentes com escorpião em 2026 até 18 de novembro, 10% a mais que no mesmo período de 2025 (1.760). No ano passado inteiro foram 2.115 casos, alta de 34% sobre 2024. Os dados são do novo painel da Secretaria Municipal da Saúde. Não há mortes registradas desde 2023.",
+        "A Prefeitura atualizou o protocolo de atendimento: crianças de até 10 anos picadas por escorpião devem ser levadas direto ao HC-UE (Unidade de Emergência); a partir de 11 anos, o atendimento é na UPA. Em caso de picada, procure atendimento imediatamente."
+      ],
+      "fonte": "Tribuna Ribeirão, com dados da Secretaria Municipal da Saúde",
+      "link": "https://www.tribunaribeirao.com.br/ataques-em-2026-passam-de-19-mil/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/9/99/Tityus_serrulatus_%28Buthidae%29_%2822768698194%29.jpg",
+      "credito_foto": "Imagem ilustrativa: escorpião-amarelo (Tityus serrulatus), José Roberto Peruca / Wikimedia Commons, CC BY 2.0",
+      "notificar": true
+    },
+    {
       "id": "2026-11-28-ciclofaixa-de-domingo-e-suspensa-por-causa-da-botafogo-run",
       "data": "2026-11-28",
       "editoria": "SERVIÇO",
