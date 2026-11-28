@@ -1,6 +1,43 @@
 {
   "noticias": [
     {
+      "id": "2026-11-28-concerto-de-natal-gratis-em-frente-a-catedral-no-centro-de-r",
+      "data": "2026-11-28",
+      "editoria": "CULTURA",
+      "titulo": "Concerto de Natal grátis em frente à Catedral, no Centro de Ribeirão",
+      "resumo": "O Museu Casa da Memória Italiana faz o tradicional Concerto di Natale no dia 10 de dezembro (quinta), às 19h, na rua Tibiriçá, 776, em frente à Catedral Metropolitana. A rua será interditada para o público.",
+      "texto": [
+        "O Museu Casa da Memória Italiana faz o tradicional Concerto di Natale no dia 10 de dezembro (quinta), às 19h, na rua Tibiriçá, 776, em frente à Catedral Metropolitana. A rua será interditada para o público.",
+        "Quem canta é o Coro Memorie d'Italia, com regência do maestro Alexandre Mazzer, em cerca de 50 minutos de músicas italianas e clássicos de Natal. A entrada é gratuita e haverá intérprete de Libras."
+      ],
+      "fonte": "ACidade ON",
+      "link": "https://www.acidadeon.com/ribeiraopreto/lazer-e-cultura/casarao-historico-de-ribeirao-preto-anuncia-concerto-de-natal-gratuito-veja-quando/",
+      "imagem": "",
+      "foto": "https://ribeiraoinforma.github.io/midia/2026-11-28/fotos/catedral-rp.jpg",
+      "credito_foto": "Catedral Metropolitana: Daniel Guedes F. Dionizio / Wikimedia Commons, CC BY-SA 4.0",
+      "evento": {
+        "data": "2026-12-10",
+        "hora": "19:00",
+        "local": "Museu Casa da Memória Italiana, r. Tibiriçá, 776, Centro"
+      }
+    },
+    {
+      "id": "2026-11-28-bombeiros-resgatam-gato-de-corrego-em-frente-a-rodoviaria-de",
+      "data": "2026-11-28",
+      "editoria": "CIDADE",
+      "titulo": "Bombeiros resgatam gato de córrego em frente à Rodoviária de Ribeirão",
+      "resumo": "O Corpo de Bombeiros tirou um gato do córrego da avenida Jerônimo Gonçalves, em frente ao Terminal Rodoviário, na manhã deste sábado (28). A Guarda Civil Metropolitana deu apoio no local.",
+      "texto": [
+        "O Corpo de Bombeiros tirou um gato do córrego da avenida Jerônimo Gonçalves, em frente ao Terminal Rodoviário, na manhã deste sábado (28). A Guarda Civil Metropolitana deu apoio no local.",
+        "Não se sabe se o animal caiu ou foi jogado no córrego. Depois do resgate, comerciantes da região ficaram com o gato e se comprometeram a cuidar dele."
+      ],
+      "fonte": "ACidade ON",
+      "link": "https://www.acidadeon.com/ribeiraopreto/cotidiano/gato-e-resgatado-de-corrego-em-frente-ao-terminal-rodoviario-de-ribeirao-preto/",
+      "imagem": "",
+      "foto": "https://ribeiraoinforma.github.io/midia/2026-11-28/fotos/gato-ilustrativa.jpg",
+      "credito_foto": "Imagem ilustrativa: gato, Alvesgaspar / Wikimedia Commons, CC BY-SA 3.0"
+    },
+    {
       "id": "2026-11-28-picadas-de-escorpiao-em-ribeirao-passam-de-1-9-mil-em-2026",
       "data": "2026-11-28",
       "editoria": "SAÚDE",
