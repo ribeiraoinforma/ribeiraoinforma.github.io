@@ -1,6 +1,43 @@
 {
   "noticias": [
     {
+      "id": "2026-11-28-novo-shopping-faz-a-ultima-feira-de-adocao-de-caes-e-gatos-d",
+      "data": "2026-11-28",
+      "editoria": "CIDADE",
+      "titulo": "Novo Shopping faz a última feira de adoção de cães e gatos do ano neste domingo",
+      "resumo": "O Novo Shopping recebe neste domingo (29), das 14h às 17h, a última Feira de Adoção Pet de 2026, em parceria com a ONG Paraíso dos Pets. Estarão disponíveis seis filhotes e quatro adultos, entre cães e gatos. A feira fica no corredor de acesso ao Savegnago, na Av. Presidente Kennedy, 1.500.",
+      "texto": [
+        "O Novo Shopping recebe neste domingo (29), das 14h às 17h, a última Feira de Adoção Pet de 2026, em parceria com a ONG Paraíso dos Pets. Estarão disponíveis seis filhotes e quatro adultos, entre cães e gatos. A feira fica no corredor de acesso ao Savegnago, na Av. Presidente Kennedy, 1.500.",
+        "A adoção é gratuita. É preciso ter mais de 18 anos, levar documento com foto e passar por uma conversa rápida com a equipe da ONG, que avalia cada pedido."
+      ],
+      "fonte": "Tribuna Ribeirão",
+      "link": "https://www.tribunaribeirao.com.br/novo-shopping-promove-ultima-feira-de-adocao-pet-do-ano/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/A_Golden_Retriever-9_%28Barras%29.JPG/1280px-A_Golden_Retriever-9_%28Barras%29.JPG",
+      "credito_foto": "Imagem ilustrativa: cão, Barras / Wikimedia Commons, CC BY 3.0",
+      "evento": {
+        "data": "2026-11-29",
+        "hora": "14:00",
+        "local": "Novo Shopping, Av. Presidente Kennedy, 1.500"
+      }
+    },
+    {
+      "id": "2026-11-28-fim-de-semana-com-calor-de-ate-31c-e-pancadas-de-chuva-em-ri",
+      "data": "2026-11-28",
+      "editoria": "CIDADE",
+      "titulo": "Fim de semana com calor de até 31°C e pancadas de chuva em Ribeirão",
+      "resumo": "O sábado (28) em Ribeirão Preto deve ter mínima de 21°C e máxima de 29°C, com sensação térmica de até 33°C, segundo a Climatempo. A chance de chuva é de 94%, com cerca de 20 mm previstos em pancadas rápidas, principalmente entre a tarde e a noite. Quem vai ao show da Ivete Sangalo no Palma Travassos deve levar capa de chuva.",
+      "texto": [
+        "O sábado (28) em Ribeirão Preto deve ter mínima de 21°C e máxima de 29°C, com sensação térmica de até 33°C, segundo a Climatempo. A chance de chuva é de 94%, com cerca de 20 mm previstos em pancadas rápidas, principalmente entre a tarde e a noite. Quem vai ao show da Ivete Sangalo no Palma Travassos deve levar capa de chuva.",
+        "No domingo (29), a máxima sobe para 31°C, com sensação de até 35°C, e a chance de chuva é de 96%. É também o início da primeira Zona de Convergência do Atlântico Sul (ZCAS) da temporada, que pode trazer chuva forte a São Paulo até 5 de dezembro."
+      ],
+      "fonte": "ACidade ON, com dados da Climatempo",
+      "link": "https://www.acidadeon.com/ribeiraopreto/cotidiano/calor-de-31c-e-previsao-de-chuva-veja-como-fica-o-tempo-em-ribeirao-preto-no-fim-de-semana/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Vista_a%C3%A9rea_Ribeir%C3%A3o_Preto_2025.jpg/1280px-Vista_a%C3%A9rea_Ribeir%C3%A3o_Preto_2025.jpg",
+      "credito_foto": "Imagem ilustrativa: vista aérea de Ribeirão Preto, And Ribeirão 1980 / Wikimedia Commons, CC0"
+    },
+    {
       "id": "2026-11-28-e-hoje-ivete-sangalo-faz-show-no-estadio-do-comercial-a-part",
       "data": "2026-11-28",
       "editoria": "CULTURA",
@@ -22,6 +59,22 @@
         "hora": "14:00",
         "local": "Estádio Palma Travassos (Comercial)"
       }
+    },
+    {
+      "id": "2026-11-27-botafogo-sp-renova-com-o-zagueiro-badaro-ate-2029",
+      "data": "2026-11-27",
+      "editoria": "ESPORTE",
+      "titulo": "Botafogo-SP renova com o zagueiro Badaró até 2029",
+      "resumo": "O Botafogo-SP renovou o contrato do zagueiro Badaró, de 21 anos, até dezembro de 2029. O vínculo anterior ia até o fim de 2027. Natural de Sertãozinho, o jogador chegou ao clube em janeiro de 2024 e foi formado nas categorias de base do Tricolor.",
+      "texto": [
+        "O Botafogo-SP renovou o contrato do zagueiro Badaró, de 21 anos, até dezembro de 2029. O vínculo anterior ia até o fim de 2027. Natural de Sertãozinho, o jogador chegou ao clube em janeiro de 2024 e foi formado nas categorias de base do Tricolor.",
+        "Depois de duas temporadas no Sub-20, onde fez 56 jogos e três gols, Badaró estreou no time principal em 2026 e disputou nove partidas na Série B, com um gol marcado."
+      ],
+      "fonte": "Tribuna Ribeirão",
+      "link": "https://www.tribunaribeirao.com.br/badaro-renova-com-botafogo-ate-2029/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Estadio_santacruz.JPG/1280px-Estadio_santacruz.JPG",
+      "credito_foto": "Estádio Santa Cruz: Duskien / Wikimedia Commons, CC BY-SA 3.0"
     },
     {
       "id": "2026-11-27-expectativa-de-vida-do-brasileiro-sobe-para-76-9-anos-diz-ib",
