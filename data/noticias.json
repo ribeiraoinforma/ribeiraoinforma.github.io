@@ -1,6 +1,27 @@
 {
   "noticias": [
     {
+      "id": "2026-11-28-ciclofaixa-de-domingo-e-suspensa-por-causa-da-botafogo-run",
+      "data": "2026-11-28",
+      "editoria": "SERVIÇO",
+      "titulo": "Ciclofaixa de domingo é suspensa por causa da Botafogo Run",
+      "resumo": "A Prefeitura de Ribeirão Preto suspendeu a Ciclofaixa de Lazer deste domingo (29). No lugar dela, as ruas recebem a Botafogo Run, corrida com largada às 5h20 no Estádio Santa Cruz, com percursos de 5, 10 e 21 km, caminhada de 3 km e Corrida Kids. Segundo a Prefeitura, as vias devem ser liberadas a partir das 9h.",
+      "texto": [
+        "A Prefeitura de Ribeirão Preto suspendeu a Ciclofaixa de Lazer deste domingo (29). No lugar dela, as ruas recebem a Botafogo Run, corrida com largada às 5h20 no Estádio Santa Cruz, com percursos de 5, 10 e 21 km, caminhada de 3 km e Corrida Kids. Segundo a Prefeitura, as vias devem ser liberadas a partir das 9h.",
+        "O trajeto passa pelas avenidas Sebastião Venturi, Maurílio Biagi, Dr. Francisco Junqueira e Celso Charuri e pela rua Ovídeo José de Faria. Os ônibus seguem por rotas alternativas, e alguns pontos de parada no caminho da prova podem ficar desativados durante a manhã. A Ciclofaixa normalmente funciona aos domingos, das 7h às 13h."
+      ],
+      "fonte": "ACidade ON",
+      "link": "https://www.acidadeon.com/ribeiraopreto/cotidiano/domingo-na-ciclofaixa-sera-suspenso-neste-fim-de-semana-saiba-o-motivo/",
+      "imagem": "",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Est%C3%A1dio_Santa_Cruz_BFC.JPG/1280px-Est%C3%A1dio_Santa_Cruz_BFC.JPG",
+      "credito_foto": "Estádio Santa Cruz: Anderson Bueno Pereira / Wikimedia Commons, domínio público",
+      "evento": {
+        "data": "2026-11-29",
+        "hora": "05:20",
+        "local": "Estádio Santa Cruz (largada da Botafogo Run)"
+      }
+    },
+    {
       "id": "2026-11-28-novo-shopping-faz-a-ultima-feira-de-adocao-de-caes-e-gatos-d",
       "data": "2026-11-28",
       "editoria": "CIDADE",
